@@ -15,11 +15,13 @@ public class PlayerMove : MonoBehaviour
         _rb2D = GetComponent<Rigidbody2D>();
     }
 
+
     private void FixedUpdate()
     {
         float positionX = _rb2D.position.x + _moveX * _speed * Time.fixedDeltaTime;
+        float positionY = _rb2D.position.y + (0.5f * Time.fixedDeltaTime);
 
-        _rb2D.MovePosition(new Vector2(positionX, _rb2D.position.y));
+        _rb2D.MovePosition(new Vector2(positionX, positionY));
     }
 
     private void OnEnable()
