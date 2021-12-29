@@ -44,7 +44,9 @@ public class UIManager : MonoBehaviour
         for (int i = 0; i < _currentCountSkins; i++)
         {
             GameObject prefab = Instantiate(_defaultPrefabToSkin);
+            
             prefab.gameObject.transform.SetParent(_parentSellsToSkins.transform);
+            prefab.transform.localScale = new Vector3(1, 1, 1);
             prefab.GetComponent<BtnStateSprite>().Skin = _Skins[i];
             prefab.GetComponent<BtnStateSprite>().PlayerSkin = _playerSkins[i];
             if (_selectedSkin == i) // Вызов показа активного спрайта
@@ -57,13 +59,18 @@ public class UIManager : MonoBehaviour
         {
             GameObject prefab = Instantiate(_defaultPrefabToSkin);
             prefab.gameObject.transform.SetParent(_parentSellsToSkins.transform);
+            prefab.transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
     public void SelectSkin(GameObject current)
     {
-        _player = GameObject.FindGameObjectWithTag("Player");
-        _player.GetComponent<SpriteRenderer>().sprite = current.GetComponent<BtnStateSprite>().PlayerSkin;
+        if (_player != null)
+        {
+            _player = GameObject.FindGameObjectWithTag("Player");
+            _player.GetComponent<SpriteRenderer>().sprite = current.GetComponent<BtnStateSprite>().PlayerSkin;
+        }
+        
     }
 
     private void Update()
@@ -78,14 +85,24 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void OpenSettings()
-    {
-
-    }
-
     public void OpenSkins()
     {
         _pause = !_pause;
         _TableSkins.SetActive(_pause);
     }
+
+    bool isSettingsHide;
+    public void PressSettinsBtn(GameObject button)
+    {
+        Debug.Log(isSettingsHide);
+        isSettingsHide = button.GetComponent<Animator>().GetBool("isHide");
+        OpenCloseSettings(button.GetComponent<Animator>());
+    }
+
+    private void OpenCloseSettings(Animator anim)
+    {
+        anim.SetBool("isHide", !isSettingsHide);
+    }
+
+    
 }
