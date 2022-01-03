@@ -103,6 +103,4 @@ public class UIManager : MonoBehaviour
     {
         anim.SetBool("isHide", !isSettingsHide);
     }
-
-    
 }
