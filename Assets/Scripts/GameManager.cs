@@ -16,24 +16,25 @@ public class GameManager : MonoBehaviour
     private GameObject _linePrefab;
     [SerializeField]
     private Transform _startPosition;
+    [SerializeField]
+    private GameObject _uiManager;
 
-    public void TakeLevel(int sceneIndex)
-    {
-        GameObject sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
-        sceneManager.GetComponent<ChangeScene>().ChooseScene(sceneIndex);
-    }
+    
 
     private void Start()
     {
         CreateEnemies();
+        _numberLevel = 1;
     }
 
     private void CreateEnemies()
     {
+         
         switch (_numberLevel)
         {
             case 1:
-                Generateenemies(_numberLevel);
+                GenerateEnemies(_numberLevel);
+                _countLines = _numberLevel;
                 break;
             case 2:
                 break;
@@ -41,12 +42,10 @@ public class GameManager : MonoBehaviour
                 break;
             case 4:
                 break;
-            case 5:
-                break;
         }
     }
 
-    private void Generateenemies(int count)
+    private void GenerateEnemies(int count)
     {
 
     }

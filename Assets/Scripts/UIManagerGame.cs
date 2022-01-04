@@ -44,4 +44,11 @@ public class UIManagerGame : MonoBehaviour
     {
 
     }
+
+
+    public void TakeLevel(int sceneIndex)
+    {
+        GameObject sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
+        sceneManager.GetComponent<ChangeScene>().ChooseScene(sceneIndex);
+    }
 }
