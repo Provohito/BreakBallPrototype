@@ -16,6 +16,8 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField]
     private Transform _parentDefencePrefab;
 
+    
+
 
     public void PressPause()
     {
