@@ -46,25 +46,37 @@ public class GameManager : MonoBehaviour
 
     private void CreateEnemies()
     {
-         
         switch (_numberLevel)
         {
+            
             case 1:
                 GenerateEnemies(_numberLevel);
                 _countLines = _numberLevel;
                 break;
             case 2:
+                GenerateEnemies(_numberLevel);
+                _countLines = _numberLevel;
                 break;
             case 3:
+                GenerateEnemies(_numberLevel);
+                _countLines = _numberLevel;
                 break;
             case 4:
+                GenerateEnemies(_numberLevel);
+                _countLines = _numberLevel;
                 break;
         }
     }
 
     private void GenerateEnemies(int count)
     {
-
+        for (int i = 0; i < count; i++)
+        {
+            GameObject prefab = Instantiate(_linePrefab);
+            prefab.GetComponent<SpriteRenderer>().color = _outColor[i];
+            prefab.transform.position = new Vector3(_linePrefab.transform.position.x, (_linePrefab.transform.position.y + 10 + i)/7, _linePrefab.transform.position.z);
+        }
+        
     }
 
     [SerializeField]
@@ -81,8 +93,17 @@ public class GameManager : MonoBehaviour
             _outColor[i] = _colorsLine[i];
             colorPref = mainColorPref.transform.GetChild(i).gameObject;
             colorPref.GetComponent<SpriteRenderer>().color = _outColor[i];
-            Debug.Log(_outColor[i].r);
         }
+        CreateEnemies();
     }
 
+    public void GenerateShild()
+    {
+        _uiManager.GetComponent<UIManagerGame>().PressInitDefenceBtn(_outColor,_numberLevel);
+    }
+
+    public void StartConsentration()
+    {
+        _uiManager.GetComponent<UIManagerGame>().Consentration();
+    }
 }

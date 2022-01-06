@@ -94,7 +94,6 @@ public class UIManager : MonoBehaviour
     bool isSettingsHide;
     public void PressSettinsBtn(GameObject button)
     {
-        Debug.Log(isSettingsHide);
         isSettingsHide = button.GetComponent<Animator>().GetBool("isHide");
         OpenCloseSettings(button.GetComponent<Animator>());
     }
@@ -102,5 +101,11 @@ public class UIManager : MonoBehaviour
     private void OpenCloseSettings(Animator anim)
     {
         anim.SetBool("isHide", !isSettingsHide);
+    }
+
+    public void TakeLevel(int sceneIndex)
+    {
+        GameObject sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
+        sceneManager.GetComponent<ChangeScene>().ChooseScene(sceneIndex);
     }
 }

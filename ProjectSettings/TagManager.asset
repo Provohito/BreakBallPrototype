@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SceneManager
   - Die
+  - TakeColor
+  - Consentraition
   layers:
   - Default
   - TransparentFX

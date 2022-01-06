@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManagerGame : MonoBehaviour
 {
@@ -44,13 +45,39 @@ public class UIManagerGame : MonoBehaviour
 
     private void InitDefenceBtn(Color[] colors, int count)
     {
-
+        for (int i = 0; i < count; i++)
+        {
+            GameObject prefab = Instantiate(_defenceBtnPrefab);
+            prefab.transform.SetParent(_parentDefencePrefab);
+            prefab.transform.GetChild(0).GetComponent<Image>().color = colors[i];
+        }
     }
 
-
-    public void TakeLevel(int sceneIndex)
+    [SerializeField] private Image[] timerImage;
+    private float _timeLeft = 0f;
+    private float time = 2f;
+    public void Consentration()
     {
-        GameObject sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
-        sceneManager.GetComponent<ChangeScene>().ChooseScene(sceneIndex);
+        StartTimer();
     }
+
+    private void StartTimer()
+    {
+        _timeLeft = time;
+        StartCoroutine(Timer());
+    }
+
+  
+    private IEnumerator Timer()
+    {
+        while (_timeLeft > 0)
+        {
+            _timeLeft -= Time.deltaTime;
+            var normalizedValue = Mathf.Clamp(_timeLeft / time, 0.0f, 1.0f);
+            timerImage[0].fillAmount = normalizedValue;
+            timerImage[1].fillAmount = normalizedValue;
+            yield return null;
+        }
+    }
+
 }
