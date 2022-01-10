@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        _numberLevel = 3;
+        _numberLevel = 1;
         GenerateContainer();
         
         //StartGame();

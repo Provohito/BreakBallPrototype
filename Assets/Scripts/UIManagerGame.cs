@@ -16,9 +16,21 @@ public class UIManagerGame : MonoBehaviour
     private GameObject _defenceBtnPrefab;
     [SerializeField]
     private Transform _parentDefencePrefab;
+    private int _countDefenceBtn = 0;
+    private GameObject _player;
 
-    
+    [SerializeField]
+    private GameObject _consentrationPanel;
 
+    public void Start()
+    {
+        _player = GameObject.Find("Player");
+    }
+
+    public void PressBtnDefence(Color color)
+    {
+        _player.GetComponent<PlayerController>().ActiveDefence(color);
+    }
 
     public void PressPause()
     {
@@ -40,6 +52,7 @@ public class UIManagerGame : MonoBehaviour
     public void PressInitDefenceBtn(Color[] colors, int count)
     {
         InitDefenceBtn(colors, count);
+        _countDefenceBtn = count;
     }
 
 
@@ -53,12 +66,18 @@ public class UIManagerGame : MonoBehaviour
         }
     }
 
+
     [SerializeField] private Image[] timerImage;
     private float _timeLeft = 0f;
     private float time = 2f;
     public void Consentration()
     {
+        _consentrationPanel.SetActive(true);
         StartTimer();
+        for (int i = 0; i < _countDefenceBtn; i++)
+        {
+            _parentDefencePrefab.GetChild(i).GetComponent<Button>().interactable = true;
+        }
     }
 
     private void StartTimer()
@@ -78,6 +97,9 @@ public class UIManagerGame : MonoBehaviour
             timerImage[1].fillAmount = normalizedValue;
             yield return null;
         }
+        
+        _player.GetComponent<PlayerMove>().enabled = true;
+        _consentrationPanel.SetActive(false);
     }
 
 }
