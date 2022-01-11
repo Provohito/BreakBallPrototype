@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManagerGame : MonoBehaviour
 {
     private bool _pause = false;
+
+    [SerializeField]
+    private Sprite[] _playerSkins;
 
     [SerializeField]
     private GameObject _pausePanel;
@@ -22,9 +26,38 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField]
     private GameObject _consentrationPanel;
 
+    [SerializeField]
+    private GameObject _endGamePanel;
+    [SerializeField]
+    private TMP_Text _scoreText;
+    [SerializeField]
+    private TMP_Text _score;
+    private float Score = 1;
+    private float _time;
+
+    private void Update()
+    {
+        Debug.Log(_time);
+        _time += Time.deltaTime;
+        if (_time > 1)
+        {
+            Score++;
+            UpdateScore();
+            _time = 0;
+        }
+    }
+
+    private void UpdateScore()
+    {
+        _score.text = Score.ToString();
+    }
+
     public void Start()
     {
+
         _player = GameObject.Find("Player");
+        _player.GetComponent<SpriteRenderer>().sprite = _playerSkins[PlayerPrefs.GetInt("SelectedSkin")];
+        _score.text = Score.ToString();
     }
 
     public void PressBtnDefence(Color color)
@@ -66,18 +99,20 @@ public class UIManagerGame : MonoBehaviour
         }
     }
 
-
+    [SerializeField] private GameObject _timer;
     [SerializeField] private Image[] timerImage;
     private float _timeLeft = 0f;
     private float time = 2f;
     public void Consentration()
     {
         _consentrationPanel.SetActive(true);
-        StartTimer();
+        _timer.SetActive(true);
         for (int i = 0; i < _countDefenceBtn; i++)
         {
             _parentDefencePrefab.GetChild(i).GetComponent<Button>().interactable = true;
         }
+        StartTimer();
+
     }
 
     private void StartTimer()
@@ -86,6 +121,19 @@ public class UIManagerGame : MonoBehaviour
         StartCoroutine(Timer());
     }
 
+    public void EndGameStart()
+    {
+        EndGame();
+    }
+
+    private void EndGame()
+    {
+        _gamePanel.SetActive(false);
+        _endGamePanel.SetActive(true);
+        Time.timeScale = 0;
+        _scoreText.text = Score.ToString();
+
+    }
   
     private IEnumerator Timer()
     {
@@ -97,9 +145,18 @@ public class UIManagerGame : MonoBehaviour
             timerImage[1].fillAmount = normalizedValue;
             yield return null;
         }
-        
+
         _player.GetComponent<PlayerMove>().enabled = true;
         _consentrationPanel.SetActive(false);
+        _timer.SetActive(false);
+    }
+
+    public void ReloadGame()
+    {
+        if((int)Score > PlayerPrefs.GetInt("Score"))
+            PlayerPrefs.SetInt("Score", (int)Score);
+
+        GameObject.Find("SceneManager").GetComponent<ChangeScene>().ChooseScene(1);
     }
 
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,43 +17,56 @@ public class UIManager : MonoBehaviour
     private GameObject _TableSkins;
     private bool _pause = false;
 
-
-
-    private GameObject _player;
-
-
     private int _countAllSkins = 20;
-
     [SerializeField]
     private GameObject _parentSellsToSkins;
 
-    private int _currentCountSkins = 3;
-    private int _selectedSkin = 1;
+    private int _currentCountSkins;
+    private int _selectedSkin;
+
+    [SerializeField]
+    private TMP_Text _score;
 
     private void Start()
     {
-        //PlayerPrefs.SetInt("CurrentCountSkins", 3);
-        //PlayerPrefs.SetInt("SelectedSkin", 1);
-        //PlayerPrefs.GetInt("SelectedSkin", _selectedSkin);
-        //PlayerPrefs.GetInt("CurrentCountSkins", _currentCountSkins);
+        if (PlayerPrefs.HasKey("Score") == true)
+        {
+            _score.text = PlayerPrefs.GetInt("Score", 0).ToString();
+        }
+
+        if (PlayerPrefs.HasKey("SelectedSkin") == true)
+        {
+            _selectedSkin = PlayerPrefs.GetInt("SelectedSkin");
+        }
+        else
+            _selectedSkin = 1;
+
+        if (PlayerPrefs.HasKey("CurrentCountSkins") == true)
+        {
+            _currentCountSkins =  PlayerPrefs.GetInt("CurrentCountSkins");
+        }
+        else
+            _currentCountSkins = 3;
+        //PlayerPrefs.SetInt("CurrentCountSkins", 3);       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Важно, сколько скинов открыли !!!!!!!!!!!!!!!!!!!!!!!!!!!!
         CreateSellsToSkins(_selectedSkin);
     }
 
     private void CreateSellsToSkins(int selectedSkin) // Создание ячейки под скин
-    {
-        Debug.Log(_currentCountSkins);        
+    {      
         for (int i = 0; i < _currentCountSkins; i++)
         {
             GameObject prefab = Instantiate(_defaultPrefabToSkin);
             
-            prefab.gameObject.transform.SetParent(_parentSellsToSkins.transform);
+            prefab.transform.SetParent(_parentSellsToSkins.transform);
             prefab.transform.localScale = new Vector3(1, 1, 1);
             prefab.GetComponent<BtnStateSprite>().Skin = _Skins[i];
             prefab.GetComponent<BtnStateSprite>().PlayerSkin = _playerSkins[i];
+            prefab.GetComponent<BtnStateSprite>().ID = i;
             if (_selectedSkin == i) // Вызов показа активного спрайта
             {
                 prefab.GetComponent<BtnStateSprite>().ActiveSkin = true;
             }
+            prefab.GetComponent<BtnStateSprite>().StateSkin = true;
         }
 
         for (int i = 0; i < _countAllSkins - _currentCountSkins; i++)
@@ -65,24 +79,25 @@ public class UIManager : MonoBehaviour
 
     public void SelectSkin(GameObject current)
     {
-        if (_player != null)
+        _parentSellsToSkins = GameObject.Find("Content");
+        if (current.GetComponent<BtnStateSprite>().StateSkin == false)
         {
-            _player = GameObject.FindGameObjectWithTag("Player");
-            _player.GetComponent<SpriteRenderer>().sprite = current.GetComponent<BtnStateSprite>().PlayerSkin;
+            Debug.Log("return");
+            return;
+        }
+        else
+        {
+            current.GetComponent<BtnStateSprite>().ActiveSkin = true;
+            _parentSellsToSkins.transform.GetChild(_selectedSkin).GetComponent<BtnStateSprite>().ActiveSkin = false;
+            _selectedSkin = current.GetComponent<BtnStateSprite>().ID;
+            PlayerPrefs.SetInt("SelectedSkin", _selectedSkin);
         }
         
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (_pause == false)
-                Time.timeScale = 0;
-            else
-                Time.timeScale = 1;
-            OpenSkins();
-        }
+
     }
 
     public void OpenSkins()

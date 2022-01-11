@@ -47,7 +47,9 @@ MonoBehaviour:
   _gamePanel: {fileID: 0}
   _defenceBtnPrefab: {fileID: 2751427604744460715, guid: 33760d7389f46d44396b2bd786968139, type: 3}
   _parentDefencePrefab: {fileID: 0}
-  _player: {fileID: 4201636504701066491, guid: 1b83fa6a6492c4e44b63bc3b11c639fb, type: 3}
+  _consentrationPanel: {fileID: 0}
+  _endGamePanel: {fileID: 0}
+  _scoreText: {fileID: 0}
   timerImage:
   - {fileID: 0}
   - {fileID: 0}
