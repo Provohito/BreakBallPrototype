@@ -19,53 +19,50 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _uiManager;
 
-    private bool _gameContinue = false;
+    [SerializeField]
+    private GameObject _consentrationPrefab;
 
     
+
+    [SerializeField] private GameObject _player;
 
     private void Start()
     {
         _numberLevel = 1;
         GenerateContainer();
         
-        //StartGame();
+        
     }
 
     private void Update()
     {
-        if (_gameContinue == true)
-            StartGame();
+
     }
 
-    private void StartGame()
+    
+
+    // Запуск нового уровня
+    public void NextLevel()
     {
-        
-        CreateEnemies();
-        
+        trix = Random.Range(1, 4);
+        if (_numberLevel != 4)
+        {
+            _numberLevel++;
+        }
+        GenerateContainer();
+        CreateConsentrationPoint();
     }
-
+    int trix = 1;
     private void CreateEnemies()
     {
-        switch (_numberLevel)
+        
+        if (_numberLevel == 1)
         {
-            
-            case 1:
-                GenerateEnemies(_numberLevel);
-                _countLines = _numberLevel;
-                break;
-            case 2:
-                GenerateEnemies(_numberLevel);
-                _countLines = _numberLevel;
-                break;
-            case 3:
-                GenerateEnemies(_numberLevel);
-                _countLines = _numberLevel;
-                break;
-            case 4:
-                GenerateEnemies(_numberLevel);
-                _countLines = _numberLevel;
-                break;
+            trix = 1;
         }
+        GenerateEnemies(trix);
+        _countLines = trix;
+        
     }
 
     private void GenerateEnemies(int count)
@@ -74,7 +71,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject prefab = Instantiate(_linePrefab);
             prefab.GetComponent<SpriteRenderer>().color = _outColor[i];
-            prefab.transform.position = new Vector3(_linePrefab.transform.position.x, (_linePrefab.transform.position.y + 10 + i)/7, _linePrefab.transform.position.z);
+            prefab.transform.position = new Vector3(_linePrefab.transform.position.x, _player.transform.position.y + i + 7, _linePrefab.transform.position.z);
         }
         
     }
@@ -84,22 +81,33 @@ public class GameManager : MonoBehaviour
 
     private void GenerateContainer()
     {
+        
         GameObject mainColorPref;
         GameObject colorPref;
-        mainColorPref = _colorsConteiner.transform.GetChild(_numberLevel-1).gameObject;
+        _colorsConteiner.transform.position = new Vector3(_colorsConteiner.transform.position.x, _player.transform.position.y + 3.12f, _colorsConteiner.transform.position.z);
+        mainColorPref = _colorsConteiner.transform.GetChild(trix - 1).gameObject;
         mainColorPref.SetActive(true);
-        for (int i = 0; i < _numberLevel; i++)
+        for (int i = 0; i < trix; i++)
         {
-            _outColor[i] = _colorsLine[i];
+            int k = Random.Range(0, 4);
+            _outColor[i] =  _colorsLine[k];
             colorPref = mainColorPref.transform.GetChild(i).gameObject;
             colorPref.GetComponent<SpriteRenderer>().color = _outColor[i];
         }
         CreateEnemies();
+        
+    }
+
+    private void CreateConsentrationPoint()
+    {
+        GameObject prefab = Instantiate(_consentrationPrefab);
+        prefab.transform.position = new Vector3(_consentrationPrefab.transform.position.x, _player.transform.position.y + 4.12f, _consentrationPrefab.transform.position.z);
+
     }
 
     public void GenerateShild()
     {
-        _uiManager.GetComponent<UIManagerGame>().PressInitDefenceBtn(_outColor,_numberLevel);
+        _uiManager.GetComponent<UIManagerGame>().PressInitDefenceBtn(_outColor, trix);
     }
 
     public void StartConsentration()

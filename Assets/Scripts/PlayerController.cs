@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log(_defenders[i].activeInHierarchy);
             if (_defenders[i].activeInHierarchy == false)
             {
-                Debug.Log(_defenders[i].name);
                 _defenders[i].gameObject.SetActive(true);
                 _defenders[i].GetComponent<SpriteRenderer>().color = color;
                 break;

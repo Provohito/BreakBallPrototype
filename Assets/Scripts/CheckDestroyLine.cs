@@ -11,14 +11,18 @@ public class CheckDestroyLine : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<SpriteRenderer>().color == this.gameObject.GetComponent<SpriteRenderer>().color)
+        if (collision.tag == "defence")
         {
-            collision.gameObject.SetActive(false);
-            Destroy(this.gameObject);
+            if (collision.gameObject.GetComponent<SpriteRenderer>().color == this.gameObject.GetComponent<SpriteRenderer>().color)
+            {
+                collision.gameObject.SetActive(false);
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                _ui.EndGameStart();
+            }
         }
-        else
-        {
-            _ui.EndGameStart();
-        }
+        
     }
 }

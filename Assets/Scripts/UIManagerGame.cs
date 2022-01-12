@@ -11,6 +11,8 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField]
     private Sprite[] _playerSkins;
 
+    [SerializeField] private GameManager _GM;
+
     [SerializeField]
     private GameObject _pausePanel;
     [SerializeField]
@@ -32,32 +34,40 @@ public class UIManagerGame : MonoBehaviour
     private TMP_Text _scoreText;
     [SerializeField]
     private TMP_Text _score;
-    private float Score = 1;
+    private float score = 1;
+    private float _previousScore = 5;
     private float _time;
 
     private void Update()
     {
-        Debug.Log(_time);
         _time += Time.deltaTime;
         if (_time > 1)
         {
-            Score++;
+            score++;
             UpdateScore();
             _time = 0;
         }
     }
 
+    
+
     private void UpdateScore()
     {
-        _score.text = Score.ToString();
+        _score.text = score.ToString();
+        Debug.Log(score + " !!!! " + _previousScore);
+        if (score - _previousScore == 15)
+        {
+            _GM.NextLevel();
+            _previousScore = score;
+        }
     }
 
     public void Start()
     {
-
+        Time.timeScale = 1;
         _player = GameObject.Find("Player");
         _player.GetComponent<SpriteRenderer>().sprite = _playerSkins[PlayerPrefs.GetInt("SelectedSkin")];
-        _score.text = Score.ToString();
+        _score.text = score.ToString();
     }
 
     public void PressBtnDefence(Color color)
@@ -82,8 +92,10 @@ public class UIManagerGame : MonoBehaviour
         _pause = !_pause;
     }
 
+    int countDefence;
     public void PressInitDefenceBtn(Color[] colors, int count)
     {
+        countDefence = count;
         InitDefenceBtn(colors, count);
         _countDefenceBtn = count;
     }
@@ -97,12 +109,26 @@ public class UIManagerGame : MonoBehaviour
             prefab.transform.SetParent(_parentDefencePrefab);
             prefab.transform.GetChild(0).GetComponent<Image>().color = colors[i];
         }
+        
+    }
+
+    private void Shuffle(int block)
+    {
+        
+        for (int i = 0; i < block; i++)
+        {
+            Debug.Log(_parentDefencePrefab.name);
+            Color temp = _parentDefencePrefab.GetChild(i).GetChild(0).GetComponent<Image>().color;
+            int r = Random.Range(0, block);
+            _parentDefencePrefab.GetChild(i).GetChild(0).GetComponent<Image>().color = _parentDefencePrefab.GetChild(r).GetChild(0).GetComponent<Image>().color;
+            _parentDefencePrefab.GetChild(r).GetChild(0).GetComponent<Image>().color = temp;
+        }
     }
 
     [SerializeField] private GameObject _timer;
     [SerializeField] private Image[] timerImage;
     private float _timeLeft = 0f;
-    private float time = 2f;
+    private float time = 4f;
     public void Consentration()
     {
         _consentrationPanel.SetActive(true);
@@ -111,8 +137,9 @@ public class UIManagerGame : MonoBehaviour
         {
             _parentDefencePrefab.GetChild(i).GetComponent<Button>().interactable = true;
         }
+        Shuffle(_countDefenceBtn);
         StartTimer();
-
+        
     }
 
     private void StartTimer()
@@ -131,7 +158,7 @@ public class UIManagerGame : MonoBehaviour
         _gamePanel.SetActive(false);
         _endGamePanel.SetActive(true);
         Time.timeScale = 0;
-        _scoreText.text = Score.ToString();
+        _scoreText.text = score.ToString();
 
     }
   
@@ -153,8 +180,8 @@ public class UIManagerGame : MonoBehaviour
 
     public void ReloadGame()
     {
-        if((int)Score > PlayerPrefs.GetInt("Score"))
-            PlayerPrefs.SetInt("Score", (int)Score);
+        if((int)score > PlayerPrefs.GetInt("Score"))
+            PlayerPrefs.SetInt("Score", (int)score);
 
         GameObject.Find("SceneManager").GetComponent<ChangeScene>().ChooseScene(1);
     }

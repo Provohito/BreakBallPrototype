@@ -8,6 +8,8 @@ TagManager:
   - Die
   - TakeColor
   - Consentraition
+  - bg1
+  - defence
   layers:
   - Default
   - TransparentFX
