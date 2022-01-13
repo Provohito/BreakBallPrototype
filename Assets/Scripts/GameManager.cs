@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         _numberLevel = 1;
         GenerateContainer();
-        
+        GenerateDestroyer();
         
     }
 
@@ -113,5 +113,38 @@ public class GameManager : MonoBehaviour
     public void StartConsentration()
     {
         _uiManager.GetComponent<UIManagerGame>().Consentration();
+    }
+
+    [SerializeField]
+    private Transform[] _destroyPoint;
+    [SerializeField]
+    private GameObject _destroyPrefab;
+    [SerializeField]
+    private Transform _destroyContainer;
+    
+    private void GenerateDestroyer()
+    {
+        GameObject prefab;
+        for (int i = 0; i < 10; i++)
+        {
+            prefab = Instantiate(_destroyPrefab);
+            prefab.gameObject.transform.SetParent(_destroyContainer);
+        }
+    }
+
+    public void GenerateDestroyPoint()
+    {
+        
+        for (int i = 0; i < trix + 4; i++)
+        {
+            CreateDestroyer();
+        }
+        
+    }
+
+    private void CreateDestroyer()
+    {
+        int i = Random.Range(1, 10);
+        _destroyContainer.GetChild(i).transform.position = _destroyPoint[i].position;
     }
 }

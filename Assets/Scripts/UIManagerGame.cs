@@ -57,6 +57,7 @@ public class UIManagerGame : MonoBehaviour
         Debug.Log(score + " !!!! " + _previousScore);
         if (score - _previousScore == 15)
         {
+            StopAllCoroutines();
             _GM.NextLevel();
             _previousScore = score;
         }

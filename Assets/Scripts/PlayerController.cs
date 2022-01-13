@@ -8,12 +8,22 @@ public class PlayerController : MonoBehaviour
     private GameObject _gameManager;
     [SerializeField]
     private GameObject[] _defenders;
+    private UIManagerGame _ui;
+
+    private void Start()
+    {
+        _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
+    }
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "TakeColor")
         {
             collision.gameObject.SetActive(false);
             _gameManager.GetComponent<GameManager>().GenerateShild();
+        }
+        if (collision.transform.tag == "Die")
+        {
+            _ui.EndGameStart();
         }
     }
 
