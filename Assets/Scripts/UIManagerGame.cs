@@ -174,6 +174,11 @@ public class UIManagerGame : MonoBehaviour
             yield return null;
         }
 
+        GoGame();
+    }
+
+    public void GoGame()
+    {
         _player.GetComponent<PlayerMove>().enabled = true;
         _consentrationPanel.SetActive(false);
         _timer.SetActive(false);

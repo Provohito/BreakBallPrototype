@@ -32,7 +32,9 @@ public class PlayerController : MonoBehaviour
         if (collision.transform.tag == "Consentraition")
         {
             this.gameObject.GetComponent<PlayerMove>().enabled = false;
+            this.gameObject.transform.position = collision.transform.position;
             _gameManager.GetComponent<GameManager>().StartConsentration();
+            Destroy(collision.gameObject);
         }
     }
 

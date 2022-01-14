@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _consentrationPrefab;
 
+    [SerializeField]
+    private GameObject[] _particleEffectsConteiners;
+    [SerializeField]
+    private Sprite[] _particleSkins;
+    private bool _cosmos;
     
 
     [SerializeField] private GameObject _player;
@@ -36,19 +41,49 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
+        if (_numberLevel == 3)
+        {
+            SwapParticles();
+            _numberLevel++;
+        }
+        else if (_numberLevel == 6)
+        {
+            SwapParticles();
+            _numberLevel++;
+        }
     }
 
-    
+    private void SwapParticles()
+    {
+        if (_cosmos == true)
+        {
+           
+
+            for (int i = 0; i < _particleEffectsConteiners[0].transform.GetChildCount(); i++)
+            {
+                int k = Random.Range(2, 4);
+                _particleEffectsConteiners[0].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[k]);
+            }
+            for (int i = 0; i < _particleEffectsConteiners[1].transform.GetChildCount(); i++)
+            {
+                _particleEffectsConteiners[1].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[1]);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < _particleEffectsConteiners[0].transform.GetChildCount(); i++)
+            {
+                _particleEffectsConteiners[0].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[0]);
+            }
+            _cosmos = true;
+        }
+    }
 
     // Запуск нового уровня
     public void NextLevel()
     {
         trix = Random.Range(1, 4);
-        if (_numberLevel != 4)
-        {
-            _numberLevel++;
-        }
+        _numberLevel++;
         GenerateContainer();
         CreateConsentrationPoint();
     }
