@@ -994,3 +994,160 @@ Total: 7.359700 ms (FindLiveObjects: 0.544600 ms CreateObjectMapping: 0.268100 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 385.321080 seconds.
+  path: Assets/Sprites/destroyer.png
+  artifactKey: Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/destroyer.png using Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5d59804fd5cffbcaa526dd2036127fc') in 0.059459 seconds
+  Import took 0.063255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.965241 seconds.
+  path: Assets/Sprites/destroyer.png
+  artifactKey: Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/destroyer.png using Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c7759043a050a596bb8ddba63ade4aa') in 0.017688 seconds
+  Import took 0.021715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.078825 seconds.
+  path: Assets/Prefab/DieEnemy.prefab
+  artifactKey: Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/DieEnemy.prefab using Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e137bc0b9594834259d3f8298cfaaa36') in 0.034972 seconds
+  Import took 0.038597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.887975 seconds.
+  path: Assets/Sprites/destroyer.png
+  artifactKey: Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/destroyer.png using Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04986714899e374f09ef27547da5e4d4') in 0.013636 seconds
+  Import took 0.017357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.459979 seconds.
+  path: Assets/Sprites/destroyer.png
+  artifactKey: Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/destroyer.png using Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11cdf60dd1a64e16999ab3ba86e21d9c') in 0.012924 seconds
+  Import took 0.017459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.873329 seconds.
+  path: Assets/Sprites/destroyer.png
+  artifactKey: Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/destroyer.png using Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1be3ae1bf5e2e92b49bf8c9e9a584d21') in 0.014207 seconds
+  Import took 0.017680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002326 seconds.
+  path: Assets/Sprites/destroyer.png
+  artifactKey: Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/destroyer.png using Guid(bdb1bf26f9c5c0746a1e1e2bbb0b215f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1be3ae1bf5e2e92b49bf8c9e9a584d21') in 0.014756 seconds
+  Import took 0.018108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.192234 seconds.
+  path: Assets/Prefab/DieEnemy.prefab
+  artifactKey: Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/DieEnemy.prefab using Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a733ed88a808c17fcf86db520cd011e') in 0.011589 seconds
+  Import took 0.015133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.008382 seconds.
+  path: Assets/Prefab/DieEnemy.prefab
+  artifactKey: Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/DieEnemy.prefab using Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29cf98b0ce8cd575120bb254c64ca055') in 0.012068 seconds
+  Import took 0.016349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.628912 seconds.
+  path: Assets/Prefab/DieEnemy.prefab
+  artifactKey: Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/DieEnemy.prefab using Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0c7605f877eafc4b6c0f5c3d0a7924a') in 0.009483 seconds
+  Import took 0.013006 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.785368 seconds.
+  path: Assets/Prefab/DieEnemy.prefab
+  artifactKey: Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/DieEnemy.prefab using Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4997a1066e3a78fe5cca5b1fdb25a4fc') in 0.009640 seconds
+  Import took 0.012970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.616531 seconds.
+  path: Assets/Prefab/DieEnemy.prefab
+  artifactKey: Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/DieEnemy.prefab using Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52a775585f5a0b7408149744ef655495') in 0.009544 seconds
+  Import took 0.012954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.428917 seconds.
+  path: Assets/Prefab/DieEnemy.prefab
+  artifactKey: Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/DieEnemy.prefab using Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58dc42b04e4ccabf1ee7c6a0d5582187') in 0.009534 seconds
+  Import took 0.013521 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000730 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.944 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1952 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.1 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2530.
+Total: 3.929100 ms (FindLiveObjects: 0.459900 ms CreateObjectMapping: 0.220900 ms MarkObjects: 3.055100 ms  DeleteObjects: 0.191200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000717 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.045 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1952 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.1 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2533.
+Total: 1.921800 ms (FindLiveObjects: 0.216900 ms CreateObjectMapping: 0.077200 ms MarkObjects: 1.532700 ms  DeleteObjects: 0.094100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
