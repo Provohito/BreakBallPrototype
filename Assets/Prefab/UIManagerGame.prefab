@@ -43,6 +43,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5832c7bd309eae49b6cb07bf408966a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerSkins:
+  - {fileID: 21300000, guid: 159f3993b7954fa42892826376fd1fc8, type: 3}
+  - {fileID: 21300000, guid: 01a8275ebe89877488bccabbe9a0adc2, type: 3}
+  - {fileID: 21300000, guid: 952f72998e147e442b92781a20a481e2, type: 3}
+  - {fileID: 21300000, guid: 0645308388e338a428fa49a5c05f4107, type: 3}
+  - {fileID: 21300000, guid: d1b658e27648c404c9d562902c3a2b5e, type: 3}
+  - {fileID: 21300000, guid: 91fdeea4e58d1cb46b13eb871b65e8c9, type: 3}
+  - {fileID: 21300000, guid: 3b2cf2e69bf1d4549aa28ff2d95faec2, type: 3}
+  - {fileID: 21300000, guid: 4782382ef38ef0e45819e23ee922abcf, type: 3}
+  - {fileID: 21300000, guid: 0592417b13f90db4eb912b2955610dad, type: 3}
+  - {fileID: 21300000, guid: a84a9e929b26d414fb9c8ed40e4d584d, type: 3}
+  - {fileID: 21300000, guid: 41dc8100f0f0da642a22a5bc726e5f41, type: 3}
+  - {fileID: 21300000, guid: 5fbf62794d7a83b458d9e7b769b62f6b, type: 3}
+  - {fileID: 21300000, guid: 238f41ae890df9047a983441e9601b61, type: 3}
+  - {fileID: 21300000, guid: 07f7cd4d6feee4b4082b4e2a0e93e364, type: 3}
+  - {fileID: 21300000, guid: 1bdfddf25b47fa446a2953935e6803eb, type: 3}
+  - {fileID: 21300000, guid: 4e7b04a158bc030449e0192ce8db18d6, type: 3}
+  - {fileID: 21300000, guid: cd918dbaa23d33d46a55f94e755a2e5b, type: 3}
+  - {fileID: 21300000, guid: 89d499f1aaa25fa4c8ff1dbd9ce6d6a5, type: 3}
+  - {fileID: 21300000, guid: 88f7ba75c4b1d9b49a2bb521e7b31f67, type: 3}
+  - {fileID: 21300000, guid: af02185715c7fa842bc854760a037581, type: 3}
+  - {fileID: 21300000, guid: 9b09a4276e313af44802343b4df0c673, type: 3}
+  - {fileID: 21300000, guid: 3fd123d75aceeb84ba60a77d8df0e8da, type: 3}
+  - {fileID: 21300000, guid: b3ba13fda933289498266778f3bc6676, type: 3}
+  - {fileID: 21300000, guid: 5a50ff631d89af248a2955293a99f607, type: 3}
+  _GM: {fileID: 0}
   _pausePanel: {fileID: 0}
   _gamePanel: {fileID: 0}
   _defenceBtnPrefab: {fileID: 2751427604744460715, guid: 33760d7389f46d44396b2bd786968139, type: 3}
@@ -50,6 +76,8 @@ MonoBehaviour:
   _consentrationPanel: {fileID: 0}
   _endGamePanel: {fileID: 0}
   _scoreText: {fileID: 0}
+  _score: {fileID: 0}
+  _timer: {fileID: 0}
   timerImage:
   - {fileID: 0}
   - {fileID: 0}

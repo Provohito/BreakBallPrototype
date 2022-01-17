@@ -59,19 +59,19 @@ public class GameManager : MonoBehaviour
         {
            
 
-            for (int i = 0; i < _particleEffectsConteiners[0].transform.GetChildCount(); i++)
+            for (int i = 0; i < _particleEffectsConteiners[0].transform.childCount; i++)
             {
                 int k = Random.Range(2, 4);
                 _particleEffectsConteiners[0].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[k]);
             }
-            for (int i = 0; i < _particleEffectsConteiners[1].transform.GetChildCount(); i++)
+            for (int i = 0; i < _particleEffectsConteiners[1].transform.childCount; i++)
             {
                 _particleEffectsConteiners[1].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[1]);
             }
         }
         else
         {
-            for (int i = 0; i < _particleEffectsConteiners[0].transform.GetChildCount(); i++)
+            for (int i = 0; i < _particleEffectsConteiners[0].transform.childCount; i++)
             {
                 _particleEffectsConteiners[0].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[0]);
             }
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Запуск нового уровня
+    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     public void NextLevel()
     {
         trix = Random.Range(1, 4);

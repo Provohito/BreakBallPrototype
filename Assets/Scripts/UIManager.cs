@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -17,18 +18,21 @@ public class UIManager : MonoBehaviour
     private GameObject _TableSkins;
     private bool _pause = false;
 
-    private int _countAllSkins = 20;
+    private int _countAllSkins = 24;
     [SerializeField]
     private GameObject _parentSellsToSkins;
 
-    private int _currentCountSkins;
+    private int _currentCountSkins = 23;
     private int _selectedSkin;
 
     [SerializeField]
     private TMP_Text _score;
+    private GameObject _player;
 
     private void Start()
     {
+        Time.timeScale = 1;
+        _player = GameObject.Find("Player");
         if (PlayerPrefs.HasKey("Score") == true)
         {
             _score.text = PlayerPrefs.GetInt("Score", 0).ToString();
@@ -37,16 +41,12 @@ public class UIManager : MonoBehaviour
         if (PlayerPrefs.HasKey("SelectedSkin") == true)
         {
             _selectedSkin = PlayerPrefs.GetInt("SelectedSkin");
+            _player.GetComponent<SpriteRenderer>().sprite = _playerSkins[_selectedSkin];
         }
         else
             _selectedSkin = 1;
 
-        if (PlayerPrefs.HasKey("CurrentCountSkins") == true)
-        {
-            _currentCountSkins =  PlayerPrefs.GetInt("CurrentCountSkins");
-        }
-        else
-            _currentCountSkins = 3;
+        
         //PlayerPrefs.SetInt("CurrentCountSkins", 3);       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Важно, сколько скинов открыли !!!!!!!!!!!!!!!!!!!!!!!!!!!!
         CreateSellsToSkins(_selectedSkin);
     }
@@ -55,9 +55,9 @@ public class UIManager : MonoBehaviour
     {      
         for (int i = 0; i < _currentCountSkins; i++)
         {
-            GameObject prefab = Instantiate(_defaultPrefabToSkin);
+            GameObject prefab = Instantiate(_defaultPrefabToSkin, new Vector3(1,1,0), Quaternion.identity);
             
-            prefab.transform.SetParent(_parentSellsToSkins.transform);
+            prefab.transform.SetParent(_parentSellsToSkins.transform, false);
             prefab.transform.localScale = new Vector3(1, 1, 1);
             prefab.GetComponent<BtnStateSprite>().Skin = _Skins[i];
             prefab.GetComponent<BtnStateSprite>().PlayerSkin = _playerSkins[i];
@@ -90,7 +90,8 @@ public class UIManager : MonoBehaviour
             current.GetComponent<BtnStateSprite>().ActiveSkin = true;
             _parentSellsToSkins.transform.GetChild(_selectedSkin).GetComponent<BtnStateSprite>().ActiveSkin = false;
             _selectedSkin = current.GetComponent<BtnStateSprite>().ID;
-            PlayerPrefs.SetInt("SelectedSkin", _selectedSkin);
+            PlayerPrefs.SetInt("SelectedSkin", _selectedSkin); 
+            _player.GetComponent<SpriteRenderer>().sprite = _playerSkins[_selectedSkin];
         }
         
     }
@@ -120,7 +121,6 @@ public class UIManager : MonoBehaviour
 
     public void TakeLevel(int sceneIndex)
     {
-        GameObject sceneManager = GameObject.FindGameObjectWithTag("SceneManager");
-        sceneManager.GetComponent<ChangeScene>().ChooseScene(sceneIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

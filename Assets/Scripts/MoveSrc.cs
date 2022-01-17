@@ -18,10 +18,8 @@ public class MoveSrc : MonoBehaviour
         _rb2D = GetComponent<Rigidbody2D>();
     }
 
-
     private void SetYPos()
     {
-
         _rb2D.MovePosition(new Vector2(_rb2D.position.x, positionY));
     }
 

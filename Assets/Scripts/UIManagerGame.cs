@@ -106,8 +106,10 @@ public class UIManagerGame : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            GameObject prefab = Instantiate(_defenceBtnPrefab);
-            prefab.transform.SetParent(_parentDefencePrefab);
+            GameObject prefab = Instantiate(_defenceBtnPrefab,new Vector3(1,1,0), Quaternion.identity);
+            
+            prefab.transform.SetParent(_parentDefencePrefab,false);
+            prefab.transform.localScale = new Vector3(1, 1, 1);
             prefab.transform.GetChild(0).GetComponent<Image>().color = colors[i];
         }
         
@@ -189,7 +191,7 @@ public class UIManagerGame : MonoBehaviour
         if((int)score > PlayerPrefs.GetInt("Score"))
             PlayerPrefs.SetInt("Score", (int)score);
 
-        GameObject.Find("SceneManager").GetComponent<ChangeScene>().ChooseScene(1);
+        GameObject.Find("SceneManager").GetComponent<ChangeScene>().ChooseScene(0);
     }
 
 }

@@ -15,7 +15,7 @@ public class BtnSendColor : MonoBehaviour
     }
     public void SendColor()
     {
-        if (_defenceConteiner.transform.GetChildCount() == 1)
+        if (_defenceConteiner.transform.childCount == 1)
         {
             _ui.GetComponent<UIManagerGame>().GoGame();
         }

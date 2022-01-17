@@ -12,10 +12,11 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
+       
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
         if (collision.transform.tag == "TakeColor")
         {
             collision.gameObject.SetActive(false);
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.transform.tag == "Die")
         {
+            Debug.Log("Die");
             _ui.EndGameStart();
         }
     }
@@ -36,6 +38,13 @@ public class PlayerController : MonoBehaviour
             _gameManager.GetComponent<GameManager>().StartConsentration();
             Destroy(collision.gameObject);
         }
+    }
+
+    public void PlayEffect(Color color)
+    {
+        ParticleSystem.MainModule main = transform.GetChild(2).GetComponent<ParticleSystem>().main;
+        main.startColor = color;
+        transform.GetChild(2).GetComponent<ParticleSystem>().Play();
     }
 
     public void ActiveDefence(Color color)
