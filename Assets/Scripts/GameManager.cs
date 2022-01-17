@@ -36,7 +36,9 @@ public class GameManager : MonoBehaviour
         _numberLevel = 1;
         GenerateContainer();
         GenerateDestroyer();
-        
+        CreateConsentrationPoint();
+
+
     }
 
     private void Update()

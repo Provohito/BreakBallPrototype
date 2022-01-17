@@ -134,13 +134,13 @@ public class UIManagerGame : MonoBehaviour
     private float time = 4f;
     public void Consentration()
     {
-        _consentrationPanel.SetActive(true);
-        _timer.SetActive(true);
         for (int i = 0; i < _countDefenceBtn; i++)
         {
             _parentDefencePrefab.GetChild(i).GetComponent<Button>().interactable = true;
         }
         Shuffle(_countDefenceBtn);
+        _consentrationPanel.SetActive(true);
+        _timer.SetActive(true);
         StartTimer();
         
     }
