@@ -54,7 +54,6 @@ public class UIManagerGame : MonoBehaviour
     private void UpdateScore()
     {
         _score.text = score.ToString();
-        Debug.Log(score + " !!!! " + _previousScore);
         if (score - _previousScore == 15)
         {
             StopAllCoroutines();
@@ -97,8 +96,10 @@ public class UIManagerGame : MonoBehaviour
     public void PressInitDefenceBtn(Color[] colors, int count)
     {
         countDefence = count;
-        InitDefenceBtn(colors, count);
         _countDefenceBtn = count;
+        InitDefenceBtn(colors, count);
+        
+        
     }
 
 
@@ -112,12 +113,12 @@ public class UIManagerGame : MonoBehaviour
             prefab.transform.localScale = new Vector3(1, 1, 1);
             prefab.transform.GetChild(0).GetComponent<Image>().color = colors[i];
         }
-        
+        Shuffle(_countDefenceBtn);
     }
 
     private void Shuffle(int block)
     {
-        
+        Debug.Log("block" + block);
         for (int i = 0; i < block; i++)
         {
             Debug.Log(_parentDefencePrefab.name);
@@ -134,12 +135,12 @@ public class UIManagerGame : MonoBehaviour
     private float time = 4f;
     public void Consentration()
     {
-        // Сделать пулл объектов и перемешать их
+        Debug.Log(_countDefenceBtn);
         for (int i = 0; i < _countDefenceBtn; i++)
         {
             _parentDefencePrefab.GetChild(i).GetComponent<Button>().interactable = true;
         }
-        Shuffle(_countDefenceBtn);
+        
         _consentrationPanel.SetActive(true);
         _timer.SetActive(true);
         StartTimer();
@@ -195,4 +196,5 @@ public class UIManagerGame : MonoBehaviour
         GameObject.Find("SceneManager").GetComponent<ChangeScene>().ChooseScene(0);
     }
 
+    
 }

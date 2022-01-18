@@ -32,8 +32,13 @@ public class PlayerController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        GameObject _defPen = GameObject.Find("DefencePanel");
         if (collision.transform.tag == "Consentraition")
         {
+            if (_defPen.transform.childCount == 0)
+            {
+                _ui.EndGameStart();
+            }
             this.gameObject.GetComponent<PlayerMove>().enabled = false;
             transform.GetChild(4).GetComponent<ParticleSystem>().Play();
             this.gameObject.transform.position = collision.transform.position;
@@ -54,12 +59,11 @@ public class PlayerController : MonoBehaviour
        
         for (int i = 0; i < _defenders.Length; i++)
         {
-            Debug.Log(_defenders[i].activeInHierarchy);
             if (_defenders[i].activeInHierarchy == false)
-            {
-                transform.GetChild(6).GetComponent<ParticleSystem>().Play();
+            { 
                 _defenders[i].gameObject.SetActive(true);
                 _defenders[i].GetComponent<SpriteRenderer>().color = color;
+                _defenders[i].transform.GetChild(0).GetComponent<ParticleSystem>().Play();
                 break;
             }
         }

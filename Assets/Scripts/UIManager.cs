@@ -79,6 +79,7 @@ public class UIManager : MonoBehaviour
 
     public void SelectSkin(GameObject current)
     {
+        
         _parentSellsToSkins = GameObject.Find("Content");
         if (current.GetComponent<BtnStateSprite>().StateSkin == false)
         {
@@ -90,7 +91,8 @@ public class UIManager : MonoBehaviour
             current.GetComponent<BtnStateSprite>().ActiveSkin = true;
             _parentSellsToSkins.transform.GetChild(_selectedSkin).GetComponent<BtnStateSprite>().ActiveSkin = false;
             _selectedSkin = current.GetComponent<BtnStateSprite>().ID;
-            PlayerPrefs.SetInt("SelectedSkin", _selectedSkin); 
+            PlayerPrefs.SetInt("SelectedSkin", _selectedSkin);
+            _player = GameObject.Find("Player");
             _player.GetComponent<SpriteRenderer>().sprite = _playerSkins[_selectedSkin];
         }
         
@@ -122,5 +124,13 @@ public class UIManager : MonoBehaviour
     public void TakeLevel(int sceneIndex)
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private bool _stateMusik = false;
+    public void OnOffMusic()
+    {
+        _stateMusik = !_stateMusik;
+        GameObject _sm = GameObject.Find("SoundManager");
+        _sm.GetComponent<AudioSource>().mute = _stateMusik;
     }
 }
