@@ -134,6 +134,7 @@ public class UIManagerGame : MonoBehaviour
     private float time = 4f;
     public void Consentration()
     {
+        // Сделать пулл объектов и перемешать их
         for (int i = 0; i < _countDefenceBtn; i++)
         {
             _parentDefencePrefab.GetChild(i).GetComponent<Button>().interactable = true;

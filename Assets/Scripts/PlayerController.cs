@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
             _gameManager.GetComponent<GameManager>().GenerateShild();
+            transform.GetChild(5).GetComponent<ParticleSystem>().Play();
         }
         if (collision.transform.tag == "Die")
         {
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
         if (collision.transform.tag == "Consentraition")
         {
             this.gameObject.GetComponent<PlayerMove>().enabled = false;
+            transform.GetChild(4).GetComponent<ParticleSystem>().Play();
             this.gameObject.transform.position = collision.transform.position;
             _gameManager.GetComponent<GameManager>().StartConsentration();
             Destroy(collision.gameObject);
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log(_defenders[i].activeInHierarchy);
             if (_defenders[i].activeInHierarchy == false)
             {
+                transform.GetChild(6).GetComponent<ParticleSystem>().Play();
                 _defenders[i].gameObject.SetActive(true);
                 _defenders[i].GetComponent<SpriteRenderer>().color = color;
                 break;

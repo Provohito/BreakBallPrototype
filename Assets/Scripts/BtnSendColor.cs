@@ -7,6 +7,7 @@ public class BtnSendColor : MonoBehaviour
 {
     private GameObject _ui;
     private GameObject _defenceConteiner;
+    private GameObject _effectDestroy;
 
     private void Start()
     {
@@ -20,6 +21,9 @@ public class BtnSendColor : MonoBehaviour
             _ui.GetComponent<UIManagerGame>().GoGame();
         }
         _ui.GetComponent<UIManagerGame>().PressBtnDefence(this.transform.GetChild(0).GetComponent<Image>().color);
+        _effectDestroy = GameObject.Find("EffectDestroyDefence");
+        _effectDestroy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        _effectDestroy.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
         Destroy(this.gameObject);
     }
 }
