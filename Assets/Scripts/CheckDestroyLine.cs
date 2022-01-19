@@ -17,9 +17,10 @@ public class CheckDestroyLine : MonoBehaviour
     {
         if (collision.tag == "defence")
         {
-            _gm.GenerateDestroyPoint();
+            
             if (collision.gameObject.GetComponent<SpriteRenderer>().color == this.gameObject.GetComponent<SpriteRenderer>().color)
             {
+                _player.GetComponent<PlayerController>().PlaySoundDestroyWall();
                 collision.gameObject.SetActive(false);
                 _player.GetComponent<PlayerController>().PlayEffect(this.gameObject.GetComponent<SpriteRenderer>().color);
 
@@ -30,9 +31,8 @@ public class CheckDestroyLine : MonoBehaviour
                 _ui.EndGameStart();
             }
         }
-        else
+        else if(collision.tag == "Player")
         {
-            Debug.Log("Die");
             _ui.EndGameStart();
         }
 

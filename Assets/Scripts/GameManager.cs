@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Sprite[] _particleSkins;
     private bool _cosmos;
+
+    private int _speedLevel;
     
 
     [SerializeField] private GameObject _player;
@@ -37,12 +39,13 @@ public class GameManager : MonoBehaviour
         GenerateContainer();
         GenerateDestroyer();
         CreateConsentrationPoint();
-
+        GenerateDestroyPoint();
 
     }
 
     private void Update()
     {
+        
         if (_numberLevel == 3)
         {
             SwapParticles();
@@ -88,6 +91,16 @@ public class GameManager : MonoBehaviour
         _numberLevel++;
         GenerateContainer();
         CreateConsentrationPoint();
+        _player.GetComponent<PlayerMove>().Speed += 0.5f;
+        StartCoroutine(ReloadDestroyPoint());
+    }
+
+    private IEnumerator ReloadDestroyPoint()
+    {
+        
+        yield return new WaitForSeconds(5);
+        GenerateDestroyPoint();
+        StartCoroutine(ReloadDestroyPoint());
     }
     int trix = 1;
     private void CreateEnemies()

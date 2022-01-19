@@ -47,6 +47,7 @@ public class UIManagerGame : MonoBehaviour
             UpdateScore();
             _time = 0;
         }
+        
     }
 
     

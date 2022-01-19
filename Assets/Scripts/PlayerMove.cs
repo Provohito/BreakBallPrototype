@@ -7,7 +7,8 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D _rb2D;
 
     private float _moveX = 0f;
-    [SerializeField] private float _speed = 7f;
+    private float _speed = 2f;
+    public float Speed { get {return _speed ;} set {_speed = value; } }
 
     [SerializeField] private GameObject _movePoint;
 
@@ -19,8 +20,8 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float positionX = _rb2D.position.x + _moveX * _speed * Time.fixedDeltaTime;
-        float positionY = _rb2D.position.y + 2f * Time.fixedDeltaTime;
+        float positionX = _rb2D.position.x + _moveX * 7f * Time.fixedDeltaTime;
+        float positionY = _rb2D.position.y + _speed * Time.fixedDeltaTime;
 
         _movePoint.GetComponent<MoveSrc>().PosY = positionY;
         _rb2D.MovePosition(new Vector2(positionX, positionY));
