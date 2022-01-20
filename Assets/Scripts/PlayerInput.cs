@@ -29,12 +29,12 @@ public class PlayerInput : MonoBehaviour
 
             switch (touch.phase)// Какое было касание
             {
-                /*case TouchPhase.Began:
+                case TouchPhase.Began:
                     _startPosition = touch.position;
                     _direction = 0f;
-                    break;*/
+                    break;
                 case TouchPhase.Moved:
-                    _direction = touch.position.x > _startPosition.x ? 1f : -1f;
+                    _direction = touch.position.x > _startPosition.x ? 0.4f : -0.4f;
                     break;
                 /* case TouchPhase.Stationary:
                      break;

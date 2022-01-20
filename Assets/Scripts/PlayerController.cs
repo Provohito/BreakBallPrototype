@@ -59,9 +59,10 @@ public class PlayerController : MonoBehaviour
 
     public void MusikCheck(GameObject currentGameobject)
     {
-        Camera.main.transform.GetChild(1).GetComponent<AudioSource>().mute = isMusikOn;
+        GameObject _musik = GameObject.Find("DefaultMusik");
+        _musik.transform.GetChild(0).GetComponent<AudioSource>().mute = isMusikOn;
         isMusikOn = !isMusikOn;
-        //currentGameobject.GetComponent<SpriteRenderer>().sprite = _audioSprites[(int)isMusikOn]
+        
     }
 
     public void SwapSprite(int index)

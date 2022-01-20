@@ -20,6 +20,16 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
+
+        if (_rb2D.position.x > Screen.width/2)
+        {
+            _rb2D.position = new Vector3(2.42f, _rb2D.position.y);
+        }
+        else if (_rb2D.position.x < -Screen.width/2)
+        {
+            _rb2D.position = new Vector3(-2.42f, _rb2D.position.y);
+        }
         float positionX = _rb2D.position.x + _moveX * 7f * Time.fixedDeltaTime;
         float positionY = _rb2D.position.y + _speed * Time.fixedDeltaTime;
 
