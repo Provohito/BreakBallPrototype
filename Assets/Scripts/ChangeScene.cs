@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
@@ -24,11 +25,21 @@ public class ChangeScene : MonoBehaviour
     private GameObject _ui;
     [SerializeField]
     private ParticleSystem _startEffect;
+    [SerializeField]
+    private Animator _hideAnimatorSettings;
 
-    public void PressGameStart()
+    public void PressGameStart(GameObject currentObject)
     {
+        currentObject.GetComponent<Button>().enabled = false;
         _startEffect.Play();
+        HideSettings();
+        
         StartCoroutine(EffectStart());
+    }
+
+    private void HideSettings()
+    {
+        _hideAnimatorSettings.SetBool("isHide", true);
     }
 
     private IEnumerator EffectStart()

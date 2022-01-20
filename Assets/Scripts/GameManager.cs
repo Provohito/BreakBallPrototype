@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         GenerateContainer();
         GenerateDestroyer();
         CreateConsentrationPoint();
-        GenerateDestroyPoint();
+        
 
     }
 
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // ������ ������ ������
+    
     public void NextLevel()
     {
         trix = Random.Range(1, 4);
@@ -92,13 +92,17 @@ public class GameManager : MonoBehaviour
         GenerateContainer();
         CreateConsentrationPoint();
         _player.GetComponent<PlayerMove>().Speed += 0.5f;
-        StartCoroutine(ReloadDestroyPoint());
+        if (_numberLevel == 3)
+        {
+            StartCoroutine(ReloadDestroyPoint());
+        }
+        
     }
 
     private IEnumerator ReloadDestroyPoint()
     {
         
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
         GenerateDestroyPoint();
         StartCoroutine(ReloadDestroyPoint());
     }
@@ -179,6 +183,7 @@ public class GameManager : MonoBehaviour
         {
             prefab = Instantiate(_destroyPrefab);
             prefab.gameObject.transform.SetParent(_destroyContainer);
+            prefab.transform.position = new Vector3(-6,1,0);
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class PlayerController : MonoBehaviour
 
     private bool isAudioOn = false;
     private bool isMusikOn = true;
+
+    [SerializeField]
+    private Sprite[] _audioSprites;
 
     private void Start()
     {
@@ -57,6 +61,32 @@ public class PlayerController : MonoBehaviour
     {
         Camera.main.transform.GetChild(1).GetComponent<AudioSource>().mute = isMusikOn;
         isMusikOn = !isMusikOn;
+        //currentGameobject.GetComponent<SpriteRenderer>().sprite = _audioSprites[(int)isMusikOn]
+    }
+
+    public void SwapSprite(int index)
+    {
+        GameObject sound = GameObject.Find("Sound");
+        GameObject musik = GameObject.Find("Musik");
+        if (index == 0)
+        {
+
+            if (sound.GetComponent<Image>().sprite.name == "Sound")
+            {
+                sound.GetComponent<Image>().sprite = _audioSprites[1];
+            }
+            else
+                sound.GetComponent<Image>().sprite = _audioSprites[0];
+        }
+        else
+        {
+            if (musik.GetComponent<Image>().sprite.name == "Musik")
+            {
+                musik.GetComponent<Image>().sprite = _audioSprites[3];
+            }
+            else
+                musik.GetComponent<Image>().sprite = _audioSprites[2];
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

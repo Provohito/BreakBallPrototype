@@ -55,7 +55,7 @@ public class UIManagerGame : MonoBehaviour
     private void UpdateScore()
     {
         _score.text = score.ToString();
-        if (score - _previousScore == 15)
+        if (score - _previousScore == 10)
         {
             StopAllCoroutines();
             _GM.NextLevel();
