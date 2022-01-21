@@ -11,10 +11,14 @@ public class PlayerMove : MonoBehaviour
     public float Speed { get {return _speed ;} set {_speed = value; } }
 
     [SerializeField] private GameObject _movePoint;
+    private Vector3 min;
+    private Vector3 max;
 
     private void Awake()
     {
         _rb2D = GetComponent<Rigidbody2D>();
+        min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+        max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
     }
 
 
@@ -22,13 +26,13 @@ public class PlayerMove : MonoBehaviour
     {
         
 
-        if (_rb2D.position.x > Screen.width/2)
+        if (_rb2D.position.x > max.x)
         {
-            _rb2D.position = new Vector3(2.42f, _rb2D.position.y);
+            _rb2D.position = new Vector3(max.x-0.01f, _rb2D.position.y);
         }
-        else if (_rb2D.position.x < -Screen.width/2)
+        else if (_rb2D.position.x < min.x)
         {
-            _rb2D.position = new Vector3(-2.42f, _rb2D.position.y);
+            _rb2D.position = new Vector3(min.x+0.05f, _rb2D.position.y);
         }
         float positionX = _rb2D.position.x + _moveX * 7f * Time.fixedDeltaTime;
         float positionY = _rb2D.position.y + _speed * Time.fixedDeltaTime;

@@ -29269,18 +29269,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3116632554882799160, guid: b70dd2d6e5d7f6545882937b72852a26, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3116632554882799160, guid: b70dd2d6e5d7f6545882937b72852a26, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3116632554882799160, guid: b70dd2d6e5d7f6545882937b72852a26, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3116632554882799160, guid: b70dd2d6e5d7f6545882937b72852a26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -34878,37 +34866,11 @@ Transform:
   m_Father: {fileID: 464097265}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1453381212 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5284571614867130564, guid: b70dd2d6e5d7f6545882937b72852a26, type: 3}
-  m_PrefabInstance: {fileID: 1135354586}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1453381213 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3116632554882799160, guid: b70dd2d6e5d7f6545882937b72852a26, type: 3}
   m_PrefabInstance: {fileID: 1135354586}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &1453381214
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453381212}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!1 &1479753486
 GameObject:
   m_ObjectHideFlags: 0
@@ -65324,7 +65286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1774229083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80685,7 +80647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8321852, y: 0}
   m_AnchorMax: {x: 1, y: 0.35589597}
-  m_AnchoredPosition: {x: -26.03418, y: 106.519455}
+  m_AnchoredPosition: {x: -26.03418, y: 106.51938}
   m_SizeDelta: {x: -47.5585, y: -215.6004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047922788
