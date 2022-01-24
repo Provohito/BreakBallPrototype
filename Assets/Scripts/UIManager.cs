@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour
 
         
         //PlayerPrefs.SetInt("CurrentCountSkins", 3);       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!¬ажно, сколько скинов открыли !!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        CreateSellsToSkins(_selectedSkin);
+        //CreateSellsToSkins(_selectedSkin);
     }
 
     private void CreateSellsToSkins(int selectedSkin) // —оздание €чейки под скин
@@ -84,6 +84,10 @@ public class UIManager : MonoBehaviour
         if (current.GetComponent<BtnStateSprite>().StateSkin == false)
         {
             Debug.Log("return");
+            return;
+        }
+        if (current.GetComponent<BtnStateSprite>().ActiveSkin == true)
+        {
             return;
         }
         else

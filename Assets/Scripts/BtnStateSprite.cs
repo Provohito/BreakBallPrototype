@@ -28,7 +28,7 @@ public class BtnStateSprite : MonoBehaviour
     }
 
     private bool _activeSkin;
-    public bool ActiveSkin { set { _activeSkin = value; SelectedSkin(); }}
+    public bool ActiveSkin { set { _activeSkin = value; SelectedSkin(); } get {return _activeSkin; } }
 
     [SerializeField]
     private GameObject[] _stateSkins;
@@ -51,7 +51,7 @@ public class BtnStateSprite : MonoBehaviour
     
     private void SetSkin()
     {
-        GetComponent<Image>().sprite = _skin;
+        //GetComponent<Image>().sprite = _skin;
         _stateSkins[0].SetActive(false);
     }
 
