@@ -69,17 +69,16 @@ public class UIManagerGame : MonoBehaviour
 
         switch (score)
         {
-            case 15:
-                Debug.Log("1");
+            case 30:
                 _unSystem.Save(_pointSkins[0]);
                 break;
-            case 20:
+            case 50:
                 _unSystem.Save(_pointSkins[1]);
                 break;
-            case 25:
+            case 70:
                 _unSystem.Save(_pointSkins[2]);
                 break;
-            case 30:
+            case 90:
                 _unSystem.Save(_pointSkins[3]);
                 break;
             case 110:
