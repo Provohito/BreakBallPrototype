@@ -38,6 +38,11 @@ public class UIManagerGame : MonoBehaviour
     private float _previousScore = 5;
     private float _time;
 
+    [SerializeField]
+    private Sprite[] _pointSkins;
+    [SerializeField]
+    private UnlockSkinsSystem _unSystem;
+
     private void Update()
     {
         _time += Time.deltaTime;
@@ -60,6 +65,32 @@ public class UIManagerGame : MonoBehaviour
             StopAllCoroutines();
             _GM.NextLevel();
             _previousScore = score;
+        }
+
+        switch (score)
+        {
+            case 15:
+                Debug.Log("1");
+                _unSystem.Save(_pointSkins[0]);
+                break;
+            case 20:
+                _unSystem.Save(_pointSkins[1]);
+                break;
+            case 25:
+                _unSystem.Save(_pointSkins[2]);
+                break;
+            case 30:
+                _unSystem.Save(_pointSkins[3]);
+                break;
+            case 110:
+                _unSystem.Save(_pointSkins[4]);
+                break;
+            case 130:
+                _unSystem.Save(_pointSkins[5]);
+                break;
+            case 150:
+                _unSystem.Save(_pointSkins[6]);
+                break;
         }
     }
 

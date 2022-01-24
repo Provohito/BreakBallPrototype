@@ -54,8 +54,16 @@ public class UnlockSkinsSystem : MonoBehaviour
         }
     }
 
-    private void Save()
+    public void Save(Sprite skin)
     {
+        for (int i = 0; i < info.Length; i++)
+        {
+            if (_parentSellsToSkins.transform.GetChild(i).transform.GetChild(2).GetComponent<Image>().sprite == skin)
+            {
+                StockCheck[i] = true;
+                info[i].inStock = true;
+            }  
+        }
         PlayerPrefsX.SetBoolArray("StockArray", StockCheck);
     }
     /*
@@ -118,29 +126,7 @@ public class UnlockSkinsSystem : MonoBehaviour
         }
     }
 
-    public void BuyButtonAction()
-    {
-        if (buyBttn.interactable && !info[index].inStock)
-        {
-            if (coins > int.Parse(priceText.text))
-            {
-                coins -= int.Parse(priceText.text);
-                coinsText.text = coins.ToString();
-                PlayerPrefs.SetInt("coins", coins);
-                StockCheck[index] = true;
-                info[index].inStock = true;
-                priceText.text = "CHOOSE";
-                Save();
-            }
-        }
-
-        if (buyBttn.interactable && !info[index].isChosen && info[index].inStock)
-        {
-            PlayerPrefs.SetInt("chosenSkin", index);
-            buyBttn.interactable = false;
-            priceText.text = "CHOSEN";
-        }
-    }
+    
     */
 }
 
