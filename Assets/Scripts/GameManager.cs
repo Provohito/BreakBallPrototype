@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
         _numberLevel++;
         GenerateContainer();
         CreateConsentrationPoint();
-        _player.GetComponent<PlayerMove>().Speed += 0.5f;
+        _player.GetComponent<PlayerMove>().Speed += 0.1f;
         if (_numberLevel == 3)
         {
             StartCoroutine(ReloadDestroyPoint());
@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject prefab = Instantiate(_linePrefab);
             prefab.GetComponent<SpriteRenderer>().color = _outColor[i];
-            prefab.transform.position = new Vector3(_linePrefab.transform.position.x, _player.transform.position.y + i + 7, _linePrefab.transform.position.z);
+            prefab.transform.position = new Vector3(_linePrefab.transform.position.x, _player.transform.position.y + i + 12, _linePrefab.transform.position.z);
         }
         
     }
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
         
         GameObject mainColorPref;
         GameObject colorPref;
-        _colorsConteiner.transform.position = new Vector3(_colorsConteiner.transform.position.x, _player.transform.position.y + 3.12f, _colorsConteiner.transform.position.z);
+        _colorsConteiner.transform.position = new Vector3(_colorsConteiner.transform.position.x, _player.transform.position.y + 7.12f, _colorsConteiner.transform.position.z);
         mainColorPref = _colorsConteiner.transform.GetChild(trix - 1).gameObject;
         mainColorPref.SetActive(true);
         for (int i = 0; i < trix; i++)
@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
     private void CreateConsentrationPoint()
     {
         GameObject prefab = Instantiate(_consentrationPrefab);
-        prefab.transform.position = new Vector3(_consentrationPrefab.transform.position.x, _player.transform.position.y + 4.12f, _consentrationPrefab.transform.position.z);
+        prefab.transform.position = new Vector3(_consentrationPrefab.transform.position.x, _player.transform.position.y + 8.12f, _consentrationPrefab.transform.position.z);
 
     }
 
