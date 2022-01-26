@@ -33,6 +33,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject _player;
 
+    [SerializeField]
+    private Sprite[] _newSkinsActive;
+    [SerializeField]
+    private GameObject _newSkinPrefab;
+    [SerializeField]
+    private UnlockSkinsSystem _unSys;
+
     private void Start()
     {
         _numberLevel = 1;
@@ -104,9 +111,26 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitForSeconds(7);
         GenerateDestroyPoint();
+        int k = 27;
+        //Random.Range(1,100);
+        int i = Random.Range(0,15);
+        if (k == 27)
+        {
+            
+            _unSys.CheckSkin(_newSkinsActive[i]);
+            Debug.Log(_unSys.StateSkin);
+            if ( _unSys.StateSkin == true)
+            {
+                GameObject newskin = Instantiate(_newSkinPrefab);
+                newskin.transform.position = new Vector3(newskin.transform.position.x, _player.transform.position.y + 12, newskin.transform.position.z);
+                newskin.GetComponent<SpriteRenderer>().sprite = _newSkinsActive[i];
+
+            }
+        }
         StartCoroutine(ReloadDestroyPoint());
     }
     int trix = 1;
+
     private void CreateEnemies()
     {
         

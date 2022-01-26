@@ -66,6 +66,27 @@ public class UnlockSkinsSystem : MonoBehaviour
         }
         PlayerPrefsX.SetBoolArray("StockArray", StockCheck);
     }
+    private bool _stateSkin = false;
+    public bool StateSkin { get {return _stateSkin; } }
+
+    public void CheckSkin(Sprite skin)
+    {
+        for (int i = 0; i < info.Length; i++)
+        {
+            if (_parentSellsToSkins.transform.GetChild(i).transform.GetChild(2).GetComponent<Image>().sprite == skin)
+            {
+                if (_parentSellsToSkins.transform.GetChild(i).transform.GetChild(2).gameObject.activeInHierarchy == false)
+                {
+                    StockCheck[i] = true;
+                    info[i].inStock = true;
+                    _stateSkin = true;
+                }
+                else
+                    _stateSkin = false;
+            }
+        }
+
+    }
     /*
     public void ScrollRight()
     {
