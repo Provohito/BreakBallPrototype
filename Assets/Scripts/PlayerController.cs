@@ -19,9 +19,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Sprite[] _audioSprites;
 
+    private UnlockSkinsSystem _unSys;
+
     private void Start()
     {
-       
+        _unSys = GameObject.Find("SkinChanger").GetComponent<UnlockSkinsSystem>();
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -37,6 +39,11 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Die");
             _ui.EndGameStart();
+        }
+        if (collision.transform.tag == "skin")
+        {
+            _unSys.Save(collision.gameObject.GetComponent<SpriteRenderer>().sprite);
+            Destroy(collision.gameObject);
         }
     }
 

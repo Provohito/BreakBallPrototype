@@ -111,8 +111,7 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitForSeconds(7);
         GenerateDestroyPoint();
-        int k = 27;
-        //Random.Range(1,100);
+        int k = Random.Range(1, 100);
         int i = Random.Range(0,15);
         if (k == 27)
         {
