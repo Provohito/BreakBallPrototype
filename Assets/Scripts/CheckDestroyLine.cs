@@ -23,7 +23,7 @@ public class CheckDestroyLine : MonoBehaviour
                 _player.GetComponent<PlayerController>().PlaySoundDestroyWall();
                 collision.gameObject.SetActive(false);
                 _player.GetComponent<PlayerController>().PlayEffect(this.gameObject.GetComponent<SpriteRenderer>().color);
-
+                _ui.Score += 10;
                 Destroy(this.gameObject);
             }
             else

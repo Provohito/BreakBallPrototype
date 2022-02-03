@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioSource[] _audio;
 
+
     private bool isAudioOn = false;
     private bool isMusikOn = true;
 
@@ -39,11 +40,6 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Die");
             _ui.EndGameStart();
-        }
-        if (collision.transform.tag == "skin")
-        {
-            _unSys.Save(collision.gameObject.GetComponent<SpriteRenderer>().sprite);
-            Destroy(collision.gameObject);
         }
     }
 
@@ -102,6 +98,7 @@ public class PlayerController : MonoBehaviour
         GameObject _defPen = GameObject.Find("DefencePanel");
         if (collision.transform.tag == "Consentraition")
         {
+            
             _audio[0].Play();
             if (_defPen.transform.childCount == 0)
             {

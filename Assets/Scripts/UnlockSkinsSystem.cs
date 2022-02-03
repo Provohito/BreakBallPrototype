@@ -87,68 +87,6 @@ public class UnlockSkinsSystem : MonoBehaviour
         }
 
     }
-    /*
-    public void ScrollRight()
-    {
-        if (index < player.childCount)
-        {
-            index++;
-
-            if (info[index].inStock && info[index].isChosen)
-            {
-                priceText.text = "CHOSEN";
-                buyBttn.interactable = false;
-            }
-            else if (!info[index].inStock)
-            {
-                //priceText.text = info[index].cost.ToString();
-                buyBttn.interactable = true;
-            }
-            else if (info[index].inStock && !info[index].isChosen)
-            {
-                priceText.text = "CHOOSE";
-                buyBttn.interactable = true;
-            }
-
-            for (int i = 0; i < player.childCount; i++)
-                player.GetChild(i).gameObject.SetActive(false);
-            // Можно записать так: player.GetChild(index-1).gameObject.SetActive(false);
-
-            player.GetChild(index).gameObject.SetActive(true);
-        }
-    }
-
-    public void ScrollLeft()
-    {
-        if (index > 0)
-        {
-            index--;
-
-            if (info[index].inStock && info[index].isChosen)
-            {
-                priceText.text = "CHOSEN";
-                buyBttn.interactable = false;
-            }
-            else if (!info[index].inStock)
-            {
-                //priceText.text = info[index].cost.ToString();
-                buyBttn.interactable = true;
-            }
-            else if (info[index].inStock && !info[index].isChosen)
-            {
-                priceText.text = "CHOOSE";
-                buyBttn.interactable = true;
-            }
-
-            for (int i = 0; i < player.childCount; i++)
-                player.GetChild(i).gameObject.SetActive(false);
-
-            player.GetChild(index).gameObject.SetActive(true);
-        }
-    }
-
-    
-    */
 }
 
 

@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitForSeconds(7);
         GenerateDestroyPoint();
-        int k = Random.Range(1, 100);
+        int k = Random.Range(0, 100);
         int i = Random.Range(0,15);
         if (k == 27)
         {
@@ -123,6 +123,7 @@ public class GameManager : MonoBehaviour
                 GameObject newskin = Instantiate(_newSkinPrefab);
                 newskin.transform.position = new Vector3(newskin.transform.position.x, _player.transform.position.y + 12, newskin.transform.position.z);
                 newskin.GetComponent<SpriteRenderer>().sprite = _newSkinsActive[i];
+                _unSys.Save(_newSkinsActive[i]);
 
             }
         }

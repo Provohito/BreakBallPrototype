@@ -34,6 +34,7 @@ public class UIManagerGame : MonoBehaviour
     private TMP_Text _scoreText;
     [SerializeField]
     private TMP_Text _score;
+    public float Score { get {return score; } set {score = value; UpdateScore(); } }
     private float score = 1;
     private float _previousScore = 5;
     private float _time;
@@ -60,7 +61,9 @@ public class UIManagerGame : MonoBehaviour
     private void UpdateScore()
     {
         _score.text = score.ToString();
-        if (score - _previousScore == 10)
+        Debug.Log(score);
+        Debug.Log(_previousScore);
+        if (score - _previousScore >= 40)
         {
             StopAllCoroutines();
             _GM.NextLevel();
@@ -149,10 +152,8 @@ public class UIManagerGame : MonoBehaviour
 
     private void Shuffle(int block)
     {
-        Debug.Log("block" + block);
         for (int i = 0; i < block; i++)
         {
-            Debug.Log(_parentDefencePrefab.name);
             Color temp = _parentDefencePrefab.GetChild(i).GetChild(0).GetComponent<Image>().color;
             int r = Random.Range(0, block);
             _parentDefencePrefab.GetChild(i).GetChild(0).GetComponent<Image>().color = _parentDefencePrefab.GetChild(r).GetChild(0).GetComponent<Image>().color;
@@ -162,11 +163,12 @@ public class UIManagerGame : MonoBehaviour
 
     [SerializeField] private GameObject _timer;
     [SerializeField] private Image[] timerImage;
+    [SerializeField]
+    private GameObject _blackWindow;
     private float _timeLeft = 0f;
     private float time = 4f;
     public void Consentration()
     {
-        Debug.Log(_countDefenceBtn);
         for (int i = 0; i < _countDefenceBtn; i++)
         {
             _parentDefencePrefab.GetChild(i).GetComponent<Button>().interactable = true;
@@ -181,6 +183,7 @@ public class UIManagerGame : MonoBehaviour
     private void StartTimer()
     {
         _timeLeft = time;
+        _blackWindow.SetActive(true);
         StartCoroutine(Timer());
     }
 
@@ -208,12 +211,13 @@ public class UIManagerGame : MonoBehaviour
             timerImage[1].fillAmount = normalizedValue;
             yield return null;
         }
-
+        
         GoGame();
     }
 
     public void GoGame()
     {
+        _blackWindow.SetActive(false);
         _player.GetComponent<PlayerMove>().enabled = true;
         _consentrationPanel.SetActive(false);
         _timer.SetActive(false);
