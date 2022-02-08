@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
 
     }
 
+    [System.Obsolete]
     private void Update()
     {
         
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     private void SwapParticles()
     {
         if (_cosmos == true)
@@ -74,23 +76,34 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < _particleEffectsConteiners[0].transform.childCount; i++)
             {
                 int k = Random.Range(2, 4);
-                _particleEffectsConteiners[0].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[k]);
+                StartCoroutine(SetParticle(_particleEffectsConteiners[0], _particleSkins[k], i));
+                //_particleEffectsConteiners[0].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[k]);
             }
             for (int i = 0; i < _particleEffectsConteiners[1].transform.childCount; i++)
             {
-                _particleEffectsConteiners[1].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[1]);
+                StartCoroutine(SetParticle(_particleEffectsConteiners[1], _particleSkins[1], i));
+                //_particleEffectsConteiners[1].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[1]);
             }
         }
         else
         {
             for (int i = 0; i < _particleEffectsConteiners[0].transform.childCount; i++)
             {
-                _particleEffectsConteiners[0].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[0]);
+                StartCoroutine(SetParticle(_particleEffectsConteiners[0], _particleSkins[0], i));
+                //_particleEffectsConteiners[0].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[0]);
             }
             _cosmos = true;
         }
     }
 
+    [System.Obsolete]
+    private IEnumerator SetParticle(GameObject conteiner, Sprite sprite, int index)
+    {
+        // получить время
+        
+        yield return new WaitForSeconds(conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().duration);
+        conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
+    }
     
     public void NextLevel()
     {
