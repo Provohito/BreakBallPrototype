@@ -24,8 +24,7 @@ public class BannerAd : MonoBehaviour
     {
         // Set the banner position:
         Advertisement.Banner.SetPosition(_bannerPosition);
-        LoadBanner();
-        //StartCoroutine(LoadAdBanner());
+        StartCoroutine(LoadAdBanner());
     }
 
     private IEnumerator LoadAdBanner()
