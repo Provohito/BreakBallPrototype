@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator ReloadDestroyPoint()
     {
         
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(9);
         GenerateDestroyPoint();
         int k = Random.Range(0, 100);
         int i = Random.Range(0,15);
