@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
         if (collision.transform.tag == "Die")
         {
             Debug.Log("Die");
+            
             _ui.EndGameStart();
         }
     }

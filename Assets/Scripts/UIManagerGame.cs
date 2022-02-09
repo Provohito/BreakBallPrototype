@@ -44,6 +44,8 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField]
     private UnlockSkinsSystem _unSystem;
 
+    //private int decster = 20;
+
     private void Update()
     {
         _time += Time.deltaTime;
@@ -61,9 +63,7 @@ public class UIManagerGame : MonoBehaviour
     private void UpdateScore()
     {
         _score.text = score.ToString();
-        Debug.Log(score);
-        Debug.Log(_previousScore);
-        if (score - _previousScore >= 40)
+        if (score - _previousScore >= 25)
         {
             StopAllCoroutines();
             _GM.NextLevel();
@@ -167,6 +167,8 @@ public class UIManagerGame : MonoBehaviour
     private GameObject _blackWindow;
     private float _timeLeft = 0f;
     private float time = 4f;
+    [SerializeField]
+    private ChangeScene _chengeSceneSrc;
     public void Consentration()
     {
         for (int i = 0; i < _countDefenceBtn; i++)
@@ -187,10 +189,20 @@ public class UIManagerGame : MonoBehaviour
         StartCoroutine(Timer());
     }
 
+    
+
     public void EndGameStart()
     {
+        _player.transform.GetChild(6).GetComponent<ParticleSystem>().Play();
+        StartCoroutine(WaitTime());
+    }
+    IEnumerator WaitTime()
+    {
+        _chengeSceneSrc.WaitGame();
+        yield return new WaitForSeconds(1.4f);
         EndGame();
     }
+
 
     private void EndGame()
     {

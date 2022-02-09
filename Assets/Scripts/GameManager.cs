@@ -212,14 +212,16 @@ public class GameManager : MonoBehaviour
     private GameObject _destroyPrefab;
     [SerializeField]
     private Transform _destroyContainer;
-    
+
+    private GameObject prefab;
     private void GenerateDestroyer()
     {
-        GameObject prefab;
+        
         for (int i = 0; i < 10; i++)
         {
             prefab = Instantiate(_destroyPrefab);
             prefab.gameObject.transform.SetParent(_destroyContainer);
+            prefab.gameObject.SetActive(false);
             prefab.transform.position = new Vector3(-6,1,0);
         }
     }
@@ -237,6 +239,12 @@ public class GameManager : MonoBehaviour
     private void CreateDestroyer()
     {
         int i = Random.Range(1, 10);
-        _destroyContainer.GetChild(i).transform.position = _destroyPoint[i].position;
+        if (!_destroyContainer.GetChild(i).gameObject.activeInHierarchy)
+        {
+            _destroyContainer.GetChild(i).transform.position = _destroyPoint[i].position;
+            _destroyContainer.GetChild(i).gameObject.SetActive(true);
+        }
+        
+       
     }
 }

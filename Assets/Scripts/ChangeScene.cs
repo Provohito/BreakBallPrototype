@@ -57,4 +57,10 @@ public class ChangeScene : MonoBehaviour
         _menuPanel.SetActive(false);
         _gamePanel.SetActive(true);
     }
+    public void WaitGame()
+    {
+        _prePlayer.SetActive(false);
+        _player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        _gm.SetActive(false);
+    }
 }
