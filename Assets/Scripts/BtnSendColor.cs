@@ -9,13 +9,19 @@ public class BtnSendColor : MonoBehaviour
     private GameObject _defenceConteiner;
     private GameObject _effectDestroy;
 
+    [SerializeField]
+    private AudioClip _pressBtn;
+    private new AudioSource audio;
+
     private void Start()
     {
         _ui = GameObject.Find("UIManagerGame");
         _defenceConteiner = GameObject.Find("DefencePanel");
+        audio = GameObject.Find("Player").GetComponent<AudioSource>();
     }
     public void SendColor()
     {
+        audio.PlayOneShot(_pressBtn);
         if (_defenceConteiner.transform.childCount == 1)
         {
             _ui.GetComponent<UIManagerGame>().GoGame();
@@ -26,4 +32,7 @@ public class BtnSendColor : MonoBehaviour
         _effectDestroy.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
         Destroy(this.gameObject);
     }
+
+
 }
+

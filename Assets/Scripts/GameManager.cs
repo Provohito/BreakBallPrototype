@@ -118,7 +118,8 @@ public class GameManager : MonoBehaviour
         }
         
     }
-
+    [SerializeField]
+    private AudioClip _newSkinSound;
     private IEnumerator ReloadDestroyPoint()
     {
         
@@ -128,11 +129,12 @@ public class GameManager : MonoBehaviour
         int i = Random.Range(0,15);
         if (k == 27)
         {
-            
+            _player.GetComponent<AudioSource>().PlayOneShot(_newSkinSound);
             _unSys.CheckSkin(_newSkinsActive[i]);
             Debug.Log(_unSys.StateSkin);
             if ( _unSys.StateSkin == true)
             {
+
                 GameObject newskin = Instantiate(_newSkinPrefab);
                 newskin.transform.position = new Vector3(newskin.transform.position.x, _player.transform.position.y + 12, newskin.transform.position.z);
                 newskin.GetComponent<SpriteRenderer>().sprite = _newSkinsActive[i];

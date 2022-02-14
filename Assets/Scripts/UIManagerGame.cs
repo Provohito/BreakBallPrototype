@@ -189,10 +189,12 @@ public class UIManagerGame : MonoBehaviour
         StartCoroutine(Timer());
     }
 
-    
+    [SerializeField]
+    private AudioClip _depthSound;
 
     public void EndGameStart()
     {
+        _player.GetComponent<AudioSource>().PlayOneShot(_depthSound);
         _player.transform.GetChild(6).GetComponent<ParticleSystem>().Play();
         StartCoroutine(WaitTime());
     }

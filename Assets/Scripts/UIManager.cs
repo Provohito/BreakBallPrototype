@@ -29,6 +29,9 @@ public class UIManager : MonoBehaviour
     private TMP_Text _score;
     private GameObject _player;
 
+    [SerializeField]
+    private AudioClip _changeSkinSound;
+
     private void Start()
     {
         Time.timeScale = 1;
@@ -92,11 +95,13 @@ public class UIManager : MonoBehaviour
         }
         else
         {
+            
             current.GetComponent<BtnStateSprite>().ActiveSkin = true;
             _parentSellsToSkins.transform.GetChild(_selectedSkin).GetComponent<BtnStateSprite>().ActiveSkin = false;
             _selectedSkin = current.GetComponent<BtnStateSprite>().ID;
             PlayerPrefs.SetInt("SelectedSkin", _selectedSkin);
             _player = GameObject.Find("Player");
+            _player.GetComponent<AudioSource>().PlayOneShot(_changeSkinSound);
             _player.GetComponent<SpriteRenderer>().sprite = _playerSkins[_selectedSkin];
         }
         

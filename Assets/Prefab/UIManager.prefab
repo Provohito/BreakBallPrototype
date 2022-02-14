@@ -97,4 +97,4 @@ MonoBehaviour:
   _TableSkins: {fileID: 0}
   _parentSellsToSkins: {fileID: 0}
   _score: {fileID: 0}
-  _player: {fileID: 0}
+  _changeSkinSound: {fileID: 8300000, guid: af82194436eab044b89a30eff25dffe0, type: 3}

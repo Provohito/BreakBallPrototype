@@ -3172,6 +3172,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0b5751a813b38c840aa1e44c85d34092, type: 3}
   _newSkinPrefab: {fileID: 7074214784458575012, guid: cfd7764ca2fc0f24082bdb49ddd10604, type: 3}
   _unSys: {fileID: 1406186552}
+  _newSkinSound: {fileID: 8300000, guid: 38ae3f167b11752418e0782bbfe64930, type: 3}
   _colorsConteiner: {fileID: 710898219}
   _destroyPoint:
   - {fileID: 1635407272}
@@ -89833,7 +89834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8321852, y: 0}
   m_AnchorMax: {x: 1, y: 0.35589597}
-  m_AnchoredPosition: {x: -26.03418, y: 106.51828}
+  m_AnchoredPosition: {x: -26.03418, y: 106.51816}
   m_SizeDelta: {x: -47.5585, y: -215.6004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047922788
@@ -95201,6 +95202,10 @@ PrefabInstance:
       propertyPath: _scoreText
       value: 
       objectReference: {fileID: 75699761}
+    - target: {fileID: 1477069235987441264, guid: 105e0e33c13091344ae3e411b0b71346, type: 3}
+      propertyPath: _depthSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4061b6724137e554a8bf78982b4af8a1, type: 3}
     - target: {fileID: 1477069235987441264, guid: 105e0e33c13091344ae3e411b0b71346, type: 3}
       propertyPath: _pausePanel
       value: 
@@ -131193,18 +131198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIManager
       objectReference: {fileID: 0}
-    - target: {fileID: 9142220530967333253, guid: d7f917a60417c8047972b319e16598fa, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9142220530967333254, guid: d7f917a60417c8047972b319e16598fa, type: 3}
       propertyPath: _score
       value: 
       objectReference: {fileID: 6492223544557007101}
-    - target: {fileID: 9142220530967333254, guid: d7f917a60417c8047972b319e16598fa, type: 3}
-      propertyPath: _player
-      value: 
-      objectReference: {fileID: 20486327}
     - target: {fileID: 9142220530967333254, guid: d7f917a60417c8047972b319e16598fa, type: 3}
       propertyPath: _TableSkins
       value: 

@@ -7,6 +7,9 @@ public class CheckDestroyLine : MonoBehaviour
     private UIManagerGame _ui;
     private GameManager _gm;
     private GameObject _player;
+
+    [SerializeField]
+    private AudioClip _wallBreakSound;
     public void Start()
     {
         _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
@@ -20,6 +23,7 @@ public class CheckDestroyLine : MonoBehaviour
             
             if (collision.gameObject.GetComponent<SpriteRenderer>().color == this.gameObject.GetComponent<SpriteRenderer>().color)
             {
+                _player.GetComponent<AudioSource>().PlayOneShot(_wallBreakSound);
                 _player.GetComponent<PlayerController>().PlaySoundDestroyWall();
                 collision.gameObject.SetActive(false);
                 _player.GetComponent<PlayerController>().PlayEffect(this.gameObject.GetComponent<SpriteRenderer>().color);
