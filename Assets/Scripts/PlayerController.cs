@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
 
     private bool isMusikOn = true;
+    private bool isAudioOn = false;
 
     [SerializeField]
     private Sprite[] _audioSprites;
@@ -49,8 +50,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+    public void OnTriggerEnter(Collider other)
+    {
+        
+    }
 
+
+    public void SoundCheck(GameObject currentGameobject)
+    {
+        _audio.enabled = isAudioOn;
+        isAudioOn = !isAudioOn;
+    }
 
 
     public void MusikCheck(GameObject currentGameobject)

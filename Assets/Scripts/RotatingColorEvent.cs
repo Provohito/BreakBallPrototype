@@ -12,12 +12,15 @@ public class RotatingColorEvent : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
+        Debug.Log("Win");
+        
         if (collision.tag == "Die")
             collision.gameObject.SetActive(false);
     }
 
     public void OnCollisionStay2D(Collision2D collision)
     {
+        Debug.Log("Win");
         if (collision.gameObject.tag == "Die")
             collision.gameObject.SetActive(false);
     }
