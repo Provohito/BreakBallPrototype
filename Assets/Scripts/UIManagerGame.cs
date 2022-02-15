@@ -168,7 +168,7 @@ public class UIManagerGame : MonoBehaviour
             _parentDefencePrefab.GetChild(i).GetChild(0).GetComponent<Image>().color = _parentDefencePrefab.GetChild(r).GetChild(0).GetComponent<Image>().color;
             _parentDefencePrefab.GetChild(r).GetChild(0).GetComponent<Image>().color = temp;
         }
-        //_parentDefencePrefab.GetComponent<VerticalLayoutGroup>().enabled = false;
+        
     }
 
     [SerializeField] private GameObject _timer;
@@ -210,6 +210,10 @@ public class UIManagerGame : MonoBehaviour
     }
     IEnumerator WaitTime()
     {
+        if (_GM.gameObject.activeInHierarchy == true)
+        {
+            // Тут баг, что не происходит смерть
+        }
         _chengeSceneSrc.WaitGame();
         yield return new WaitForSeconds(1.4f);
         EndGame();
@@ -238,7 +242,7 @@ public class UIManagerGame : MonoBehaviour
         while (timeToCheck > 0)
         {
             timeToCheck -= 0.05f;
-            Debug.Log(timeToCheck);
+
             _scoreText.text = resultScore.ToString();
             resultScore += 1;
             yield return null;
@@ -267,6 +271,13 @@ public class UIManagerGame : MonoBehaviour
 
     public void GoGame()
     {
+        _parentDefencePrefab.GetComponent<VerticalLayoutGroup>().enabled = false;
+        for (int i = 0; i < _parentDefencePrefab.transform.childCount; i++)
+        {
+            GameObject reff = _parentDefencePrefab.GetChild(i).gameObject;
+            Destroy(reff);
+        }
+        _parentDefencePrefab.GetComponent<VerticalLayoutGroup>().enabled = true;
         Time.timeScale = 1;
         _blackWindow.SetActive(false);
         _player.GetComponent<PlayerMove>().enabled = true;

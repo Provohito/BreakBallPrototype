@@ -26,7 +26,6 @@ public class CheckDestroyLine : MonoBehaviour
             if (collision.gameObject.GetComponent<SpriteRenderer>().color == this.gameObject.GetComponent<SpriteRenderer>().color)
             {
                 indexWall = int.Parse(collision.gameObject.name);
-                Debug.Log(indexWall);
                 switch (indexWall)
                 {
                     case 0:
