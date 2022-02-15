@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
         _numberLevel++;
         GenerateContainer();
         
-        _player.GetComponent<PlayerMove>().Speed += 0.1f;
+        _player.GetComponent<PlayerMove>().Speed += 0.02f;
         if (_numberLevel == 3)
         {
             StartCoroutine(ReloadDestroyPoint());
