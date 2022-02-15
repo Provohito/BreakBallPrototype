@@ -55,9 +55,6 @@ public class UIManagerGame : MonoBehaviour
             UpdateScore();
             _time = 0;
         }
-        Debug.Log("Score" + score);
-        Debug.Log("Previous" + _previousScore);
-        Debug.Log(_GM.NumberLevel);
         
     }
 
@@ -68,7 +65,6 @@ public class UIManagerGame : MonoBehaviour
         _score.text = score.ToString();
         if (_GM.NumberLevel == 2)
         {
-            Debug.Log("Win");
             if (score - _previousScore >= 10)
             {
                 StopAllCoroutines();
@@ -172,6 +168,7 @@ public class UIManagerGame : MonoBehaviour
             _parentDefencePrefab.GetChild(i).GetChild(0).GetComponent<Image>().color = _parentDefencePrefab.GetChild(r).GetChild(0).GetComponent<Image>().color;
             _parentDefencePrefab.GetChild(r).GetChild(0).GetComponent<Image>().color = temp;
         }
+        //_parentDefencePrefab.GetComponent<VerticalLayoutGroup>().enabled = false;
     }
 
     [SerializeField] private GameObject _timer;
@@ -218,18 +215,42 @@ public class UIManagerGame : MonoBehaviour
         EndGame();
     }
 
-
+    private int resultScore = 0;
+    [SerializeField]
+    private AudioClip _endGameCheck;
+    [SerializeField]
+    private AudioClip _fireWorkSound;
     private void EndGame()
     {
+        
         _GM.gameObject.SetActive(false);
         _gamePanel.SetActive(false);
         _endGamePanel.SetActive(true);
         Time.timeScale = 0;
+        StartCoroutine(ScoreCheck());
+        _player.GetComponent<AudioSource>().PlayOneShot(_endGameCheck);
+    }
+
+    private float timeToCheck = 2.8f;
+    
+    private IEnumerator ScoreCheck()
+    {
+        while (timeToCheck > 0)
+        {
+            timeToCheck -= 0.05f;
+            Debug.Log(timeToCheck);
+            _scoreText.text = resultScore.ToString();
+            resultScore += 1;
+            yield return null;
+        }
         _scoreText.text = score.ToString();
+        _player.GetComponent<AudioSource>().Stop();
+        _player.GetComponent<AudioSource>().PlayOneShot(_fireWorkSound);
         
 
     }
-  
+
+
     private IEnumerator Timer()
     {
         while (_timeLeft > 0)

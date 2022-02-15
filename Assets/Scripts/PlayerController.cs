@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
         if (collision.transform.tag == "TakeColor")
         {
             //_audio[1].Play();
+            GameObject.Find("GameManager").GetComponent<GameManager>().NumberLevel++;
             collision.gameObject.SetActive(false);
             _gameManager.GetComponent<GameManager>().GenerateShild();
             transform.GetChild(5).GetComponent<ParticleSystem>().Play();

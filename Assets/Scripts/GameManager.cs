@@ -107,20 +107,21 @@ public class GameManager : MonoBehaviour
     {
         trix = Random.Range(1, 4);
         
-        GenerateContainer();
-        
-        _player.GetComponent<PlayerMove>().Speed += 0.02f;
-        if (_numberLevel == 3)
+        if (_numberLevel == 2)
         {
             StartCoroutine(ReloadDestroyPoint());
         }
+        
+        GenerateContainer();
+        
+        _player.GetComponent<PlayerMove>().Speed += 0.02f;
+        
         
     }
     [SerializeField]
     private AudioClip _newSkinSound;
     private IEnumerator ReloadDestroyPoint()
     {
-        
         yield return new WaitForSeconds(9);
         GenerateDestroyPoint();
         int k = Random.Range(0, 100);
@@ -142,7 +143,7 @@ public class GameManager : MonoBehaviour
         }
         StartCoroutine(ReloadDestroyPoint());
     }
-    int trix = 1;
+    private int trix = 1;
 
     private void CreateEnemies()
     {
@@ -162,7 +163,7 @@ public class GameManager : MonoBehaviour
         {
             GameObject prefab = Instantiate(_linePrefab);
             prefab.GetComponent<SpriteRenderer>().color = _outColor[i];
-            prefab.transform.position = new Vector3(_linePrefab.transform.position.x, _player.transform.position.y + i + 12, _linePrefab.transform.position.z);
+            prefab.transform.position = new Vector3(_linePrefab.transform.position.x, _player.transform.position.y + i + 9, _linePrefab.transform.position.z);
         }
         
     }
@@ -236,8 +237,6 @@ public class GameManager : MonoBehaviour
         {
             _destroyContainer.GetChild(i).transform.position = _destroyPoint[i].position;
             _destroyContainer.GetChild(i).gameObject.SetActive(true);
-        }
-        
-       
+        }  
     }
 }
