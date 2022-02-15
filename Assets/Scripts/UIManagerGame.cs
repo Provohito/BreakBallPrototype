@@ -176,7 +176,7 @@ public class UIManagerGame : MonoBehaviour
     [SerializeField]
     private GameObject _blackWindow;
     private float _timeLeft = 0f;
-    private float time = 4f;
+    private float time = 1.5f;
     [SerializeField]
     private ChangeScene _chengeSceneSrc;
     public void Consentration()
@@ -185,7 +185,7 @@ public class UIManagerGame : MonoBehaviour
         {
             _parentDefencePrefab.GetChild(i).GetComponent<Button>().interactable = true;
         }
-        
+        Time.timeScale = 0.3f;
         _consentrationPanel.SetActive(true);
         _timer.SetActive(true);
         StartTimer();
@@ -267,6 +267,7 @@ public class UIManagerGame : MonoBehaviour
 
     public void GoGame()
     {
+        Time.timeScale = 1;
         _blackWindow.SetActive(false);
         _player.GetComponent<PlayerMove>().enabled = true;
         _consentrationPanel.SetActive(false);
