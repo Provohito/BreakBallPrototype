@@ -63,7 +63,7 @@ public class UIManagerGame : MonoBehaviour
     private void UpdateScore()
     {
         _score.text = score.ToString();
-        if (score - _previousScore >= 25)
+        if (score - _previousScore >= 30)
         {
             StopAllCoroutines();
             _GM.NextLevel();
@@ -208,10 +208,12 @@ public class UIManagerGame : MonoBehaviour
 
     private void EndGame()
     {
+        _GM.gameObject.SetActive(false);
         _gamePanel.SetActive(false);
         _endGamePanel.SetActive(true);
         Time.timeScale = 0;
         _scoreText.text = score.ToString();
+        
 
     }
   

@@ -11,10 +11,10 @@ public class PlayerController : MonoBehaviour
     private GameObject[] _defenders;
     private UIManagerGame _ui;
     [SerializeField]
-    private AudioSource[] _audio;
+    private AudioSource _audio;
 
 
-    private bool isAudioOn = false;
+
     private bool isMusikOn = true;
 
     [SerializeField]
@@ -31,10 +31,14 @@ public class PlayerController : MonoBehaviour
         _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
         if (collision.transform.tag == "TakeColor")
         {
-            _audio[1].Play();
+            //_audio[1].Play();
             collision.gameObject.SetActive(false);
             _gameManager.GetComponent<GameManager>().GenerateShild();
             transform.GetChild(5).GetComponent<ParticleSystem>().Play();
+            this.gameObject.GetComponent<PlayerMove>().enabled = false;
+            //transform.GetChild(4).GetComponent<ParticleSystem>().Play();
+            this.gameObject.transform.position = collision.transform.position;
+            _gameManager.GetComponent<GameManager>().StartConsentration();
         }
         if (collision.transform.tag == "Die")
         {
@@ -44,22 +48,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void PlaySoundDestroyWall()
-    {
-        if (_audio[2].isActiveAndEnabled)
-        {
-            _audio[2].Play();
-        } 
-    }
+    
 
-    public void SoundCheck(GameObject currentGameobject)
-    {
-        for (int i = 0; i < _audio.Length; i++)
-        {
-            _audio[i].enabled = isAudioOn;
-        }
-        isAudioOn = !isAudioOn;
-    }
+
 
     public void MusikCheck(GameObject currentGameobject)
     {
@@ -91,27 +82,6 @@ public class PlayerController : MonoBehaviour
             }
             else
                 musik.GetComponent<Image>().sprite = _audioSprites[2];
-        }
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        GameObject _defPen = GameObject.Find("DefencePanel");
-        if (collision.transform.tag == "Consentraition")
-        {
-            
-            _audio[0].Play();
-            if (_defPen.transform.childCount == 0)
-            {
-                _ui.EndGameStart();
-            }
-            
-            this.gameObject.GetComponent<PlayerMove>().enabled = false;
-            transform.GetChild(4).GetComponent<ParticleSystem>().Play();
-            this.gameObject.transform.position = collision.transform.position;
-            _gameManager.GetComponent<GameManager>().StartConsentration();
-            
-            Destroy(collision.gameObject);
         }
     }
 

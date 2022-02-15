@@ -31,6 +31,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private AudioClip _changeSkinSound;
+    [SerializeField]
+    private AudioClip _btnPress;
 
     private void Start()
     {
@@ -52,6 +54,12 @@ public class UIManager : MonoBehaviour
         
         //PlayerPrefs.SetInt("CurrentCountSkins", 3);       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!¬ажно, сколько скинов открыли !!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //CreateSellsToSkins(_selectedSkin);
+    }
+
+    public void PressBtnSound()
+    {
+        _player = GameObject.Find("Player");
+        _player.GetComponent<AudioSource>().PlayOneShot(_btnPress);
     }
 
     private void CreateSellsToSkins(int selectedSkin) // —оздание €чейки под скин

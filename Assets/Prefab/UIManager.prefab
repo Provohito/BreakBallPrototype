@@ -98,3 +98,4 @@ MonoBehaviour:
   _parentSellsToSkins: {fileID: 0}
   _score: {fileID: 0}
   _changeSkinSound: {fileID: 8300000, guid: af82194436eab044b89a30eff25dffe0, type: 3}
+  _btnPress: {fileID: 8300000, guid: db5034b28b7c3ae4abef0a9443e3a06b, type: 3}

@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         _numberLevel = 1;
         GenerateContainer();
         GenerateDestroyer();
-        CreateConsentrationPoint();
+        
         
 
     }
@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         trix = Random.Range(1, 4);
         _numberLevel++;
         GenerateContainer();
-        CreateConsentrationPoint();
+        
         _player.GetComponent<PlayerMove>().Speed += 0.1f;
         if (_numberLevel == 3)
         {
@@ -189,13 +189,6 @@ public class GameManager : MonoBehaviour
         }
         CreateEnemies();
         
-    }
-
-    private void CreateConsentrationPoint()
-    {
-        GameObject prefab = Instantiate(_consentrationPrefab);
-        prefab.transform.position = new Vector3(_consentrationPrefab.transform.position.x, _player.transform.position.y + 8.12f, _consentrationPrefab.transform.position.z);
-
     }
 
     public void GenerateShild()
