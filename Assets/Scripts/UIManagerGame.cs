@@ -55,6 +55,9 @@ public class UIManagerGame : MonoBehaviour
             UpdateScore();
             _time = 0;
         }
+        Debug.Log("Score" + score);
+        Debug.Log("Previous" + _previousScore);
+        Debug.Log(_GM.NumberLevel);
         
     }
 
@@ -63,6 +66,16 @@ public class UIManagerGame : MonoBehaviour
     private void UpdateScore()
     {
         _score.text = score.ToString();
+        if (_GM.NumberLevel == 2)
+        {
+            Debug.Log("Win");
+            if (score - _previousScore >= 10)
+            {
+                StopAllCoroutines();
+                _GM.NextLevel();
+                _previousScore = score;
+            }
+        }
         if (score - _previousScore >= 30)
         {
             StopAllCoroutines();

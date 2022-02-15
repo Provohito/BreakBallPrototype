@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private int _countLines;
 
     private int _numberLevel;
+    public int NumberLevel { set {_numberLevel = value; } get {return _numberLevel; } }
 
     [SerializeField]
     private GameObject _linePrefab;
@@ -45,9 +46,6 @@ public class GameManager : MonoBehaviour
         _numberLevel = 1;
         GenerateContainer();
         GenerateDestroyer();
-        
-        
-
     }
 
     [System.Obsolete]
@@ -108,7 +106,7 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         trix = Random.Range(1, 4);
-        _numberLevel++;
+        
         GenerateContainer();
         
         _player.GetComponent<PlayerMove>().Speed += 0.02f;
