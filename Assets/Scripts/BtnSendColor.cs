@@ -26,11 +26,7 @@ public class BtnSendColor : MonoBehaviour
     {
         
         audio.PlayOneShot(_pressBtn);
-        
-        if (true)
-        {
 
-        }
         _ui.GetComponent<UIManagerGame>().PressBtnDefence(this.transform.GetChild(0).GetComponent<Image>().color);
         _effectDestroy = GameObject.Find("EffectDestroyDefence");
         _effectDestroy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);

@@ -144,7 +144,7 @@ public class UIManagerGame : MonoBehaviour
         
         
     }
-
+    private int[] indexs;
 
     private void InitDefenceBtn(Color[] colors, int count)
     {
@@ -155,6 +155,7 @@ public class UIManagerGame : MonoBehaviour
             prefab.transform.SetParent(_parentDefencePrefab,false);
             prefab.transform.localScale = new Vector3(1, 1, 1);
             prefab.transform.GetChild(0).GetComponent<Image>().color = colors[i];
+            
         }
         Shuffle(_countDefenceBtn);
     }
