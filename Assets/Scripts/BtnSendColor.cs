@@ -31,12 +31,6 @@ public class BtnSendColor : MonoBehaviour
         {
 
         }
-        /*
-        if (_defenceConteiner.transform.childCount - _fullContainer == 0)
-        {
-            _ui.GetComponent<UIManagerGame>().GoGame();
-        }
-        */
         _ui.GetComponent<UIManagerGame>().PressBtnDefence(this.transform.GetChild(0).GetComponent<Image>().color);
         _effectDestroy = GameObject.Find("EffectDestroyDefence");
         _effectDestroy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
@@ -44,6 +38,7 @@ public class BtnSendColor : MonoBehaviour
         gameObject.GetComponent<Button>().interactable = false;
         if (_defenceConteiner.transform.childCount == 1 & _defenceConteiner.transform.GetChild(0).GetComponent<Button>().interactable == false)
         {
+            _ui.GetComponent<UIManagerGame>().DestroyShield();
             _ui.GetComponent<UIManagerGame>().GoGame();
         }
         for (int i = 0; i < _defenceConteiner.transform.childCount; i++)
@@ -55,6 +50,7 @@ public class BtnSendColor : MonoBehaviour
         }
         if (_fullContainer == _defenceConteiner.transform.childCount)
         {
+            _ui.GetComponent<UIManagerGame>().DestroyShield();
             _ui.GetComponent<UIManagerGame>().GoGame();
         }
         

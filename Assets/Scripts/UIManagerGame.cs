@@ -269,7 +269,7 @@ public class UIManagerGame : MonoBehaviour
         GoGame();
     }
 
-    public void GoGame()
+    public void DestroyShield()
     {
         _parentDefencePrefab.GetComponent<VerticalLayoutGroup>().enabled = false;
         for (int i = 0; i < _parentDefencePrefab.transform.childCount; i++)
@@ -278,6 +278,11 @@ public class UIManagerGame : MonoBehaviour
             Destroy(reff);
         }
         _parentDefencePrefab.GetComponent<VerticalLayoutGroup>().enabled = true;
+    }
+
+    public void GoGame()
+    {
+        
         Time.timeScale = 1;
         _blackWindow.SetActive(false);
         _player.GetComponent<PlayerMove>().enabled = true;
