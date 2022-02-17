@@ -237,7 +237,7 @@ public class UIManagerGame : MonoBehaviour
 
             Destroy(_enemies[i]);
         }
-        Time.timeScale = 0;
+        
         StartCoroutine(ScoreCheck());
         _player.GetComponent<AudioSource>().PlayOneShot(_endGameCheck);
     }
@@ -247,7 +247,7 @@ public class UIManagerGame : MonoBehaviour
     {
         Time.timeScale = 1;
         StopAllCoroutines();
-        
+        _scorePanel.SetActive(false);
         _gamePanel.SetActive(true);
         _endGamePanel.SetActive(false);
         _prePlayer.SetActive(true);
@@ -268,7 +268,8 @@ public class UIManagerGame : MonoBehaviour
     }
 
     private float timeToCheck = 2.8f;
-    
+    [SerializeField]
+    private GameObject _scorePanel;
     private IEnumerator ScoreCheck()
     {
         while (timeToCheck > 0)
@@ -281,7 +282,14 @@ public class UIManagerGame : MonoBehaviour
         }
         _scoreText.text = score.ToString();
         _player.GetComponent<AudioSource>().Stop();
-        _player.GetComponent<AudioSource>().PlayOneShot(_fireWorkSound);
+        if ((int)score > PlayerPrefs.GetInt("Score"))
+        {
+            _scorePanel.SetActive(true);
+            _scorePanel.GetComponent<Animator>().Play("NewRecord");
+            _player.GetComponent<AudioSource>().PlayOneShot(_fireWorkSound);
+        }    
+            
+        
         
 
     }
