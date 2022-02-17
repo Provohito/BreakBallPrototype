@@ -12,6 +12,7 @@ TagManager:
   - defence
   - musik
   - skin
+  - enemy
   layers:
   - Default
   - TransparentFX

@@ -105,6 +105,7 @@ public class GameManager : MonoBehaviour
     
     public void NextLevel()
     {
+        Debug.Log("1234");
         trix = Random.Range(1, 4);
         
         if (_numberLevel == 2)

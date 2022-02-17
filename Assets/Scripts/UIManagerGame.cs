@@ -231,9 +231,41 @@ public class UIManagerGame : MonoBehaviour
         _GM.gameObject.SetActive(false);
         _gamePanel.SetActive(false);
         _endGamePanel.SetActive(true);
+        GameObject[] _enemies = GameObject.FindGameObjectsWithTag("enemy");
+        Debug.Log(_enemies.Length);
+        for (int i = 0; i < _enemies.Length; i++)
+        {
+
+            Destroy(_enemies[i]);
+        }
         Time.timeScale = 0;
         StartCoroutine(ScoreCheck());
         _player.GetComponent<AudioSource>().PlayOneShot(_endGameCheck);
+    }
+    [SerializeField]
+    private GameObject _prePlayer;
+    public void GGame()
+    {
+        Time.timeScale = 1;
+        StopAllCoroutines();
+        
+        _gamePanel.SetActive(true);
+        _endGamePanel.SetActive(false);
+        _prePlayer.SetActive(true);
+        _GM.gameObject.SetActive(true);
+        _GM.NextLevel();
+        _player.GetComponent<Rigidbody2D>().constraints = (RigidbodyConstraints2D)RigidbodyConstraints.None;
+        _player.GetComponent<Rigidbody2D>().freezeRotation = true;
+        for (int i = 0; i < _player.transform.GetChild(0).childCount; i++)
+        {
+            _player.transform.GetChild(0).GetChild(i).gameObject.SetActive(false);
+        }
+    
+
+
+
+
+
     }
 
     private float timeToCheck = 2.8f;
