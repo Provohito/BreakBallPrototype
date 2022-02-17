@@ -23,12 +23,12 @@ public class RewardedAdsBtn : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
         //Disable button until ad is ready to show
         _showAdButton.interactable = false;
     }
-    [SerializeField]
+    
     private UIManagerGame _ui;
     private void Start()
     {
         StartCoroutine(LoadRewardedAds());
-        
+       
         
     }
 
@@ -67,7 +67,9 @@ public class RewardedAdsBtn : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
         _showAdButton.interactable = false;
         // Then show the ad:
         Advertisement.Show(_adUnitId, this);
+        _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
     }
+    private int _coundAds = 0;
 
     // Implement the Show Listener's OnUnityAdsShowComplete callback method to determine if the user gets a reward:
     public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)
@@ -76,12 +78,17 @@ public class RewardedAdsBtn : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
         if (adUnitId.Equals(_adUnitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
+            
             _ui.GGame();
             // Grant a reward.
             //GameLogic.S.IncrementPoint2AfterAds(1);
-
+            _ui = null;
             // Load another ad:
-            Advertisement.Load(_adUnitId, this);
+            if (_coundAds < 2)
+            {
+                Advertisement.Load(_adUnitId, this);
+            }
+            _coundAds++;
         }
     }
 

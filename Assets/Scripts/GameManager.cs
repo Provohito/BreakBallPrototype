@@ -106,9 +106,17 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         Debug.Log("1234");
+        for (int i = 0; i < _colorsConteiner.transform.childCount; i++)
+        {
+            _colorsConteiner.transform.GetChild(i).gameObject.SetActive(false);
+        }
         trix = Random.Range(1, 4);
         
         if (_numberLevel == 2)
+        {
+            StartCoroutine(ReloadDestroyPoint());
+        }
+        else if (_numberLevel > 5)
         {
             StartCoroutine(ReloadDestroyPoint());
         }

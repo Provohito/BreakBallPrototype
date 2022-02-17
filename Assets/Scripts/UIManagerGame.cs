@@ -232,7 +232,6 @@ public class UIManagerGame : MonoBehaviour
         _gamePanel.SetActive(false);
         _endGamePanel.SetActive(true);
         GameObject[] _enemies = GameObject.FindGameObjectsWithTag("enemy");
-        Debug.Log(_enemies.Length);
         for (int i = 0; i < _enemies.Length; i++)
         {
 
