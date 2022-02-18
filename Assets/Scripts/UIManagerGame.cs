@@ -129,9 +129,19 @@ public class UIManagerGame : MonoBehaviour
         }
         else
         {
-            _pausePanel.SetActive(false);
-            _gamePanel.SetActive(true);
-            Time.timeScale = 1;
+            if (isConsentration == true)
+            {
+                _pausePanel.SetActive(false);
+                _gamePanel.SetActive(true);
+                Time.timeScale = 0.3f;
+            }
+            else
+            {
+                _pausePanel.SetActive(false);
+                _gamePanel.SetActive(true);
+                Time.timeScale = 1;
+            }
+            
         }
         _pause = !_pause;
     }
@@ -181,8 +191,10 @@ public class UIManagerGame : MonoBehaviour
     private float time = 1.5f;
     [SerializeField]
     private ChangeScene _chengeSceneSrc;
+    private bool isConsentration = false;
     public void Consentration()
     {
+        isConsentration = true;
         for (int i = 0; i < _countDefenceBtn; i++)
         {
             _parentDefencePrefab.GetChild(i).GetComponent<Button>().interactable = true;
@@ -326,7 +338,7 @@ public class UIManagerGame : MonoBehaviour
 
     public void GoGame()
     {
-        
+        isConsentration = false;
         Time.timeScale = 1;
         _blackWindow.SetActive(false);
         _player.GetComponent<PlayerMove>().enabled = true;
