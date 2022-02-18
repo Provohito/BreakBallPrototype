@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
 
 
 
-    private bool isMusikOn = true;
-    private bool isAudioOn = true;
+    private bool isMusikOn = false;
+    private bool isAudioOn = false;
 
     [SerializeField]
     private Sprite[] _audioSprites;
@@ -39,8 +39,9 @@ public class PlayerController : MonoBehaviour
             else
             {
                 isMusikOn = false;
+                MusikCheck();
             }
-            MusikCheck();
+            
         }
         if (!PlayerPrefs.HasKey("SoundsOn"))
         {
@@ -55,8 +56,9 @@ public class PlayerController : MonoBehaviour
             else
             {
                 isAudioOn = false;
+                SoundCheck();
             }
-            SoundCheck();
+            
         }
 
     }
@@ -85,34 +87,33 @@ public class PlayerController : MonoBehaviour
 
     public void SoundCheck()
     {
+        
+        SwapSprite(0);
+        _audio.enabled = isAudioOn;
+        isAudioOn = !isAudioOn;
         if (isAudioOn)
             PlayerPrefs.SetInt("SoundsOn", 1);
         else
         {
             PlayerPrefs.SetInt("SoundsOn", 0);
-
         }
-        SwapSprite(0);
-        _audio.enabled = isAudioOn;
-        isAudioOn = !isAudioOn;
-       
+
     }
 
 
     public void MusikCheck()
     {
         GameObject _musik = GameObject.Find("DefaultMusik");
+        SwapSprite(1);
+        _musik.transform.GetChild(0).GetComponent<AudioSource>().mute = isMusikOn;
+        isMusikOn = !isMusikOn;
+        
         if (isMusikOn)
             PlayerPrefs.SetInt("SoundsOn", 1);
         else
         {
             PlayerPrefs.SetInt("SoundsOn", 0);
-
         }
-        SwapSprite(1);
-        _musik.transform.GetChild(0).GetComponent<AudioSource>().mute = isMusikOn;
-        isMusikOn = !isMusikOn;
-        
 
     }
 
