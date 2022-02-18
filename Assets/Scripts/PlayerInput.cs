@@ -19,14 +19,13 @@ public class PlayerInput : MonoBehaviour
         GetTouchInput();
 #endif
     }
-
+    
     // Считывание тач управления
     private void GetTouchInput()
     {
         if (Input.touchCount > 0) // Проверка на качание
         {
             Touch touch = Input.GetTouch(0);// Считываем касание
-
             switch (touch.phase)// Какое было касание
             {
                 case TouchPhase.Moved:

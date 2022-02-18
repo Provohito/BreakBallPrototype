@@ -55,7 +55,7 @@ public class UIManager : MonoBehaviour
         //PlayerPrefs.SetInt("CurrentCountSkins", 3);       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Важно, сколько скинов открыли !!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //CreateSellsToSkins(_selectedSkin);
     }
-
+    
     public void PressBtnSound()
     {
         _player = GameObject.Find("Player");

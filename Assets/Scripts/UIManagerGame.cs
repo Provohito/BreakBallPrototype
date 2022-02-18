@@ -218,6 +218,10 @@ public class UIManagerGame : MonoBehaviour
 
     public void EndGameStart()
     {
+        for (int i = 0; i < _parentDefencePrefab.childCount; i++)
+        {
+            Destroy(_parentDefencePrefab.GetChild(i).gameObject);
+        }
         _player.GetComponent<AudioSource>().PlayOneShot(_depthSound);
         _player.transform.GetChild(6).GetComponent<ParticleSystem>().Play();
         StartCoroutine(WaitTime());

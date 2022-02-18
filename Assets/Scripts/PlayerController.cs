@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
 
     private bool isMusikOn = true;
-    private bool isAudioOn = false;
+    private bool isAudioOn = true;
 
     [SerializeField]
     private Sprite[] _audioSprites;
@@ -26,6 +26,39 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _unSys = GameObject.Find("SkinChanger").GetComponent<UnlockSkinsSystem>();
+        if (!PlayerPrefs.HasKey("MusikOn"))
+        {
+            PlayerPrefs.SetInt("MusikOn", 0);
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("MusikOn") == 1)
+            {
+                isMusikOn = true;
+            }   
+            else
+            {
+                isMusikOn = false;
+            }
+            MusikCheck();
+        }
+        if (!PlayerPrefs.HasKey("SoundsOn"))
+        {
+            PlayerPrefs.SetInt("SoundsOn", 0);
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("SoundsOn") == 1)
+            {
+                isAudioOn = true;
+            }
+            else
+            {
+                isAudioOn = false;
+            }
+            SoundCheck();
+        }
+
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -50,28 +83,40 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void SoundCheck()
     {
-        
-    }
+        if (isAudioOn)
+            PlayerPrefs.SetInt("SoundsOn", 1);
+        else
+        {
+            PlayerPrefs.SetInt("SoundsOn", 0);
 
-
-    public void SoundCheck(GameObject currentGameobject)
-    {
+        }
+        SwapSprite(0);
         _audio.enabled = isAudioOn;
         isAudioOn = !isAudioOn;
+       
     }
 
 
-    public void MusikCheck(GameObject currentGameobject)
+    public void MusikCheck()
     {
         GameObject _musik = GameObject.Find("DefaultMusik");
+        if (isMusikOn)
+            PlayerPrefs.SetInt("SoundsOn", 1);
+        else
+        {
+            PlayerPrefs.SetInt("SoundsOn", 0);
+
+        }
+        SwapSprite(1);
         _musik.transform.GetChild(0).GetComponent<AudioSource>().mute = isMusikOn;
         isMusikOn = !isMusikOn;
         
+
     }
 
-    public void SwapSprite(int index)
+    private void SwapSprite(int index)
     {
         GameObject sound = GameObject.Find("Sound");
         GameObject musik = GameObject.Find("Musik");

@@ -415,6 +415,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.00012207031
       objectReference: {fileID: 0}
+    - target: {fileID: 5149326529992058105, guid: 06f8f9f6253fc8646b41bbc590f85f61, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 77.20999
+      objectReference: {fileID: 0}
     - target: {fileID: 5149326530561451564, guid: 06f8f9f6253fc8646b41bbc590f85f61, type: 3}
       propertyPath: m_Name
       value: win_RecordPlayer
@@ -3335,7 +3339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.9254999}
   m_AnchorMax: {x: 0.12881482, y: 1}
-  m_AnchoredPosition: {x: 22.912964, y: -30.337158}
+  m_AnchoredPosition: {x: 22.913086, y: -30.337402}
   m_SizeDelta: {x: -62.215088, y: -67.64526}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338286358
@@ -89928,7 +89932,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8321852, y: 0}
   m_AnchorMax: {x: 1, y: 0.35589597}
-  m_AnchoredPosition: {x: -26.03418, y: 106.51718}
+  m_AnchoredPosition: {x: -26.03418, y: 106.51706}
   m_SizeDelta: {x: -47.5585, y: -215.6004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047922788
@@ -120487,19 +120491,7 @@ MonoBehaviour:
       - m_Target: {fileID: 20486334}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: SoundCheck
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 6492223544744136412}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 20486334}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: SwapSprite
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -121367,23 +121359,11 @@ MonoBehaviour:
       - m_Target: {fileID: 20486334}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: MusikCheck
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 6492223545753826722}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 20486334}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: SwapSprite
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
