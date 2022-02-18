@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
             transform.GetChild(5).GetComponent<ParticleSystem>().Play();
             this.gameObject.GetComponent<PlayerMove>().enabled = false;
             //transform.GetChild(4).GetComponent<ParticleSystem>().Play();
-            this.gameObject.transform.position = collision.transform.position;
+            
             _gameManager.GetComponent<GameManager>().StartConsentration();
         }
         if (collision.transform.tag == "Die")
