@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
     
     public void NextLevel()
     {
-        Debug.Log("1234");
+        NumberLevel++;
         for (int i = 0; i < _colorsConteiner.transform.childCount; i++)
         {
             _colorsConteiner.transform.GetChild(i).gameObject.SetActive(false);

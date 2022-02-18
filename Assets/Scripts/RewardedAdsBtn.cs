@@ -13,6 +13,8 @@ public class RewardedAdsBtn : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
 
     private string _adUnitId;
 
+    private bool isAdsRunning = false;
+
     private void Awake()
     {
         // Get the Ad Unit ID for the current platform:
@@ -36,6 +38,7 @@ public class RewardedAdsBtn : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
     {
         yield return new WaitForSeconds(1f);
         LoadAd();
+        StopCoroutine(LoadRewardedAds());
     }
 
     // Load content to the Ad Unit:
@@ -63,33 +66,55 @@ public class RewardedAdsBtn : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
     // Implement a method to execute when the user clicks the button.
     public void ShowAd()
     {
-        // Disable the button: 
-        _showAdButton.interactable = false;
-        // Then show the ad:
-        Advertisement.Show(_adUnitId, this);
-        _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
+        if (isAdsRunning == false)
+        {
+            // Disable the button: 
+            _showAdButton.interactable = false;
+            // Then show the ad:
+            _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
+            Debug.Log("SwodAd");
+            isAdsRunning = true;
+            StartCoroutine(RewardRoutine());
+
+        }
+        
     }
     private int _coundAds = 0;
 
     // Implement the Show Listener's OnUnityAdsShowComplete callback method to determine if the user gets a reward:
     public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)
     {
-        
-        if (adUnitId.Equals(_adUnitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
+        isAdsRunning = false;  
+    }
+
+    IEnumerator RewardRoutine()
+    {
+        while (Advertisement.isShowing)
         {
-            Debug.Log("Unity Ads Rewarded Ad Completed");
-            
-            _ui.GGame();
-            // Grant a reward.
-            //GameLogic.S.IncrementPoint2AfterAds(1);
-            _ui = null;
-            // Load another ad:
-            if (_coundAds < 2)
-            {
-                Advertisement.Load(_adUnitId, this);
-            }
-            _coundAds++;
+            yield return null;
         }
+
+        // In 4.0 Ads need to be loaded first, after initialization
+        // just another flag to make sure everything is initialized :)
+
+        // Show Ads
+        Advertisement.Show(_adUnitId, this);
+
+        yield return new WaitForSeconds(0.25f);
+
+        while (isAdsRunning)
+        {
+            yield return null;
+        }
+        _ui.GGame();
+        // Grant a reward.
+        //GameLogic.S.IncrementPoint2AfterAds(1);
+        // Load another ad:
+        if (_coundAds < 2)
+        {
+            Advertisement.Load(_adUnitId, this);
+        }
+        _coundAds++;
     }
 
     // Implement Load and Show Listener error callbacks:
@@ -105,7 +130,7 @@ public class RewardedAdsBtn : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
         // Use the error details to determine whether to try to load another ad.
     }
 
-    public void OnUnityAdsShowStart(string adUnitId) { }
+    public void OnUnityAdsShowStart(string adUnitId) { isAdsRunning = true; }
     public void OnUnityAdsShowClick(string adUnitId) { }
 
     private void OnDestroy()

@@ -63,6 +63,7 @@ public class UIManagerGame : MonoBehaviour
     private void UpdateScore()
     {
         _score.text = score.ToString();
+        Debug.Log(_GM.NumberLevel);
         if (_GM.NumberLevel == 2)
         {
             if (score - _previousScore >= 10)
@@ -135,7 +136,7 @@ public class UIManagerGame : MonoBehaviour
         _pause = !_pause;
     }
 
-    int countDefence;
+    private int countDefence;
     public void PressInitDefenceBtn(Color[] colors, int count)
     {
         countDefence = count;
@@ -245,6 +246,9 @@ public class UIManagerGame : MonoBehaviour
     private GameObject _prePlayer;
     public void GGame()
     {
+        Debug.Log("GGame");
+        //_player.GetComponent<PlayerController>().SCheck();
+        //_player.GetComponent<PlayerController>().MCheck();
         Time.timeScale = 1;
         StopAllCoroutines();
         _scorePanel.SetActive(false);
