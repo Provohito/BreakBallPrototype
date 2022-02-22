@@ -15190,6 +15190,7 @@ MonoBehaviour:
   _ui: {fileID: 1195968656}
   _startEffect: {fileID: 1102799514}
   _hideAnimatorSettings: {fileID: 648834650}
+  _startAudio: {fileID: 8300000, guid: 620a9df2a3e9e6e41bd4db358fb7930e, type: 3}
 --- !u!4 &605923346
 Transform:
   m_ObjectHideFlags: 0
@@ -89932,7 +89933,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8321852, y: 0}
   m_AnchorMax: {x: 1, y: 0.35589597}
-  m_AnchoredPosition: {x: -26.03418, y: 106.51694}
+  m_AnchoredPosition: {x: -26.03418, y: 106.51697}
   m_SizeDelta: {x: -47.5585, y: -215.6004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047922788
