@@ -27,6 +27,8 @@ public class ChangeScene : MonoBehaviour
     private ParticleSystem _startEffect;
     [SerializeField]
     private Animator _hideAnimatorSettings;
+    [SerializeField]
+    private AudioClip _startAudio;
 
     public void PressGameStart(GameObject currentObject)
     {
@@ -44,6 +46,7 @@ public class ChangeScene : MonoBehaviour
 
     private IEnumerator EffectStart()
     {
+        _player.GetComponent<AudioSource>().PlayOneShot(_startAudio);
         yield return new WaitForSeconds(3);
         StartGame();
     }
