@@ -47,7 +47,7 @@ public class ChangeScene : MonoBehaviour
     private IEnumerator EffectStart()
     {
         _player.GetComponent<AudioSource>().PlayOneShot(_startAudio);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         StartGame();
     }
 

@@ -98,13 +98,50 @@ public class GameManager : MonoBehaviour
     private IEnumerator SetParticle(GameObject conteiner, Sprite sprite, int index)
     {
         // получить время
-        
-        yield return new WaitForSeconds(conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().duration);
+        ChangeSkinParticle(1, index, conteiner);
+        yield return new WaitForSeconds(10f);
         conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
+        ChangeSkinParticle(2, index, conteiner);
+        
     }
     
+    private void ChangeSkinParticle(int state, int index, GameObject conteiner)
+    {
+        
+        float k = 2;
+        if (state == 1)
+        {
+            Color color = conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor;
+            while (k > 0)
+            {
+                Debug.Log("qwerty");
+                k = -Time.deltaTime;
+                color.a -= 60f;
+                conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor = color;
+            }
+
+        }
+        else
+        {
+            Color color = conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor;
+            while (k > 0)
+            {
+                k = -Time.deltaTime;
+                color.a -= Time.deltaTime * 3;
+                conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor = color;
+            }
+
+
+        }
+    }
     public void NextLevel()
     {
+        GameObject[] _enemies = GameObject.FindGameObjectsWithTag("enemy");
+        for (int i = 0; i < _enemies.Length; i++)
+        {
+
+            Destroy(_enemies[i]);
+        }
         NumberLevel++;
         for (int i = 0; i < _colorsConteiner.transform.childCount; i++)
         {
@@ -120,7 +157,7 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(ReloadDestroyPoint());
         }
-        
+        Debug.Log("Win");
         GenerateContainer();
         
         _player.GetComponent<PlayerMove>().Speed += 0.02f;

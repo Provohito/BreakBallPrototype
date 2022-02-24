@@ -228,10 +228,6 @@ public class UIManagerGame : MonoBehaviour
     }
     IEnumerator WaitTime()
     {
-        if (_GM.gameObject.activeInHierarchy == true)
-        {
-            // Тут баг, что не происходит смерть
-        }
         _chengeSceneSrc.WaitGame();
         yield return new WaitForSeconds(1.4f);
         EndGame();
@@ -262,6 +258,7 @@ public class UIManagerGame : MonoBehaviour
     private GameObject _prePlayer;
     public void GGame()
     {
+        
         Debug.Log("GGame");
         //_player.GetComponent<PlayerController>().SCheck();
         //_player.GetComponent<PlayerController>().MCheck();
@@ -272,6 +269,7 @@ public class UIManagerGame : MonoBehaviour
         _endGamePanel.SetActive(false);
         _prePlayer.SetActive(true);
         _GM.gameObject.SetActive(true);
+        
         _GM.NextLevel();
         _player.GetComponent<Rigidbody2D>().constraints = (RigidbodyConstraints2D)RigidbodyConstraints.None;
         _player.GetComponent<Rigidbody2D>().freezeRotation = true;
