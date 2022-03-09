@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "199533931565",
+    "project_id": "wrecking-ball-1cb3e",
+    "storage_bucket": "wrecking-ball-1cb3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199533931565:android:c4dfdf720827f6fea75ca4",
+        "android_client_info": {
+          "package_name": "com.TechnoInnovaciaLLC.BreakBall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199533931565-krmj3cn3ka9dl8jpbaerhp4j2bqq99il.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZaoFmvSRD4yqTcQWj0hq0xlQmwKQ1TzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199533931565-krmj3cn3ka9dl8jpbaerhp4j2bqq99il.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

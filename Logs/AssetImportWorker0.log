@@ -1,0 +1,185 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.6f1 (8a2143876886) revision 9052483'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1526; Version 2009; 64bit' Language: 'ru' Physical Memory: 15741 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Program\2020.2.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/BreakBallPrototype
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+1196
+Successfully changed project path to: D:/BreakBallPrototype
+D:/BreakBallPrototype
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 125.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.6f1 (8a2143876886)
+[Subsystems] Discovering subsystems at path D:/Program/2020.2.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/BreakBallPrototype/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1636)
+    Vendor:   
+    VRAM:     7870 MB
+    Driver:   27.20.11044.7
+Initialize mono
+Mono path[0] = 'D:/Program/2020.2.6f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Program/2020.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Program/2020.2.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56468
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Program/2020.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001888 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 85.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.488 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009577 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 86.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.817 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2185 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 97.5 MB.
+
+Unloading 115 unused Assets to reduce memory usage. Loaded Objects now: 2551.
+Total: 3.658500 ms (FindLiveObjects: 0.508100 ms CreateObjectMapping: 0.170900 ms MarkObjects: 2.821000 ms  DeleteObjects: 0.155400 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/AppMetrica/AppMetrica.prefab
+  artifactKey: Guid(1edb7f7d5ea68467097decc77664b28d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AppMetrica/AppMetrica.prefab using Guid(1edb7f7d5ea68467097decc77664b28d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '603db065f2a9e4b8418d4b298551ef7d') in 0.105288 seconds
+  Import took 0.112781 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.873481 seconds.
+  path: Assets/Scripts/AdsInitializer.cs
+  artifactKey: Guid(0987996d2b66c7f4f8df3106af4a308a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AdsInitializer.cs using Guid(0987996d2b66c7f4f8df3106af4a308a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '408f49190890db373b1b94a6636ee411') in 0.027619 seconds
+  Import took 0.032866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002158 seconds.
+  path: Assets/Scripts/AdsInitializer.cs
+  artifactKey: Guid(0987996d2b66c7f4f8df3106af4a308a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AdsInitializer.cs using Guid(0987996d2b66c7f4f8df3106af4a308a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '408f49190890db373b1b94a6636ee411') in 0.002501 seconds
+  Import took 0.008603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.364563 seconds.
+  path: Assets/Scripts/AdsInitializer.cs
+  artifactKey: Guid(0987996d2b66c7f4f8df3106af4a308a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AdsInitializer.cs using Guid(0987996d2b66c7f4f8df3106af4a308a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e2aebb9a7d4cd17eb125cc7cde1d5b1') in 0.002989 seconds
+  Import took 0.006401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000833 seconds.
+  path: Assets/Scripts/AdsInitializer.cs
+  artifactKey: Guid(0987996d2b66c7f4f8df3106af4a308a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AdsInitializer.cs using Guid(0987996d2b66c7f4f8df3106af4a308a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e2aebb9a7d4cd17eb125cc7cde1d5b1') in 0.002291 seconds
+  Import took 0.005612 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007291 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.213 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2212 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.3 MB.
+System memory in use after: 97.5 MB.
+
+Unloading 152 unused Assets to reduce memory usage. Loaded Objects now: 2554.
+Total: 2.497800 ms (FindLiveObjects: 0.331600 ms CreateObjectMapping: 0.063100 ms MarkObjects: 2.036700 ms  DeleteObjects: 0.065000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 19.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 55.3 MB.
+System memory in use after: 55.5 MB.
+
+Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 2554.
+Total: 4.026500 ms (FindLiveObjects: 0.539100 ms CreateObjectMapping: 0.157800 ms MarkObjects: 3.276800 ms  DeleteObjects: 0.050300 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 28.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 55.3 MB.
+System memory in use after: 55.5 MB.
+
+Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 2554.
+Total: 4.273200 ms (FindLiveObjects: 0.389200 ms CreateObjectMapping: 0.172800 ms MarkObjects: 3.648000 ms  DeleteObjects: 0.060400 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 33.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 55.3 MB.
+System memory in use after: 55.5 MB.
+
+Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 2554.
+Total: 4.650300 ms (FindLiveObjects: 0.399900 ms CreateObjectMapping: 0.135400 ms MarkObjects: 4.051700 ms  DeleteObjects: 0.061000 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 50.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 100 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 55.3 MB.
+System memory in use after: 55.5 MB.
+
+Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 2554.
+Total: 4.832300 ms (FindLiveObjects: 0.391400 ms CreateObjectMapping: 0.134400 ms MarkObjects: 4.194300 ms  DeleteObjects: 0.109000 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

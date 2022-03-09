@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">199533931565</string>
+  <string name="google_storage_bucket" translatable="false">wrecking-ball-1cb3e.appspot.com</string>
+  <string name="project_id" translatable="false">wrecking-ball-1cb3e</string>
+  <string name="google_api_key" translatable="false">AIzaSyDZaoFmvSRD4yqTcQWj0hq0xlQmwKQ1TzU</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDZaoFmvSRD4yqTcQWj0hq0xlQmwKQ1TzU</string>
+  <string name="google_app_id" translatable="false">1:199533931565:android:c4dfdf720827f6fea75ca4</string>
+  <string name="default_web_client_id" translatable="false">199533931565-krmj3cn3ka9dl8jpbaerhp4j2bqq99il.apps.googleusercontent.com</string>
+</resources>
