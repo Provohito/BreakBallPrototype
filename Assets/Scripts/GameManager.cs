@@ -74,12 +74,12 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < _particleEffectsConteiners[0].transform.childCount; i++)
             {
                 int k = Random.Range(2, 4);
-                StartCoroutine(SetParticle(_particleEffectsConteiners[0], _particleSkins[k], i));
+                SetParticle(_particleEffectsConteiners[0], _particleSkins[k], i);
                 //_particleEffectsConteiners[0].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[k]);
             }
             for (int i = 0; i < _particleEffectsConteiners[1].transform.childCount; i++)
             {
-                StartCoroutine(SetParticle(_particleEffectsConteiners[1], _particleSkins[1], i));
+                SetParticle(_particleEffectsConteiners[1], _particleSkins[1], i);
                 //_particleEffectsConteiners[1].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[1]);
             }
         }
@@ -87,55 +87,71 @@ public class GameManager : MonoBehaviour
         {
             for (int i = 0; i < _particleEffectsConteiners[0].transform.childCount; i++)
             {
-                StartCoroutine(SetParticle(_particleEffectsConteiners[0], _particleSkins[0], i));
+                SetParticle(_particleEffectsConteiners[0], _particleSkins[0], i);
                 //_particleEffectsConteiners[0].transform.GetChild(i).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, _particleSkins[0]);
             }
             _cosmos = true;
         }
     }
 
-    [System.Obsolete]
-    private IEnumerator SetParticle(GameObject conteiner, Sprite sprite, int index)
+    private void SetParticle(GameObject conteiner, Sprite sprite, int index)
     {
-        // получить время
-        ChangeSkinParticle(1, index, conteiner);
-        yield return new WaitForSeconds(10f);
+        StartCoroutine(UnVisibleSprite(index, conteiner, sprite));
+        //ChangeAlphaToLow(index, conteiner, sprite);
+        
+        //conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
+        
+        //ChangeAlphaToHigh(index, conteiner);
+    }
+
+
+    private IEnumerator VisibleSprite(int index, GameObject conteiner)
+    {
+        for (float f = 0.05f; f <= 1; f += 0.05f)
+        {
+            conteiner.transform.GetChild(index).localScale += new Vector3(1.1f, 1.1f, 1.1f);
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+    private IEnumerator UnVisibleSprite(int index, GameObject conteiner, Sprite sprite)
+    {
+        for (float f = 1f; f >= 0; f -= 0.05f)
+        {
+            conteiner.transform.GetChild(index).localScale -= new Vector3(1.1f,1.1f,1.1f);
+            
+            yield return new WaitForSeconds(0.05f);
+        }
         conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
-        ChangeSkinParticle(2, index, conteiner);
+        StartCoroutine(VisibleSprite(index, conteiner));
+        
         
     }
-    
-    private void ChangeSkinParticle(int state, int index, GameObject conteiner)
+
+    private void ChangeAlphaToLow(int index, GameObject conteiner, Sprite sprite)
     {
         
-        float k = 2;
-        if (state == 1)
-        {
-            
-            while (k > 0)
-            {
-                Debug.Log("qwerty");
-                Color color = conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor;
-                k = -Time.deltaTime;
-                color.a -= 60f;
-                conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor = color;
-            }
-
-        }
-        else
-        {
-            
-            while (k > 0)
-            {
-                Color color = conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor;
-                k = -Time.deltaTime;
-                color.a += Time.deltaTime * 3;
-                conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor = color;
-            }
-
-
-        }
+        conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
+        Debug.Log("Low");
     }
+    private void ChangeAlphaToHigh(int index, GameObject conteiner)
+    {
+        
+        float k = 50;
+        while (k > 0)
+        {
+            Color color = conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor;
+            k = -Time.deltaTime;
+            if (color.a <= 160f)
+            {
+                color.a += 10f;
+            }
+            conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor = color;
+            return;
+        }
+        Debug.Log("High");
+    }
+
+    
     public void NextLevel()
     {
         GameObject[] _enemies = GameObject.FindGameObjectsWithTag("enemy");

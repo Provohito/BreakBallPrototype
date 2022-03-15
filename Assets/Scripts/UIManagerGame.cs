@@ -63,7 +63,6 @@ public class UIManagerGame : MonoBehaviour
     private void UpdateScore()
     {
         _score.text = score.ToString();
-        Debug.Log(_GM.NumberLevel);
         if (_GM.NumberLevel == 2)
         {
             if (score - _previousScore >= 10)
