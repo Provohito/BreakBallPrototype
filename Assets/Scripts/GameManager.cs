@@ -111,10 +111,11 @@ public class GameManager : MonoBehaviour
         float k = 2;
         if (state == 1)
         {
-            Color color = conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor;
+            
             while (k > 0)
             {
                 Debug.Log("qwerty");
+                Color color = conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor;
                 k = -Time.deltaTime;
                 color.a -= 60f;
                 conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor = color;
@@ -123,11 +124,12 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Color color = conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor;
+            
             while (k > 0)
             {
+                Color color = conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor;
                 k = -Time.deltaTime;
-                color.a -= Time.deltaTime * 3;
+                color.a += Time.deltaTime * 3;
                 conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor = color;
             }
 
