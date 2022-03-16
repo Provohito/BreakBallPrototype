@@ -25,6 +25,7 @@ public class CheckDestroyLine : MonoBehaviour
             
             if (collision.gameObject.GetComponent<SpriteRenderer>().color == this.gameObject.GetComponent<SpriteRenderer>().color)
             {
+                collision.gameObject.SetActive(false);
                 indexWall = Random.Range(0,3);
                 switch (indexWall)
                 {
@@ -65,7 +66,8 @@ public class CheckDestroyLine : MonoBehaviour
                     }
                 }
                 _player.GetComponent<AudioSource>().PlayOneShot(_wallBreakSound);
-                collision.gameObject.SetActive(false);
+                
+                Debug.Log("1");
                 _player.GetComponent<PlayerController>().PlayEffect(this.gameObject.GetComponent<SpriteRenderer>().color);
                 _ui.Score += 8;
                 Destroy(this.gameObject);

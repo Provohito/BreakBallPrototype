@@ -222,12 +222,13 @@ public class GameManager : MonoBehaviour
         GameObject colorPref;
         _colorsConteiner.transform.position = new Vector3(_colorsConteiner.transform.position.x, _player.transform.position.y + 7.12f, _colorsConteiner.transform.position.z);
         mainColorPref = _colorsConteiner.transform.GetChild(trix - 1).gameObject;
+        mainColorPref.transform.position = new Vector3(_colorsConteiner.transform.position.x + (float)Random.Range(-2, 2), _player.transform.position.y + 7.12f, _colorsConteiner.transform.position.z);
         mainColorPref.SetActive(true);
         for (int i = 0; i < trix; i++)
         {
             int k = Random.Range(0, 4);
             _outColor[i] =  _colorsLine[k];
-            colorPref = mainColorPref.transform.GetChild(i).gameObject;
+            colorPref = mainColorPref.transform.GetChild(0).transform.GetChild(i).gameObject;
             colorPref.GetComponent<SpriteRenderer>().color = _outColor[i];
         }
         CreateEnemies();
@@ -236,6 +237,7 @@ public class GameManager : MonoBehaviour
 
     public void GenerateShild()
     {
+        Debug.Log(trix);
         _uiManager.GetComponent<UIManagerGame>().PressInitDefenceBtn(_outColor, trix);
     }
 
