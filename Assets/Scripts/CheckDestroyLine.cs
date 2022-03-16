@@ -44,10 +44,30 @@ public class CheckDestroyLine : MonoBehaviour
                         _player.GetComponent<AudioSource>().pitch = 1f;
                         break;
                 }
+                if (_gm.CountLines < 4)
+                {
+                    switch (_gm.CountLines)
+                    {
+                        case 1:
+                            _ui.Score += 10;
+                            break;
+                        case 2:
+                            _ui.Score += 10;
+                            break;
+                        case 3:
+                            _ui.Score += 8;
+                            break;
+                        case 4:
+                            _ui.Score += 7;
+                            break;
+                        default:
+                            break;
+                    }
+                }
                 _player.GetComponent<AudioSource>().PlayOneShot(_wallBreakSound);
                 collision.gameObject.SetActive(false);
                 _player.GetComponent<PlayerController>().PlayEffect(this.gameObject.GetComponent<SpriteRenderer>().color);
-                _ui.Score += 10;
+                _ui.Score += 8;
                 Destroy(this.gameObject);
             }
             else

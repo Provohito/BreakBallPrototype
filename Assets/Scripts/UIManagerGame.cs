@@ -72,7 +72,7 @@ public class UIManagerGame : MonoBehaviour
                 _previousScore = score;
             }
         }
-        if (score - _previousScore >= 30)
+        if (score - _previousScore >= 35)
         {
             StopAllCoroutines();
             _GM.NextLevel();

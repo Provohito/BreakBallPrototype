@@ -97,11 +97,7 @@ public class GameManager : MonoBehaviour
     private void SetParticle(GameObject conteiner, Sprite sprite, int index)
     {
         StartCoroutine(UnVisibleSprite(index, conteiner, sprite));
-        //ChangeAlphaToLow(index, conteiner, sprite);
         
-        //conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
-        
-        //ChangeAlphaToHigh(index, conteiner);
     }
 
 
@@ -126,34 +122,12 @@ public class GameManager : MonoBehaviour
         
         
     }
+    public int CountLines { set { countLines = value; } get { return countLines; } }
+    private int countLines = 1;
 
-    private void ChangeAlphaToLow(int index, GameObject conteiner, Sprite sprite)
-    {
-        
-        conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
-        Debug.Log("Low");
-    }
-    private void ChangeAlphaToHigh(int index, GameObject conteiner)
-    {
-        
-        float k = 50;
-        while (k > 0)
-        {
-            Color color = conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor;
-            k = -Time.deltaTime;
-            if (color.a <= 160f)
-            {
-                color.a += 10f;
-            }
-            conteiner.transform.GetChild(index).GetComponent<ParticleSystem>().startColor = color;
-            return;
-        }
-        Debug.Log("High");
-    }
-
-    
     public void NextLevel()
     {
+        Debug.Log(countLines);
         GameObject[] _enemies = GameObject.FindGameObjectsWithTag("enemy");
         for (int i = 0; i < _enemies.Length; i++)
         {
@@ -165,7 +139,14 @@ public class GameManager : MonoBehaviour
         {
             _colorsConteiner.transform.GetChild(i).gameObject.SetActive(false);
         }
-        trix = Random.Range(1, 4);
+        // Сделать рассчет
+        if (countLines > 4)
+        {
+            trix = Random.Range(1, 4);
+        }
+        else
+            trix = countLines;
+        
         
         if (_numberLevel == 2)
         {
@@ -175,7 +156,6 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(ReloadDestroyPoint());
         }
-        Debug.Log("Win");
         GenerateContainer();
         
         _player.GetComponent<PlayerMove>().Speed += 0.02f;

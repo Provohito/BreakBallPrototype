@@ -67,19 +67,16 @@ public class PlayerController : MonoBehaviour
         _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
         if (collision.transform.tag == "TakeColor")
         {
-            //_audio[1].Play();
             GameObject.Find("GameManager").GetComponent<GameManager>().NumberLevel++;
+            GameObject.Find("GameManager").GetComponent<GameManager>().CountLines++;
             collision.gameObject.SetActive(false);
             _gameManager.GetComponent<GameManager>().GenerateShild();
             transform.GetChild(5).GetComponent<ParticleSystem>().Play();
             this.gameObject.GetComponent<PlayerMove>().enabled = false;
-            //transform.GetChild(4).GetComponent<ParticleSystem>().Play();
-            
             _gameManager.GetComponent<GameManager>().StartConsentration();
         }
         if (collision.transform.tag == "Die")
         {
-            Debug.Log("Die");
             collision.gameObject.SetActive(false);
             _ui.EndGameStart();
         }
