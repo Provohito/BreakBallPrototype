@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-    private bool isMusikOn = false;
+    private bool isMusikOn = true;
     private bool isAudioOn = false;
 
     [SerializeField]
@@ -26,41 +26,6 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _unSys = GameObject.Find("SkinChanger").GetComponent<UnlockSkinsSystem>();
-        if (!PlayerPrefs.HasKey("MusikOn"))
-        {
-            PlayerPrefs.SetInt("MusikOn", 0);
-        }
-        else
-        {
-            if (PlayerPrefs.GetInt("MusikOn") == 1)
-            {
-                isMusikOn = true;
-            }   
-            else
-            {
-                isMusikOn = false;
-                MusikCheck();
-            }
-            
-        }
-        if (!PlayerPrefs.HasKey("SoundsOn"))
-        {
-            PlayerPrefs.SetInt("SoundsOn", 0);
-        }
-        else
-        {
-            if (PlayerPrefs.GetInt("SoundsOn") == 1)
-            {
-                isAudioOn = true;
-            }
-            else
-            {
-                isAudioOn = false;
-                SoundCheck();
-            }
-            
-        }
-
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -88,13 +53,6 @@ public class PlayerController : MonoBehaviour
         SwapSprite(0);
         _audio.enabled = isAudioOn;
         isAudioOn = !isAudioOn;
-        if (isAudioOn)
-            PlayerPrefs.SetInt("SoundsOn", 1);
-        else
-        {
-            PlayerPrefs.SetInt("SoundsOn", 0);
-        }
-
     }
 
 
@@ -104,14 +62,6 @@ public class PlayerController : MonoBehaviour
         SwapSprite(1);
         _musik.transform.GetChild(0).GetComponent<AudioSource>().mute = isMusikOn;
         isMusikOn = !isMusikOn;
-        
-        if (isMusikOn)
-            PlayerPrefs.SetInt("SoundsOn", 1);
-        else
-        {
-            PlayerPrefs.SetInt("SoundsOn", 0);
-        }
-
     }
 
     private void SwapSprite(int index)
