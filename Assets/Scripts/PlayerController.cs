@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        
         _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
         if (collision.transform.tag == "TakeColor")
         {
@@ -40,8 +41,9 @@ public class PlayerController : MonoBehaviour
             this.gameObject.GetComponent<PlayerMove>().enabled = false;
             _gameManager.GetComponent<GameManager>().StartConsentration();
         }
-        if (collision.transform.tag == "Die")
+        if (collision.transform.tag == "Die" || collision.transform.tag == "enemy")
         {
+            Debug.Log("Win");
             collision.gameObject.SetActive(false);
             _ui.EndGameStart();
         }
