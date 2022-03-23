@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using GoogleMobileAds.Api;
 
 public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
 {
@@ -13,6 +12,7 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     void Awake()
     {
         InitializeAds();
+        MobileAds.Initialize(initStatus => { });
     }
 
     public void InitializeAds()
