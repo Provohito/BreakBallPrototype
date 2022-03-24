@@ -2116,8 +2116,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 724520419}
-        m_TargetAssemblyTypeName: AdManager, Assembly-CSharp
-        m_MethodName: ShowRewardBasedVideo
+        m_TargetAssemblyTypeName: MobAdRewarded, Assembly-CSharp
+        m_MethodName: ShowRewardedAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21866,6 +21866,8 @@ GameObject:
   m_Component:
   - component: {fileID: 724520420}
   - component: {fileID: 724520423}
+  - component: {fileID: 724520422}
+  - component: {fileID: 724520421}
   - component: {fileID: 724520419}
   m_Layer: 0
   m_Name: Ads
@@ -21883,9 +21885,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 724520418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae6d082b59ac8740ba7ecca3585206e, type: 3}
+  m_Script: {fileID: 11500000, guid: 663e501861c591048a0047c40469652f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ui: {fileID: 1195968657}
 --- !u!4 &724520420
 Transform:
   m_ObjectHideFlags: 0
@@ -21900,6 +21903,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &724520421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724520418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2143582c0a8324e8944b593e507abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &724520422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724520418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8701583ad486b1b418ad33776b0aa700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &724520423
 MonoBehaviour:
   m_ObjectHideFlags: 0

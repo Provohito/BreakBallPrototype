@@ -15,11 +15,11 @@ D:/BreakBallPrototype
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52858
+57043
 Successfully changed project path to: D:/BreakBallPrototype
 D:/BreakBallPrototype
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 44.21 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 51.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.6f1 (8a2143876886)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/Resources/UnitySubsystems
@@ -35,117 +35,131 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56644
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56608
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001845 seconds.
+Registered in 0.002447 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 43.28 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 61.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.419 seconds
+- Completed reload, in  5.908 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006652 seconds.
+Registered in 0.009752 seconds.
 Begin MonoManager ReloadAssembly
-Unloading broken assembly Library/ScriptAssemblies/Assembly-CSharp.dll, this assembly can cause crashes in the runtime
-
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 38.21 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 40.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.956 seconds
+- Completed reload, in  1.010 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2048 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 94.2 MB.
 System memory in use after: 94.3 MB.
 
-Unloading 61 unused Assets to reduce memory usage. Loaded Objects now: 2472.
-Total: 2.481400 ms (FindLiveObjects: 0.318900 ms CreateObjectMapping: 0.120700 ms MarkObjects: 1.942300 ms  DeleteObjects: 0.098400 ms)
+Unloading 61 unused Assets to reduce memory usage. Loaded Objects now: 2473.
+Total: 3.073500 ms (FindLiveObjects: 0.342400 ms CreateObjectMapping: 0.169300 ms MarkObjects: 2.236800 ms  DeleteObjects: 0.323500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/RewardedAdsBtn.cs
-  artifactKey: Guid(e6d63eaa3a2b4dd4783416bcc892df42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/RewardedAdsBtn.cs using Guid(e6d63eaa3a2b4dd4783416bcc892df42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd27281a8fbfe78c6240de52847a1d4e') in 0.032644 seconds
-  Import took 0.035534 seconds .
+  path: Assets/Scripts/Ads/AdManager.cs
+  artifactKey: Guid(eae6d082b59ac8740ba7ecca3585206e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ads/AdManager.cs using Guid(eae6d082b59ac8740ba7ecca3585206e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc876fe48f3b29e6a3c8790355c372d7') in 0.039861 seconds
+  Import took 0.043651 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Scripts/Ads
+  artifactKey: Guid(462ba955751e7244ab1ef8125c2fb853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ads using Guid(462ba955751e7244ab1ef8125c2fb853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbc4d3284f182d888a3987163e48c01c') in 0.003923 seconds
+  Import took 0.007358 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006241 seconds.
+Registered in 0.006731 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.983 seconds
+- Completed reload, in  1.064 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2104 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.3 MB.
+System memory in use after: 95.4 MB.
+
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2476.
+Total: 2.018600 ms (FindLiveObjects: 0.216100 ms CreateObjectMapping: 0.086100 ms MarkObjects: 1.669800 ms  DeleteObjects: 0.045900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 19.949012 seconds.
+  path: Assets/Scripts/Ads/AdManager.cs
+  artifactKey: Guid(eae6d082b59ac8740ba7ecca3585206e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ads/AdManager.cs using Guid(eae6d082b59ac8740ba7ecca3585206e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9661fa59dbfbd9d332b968ade1f37c71') in 0.003826 seconds
+  Import took 0.007275 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007280 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.087 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 95.3 MB.
 System memory in use after: 95.4 MB.
 
-Unloading 133 unused Assets to reduce memory usage. Loaded Objects now: 2474.
-Total: 7.189600 ms (FindLiveObjects: 0.540600 ms CreateObjectMapping: 0.319400 ms MarkObjects: 6.123800 ms  DeleteObjects: 0.202400 ms)
+Unloading 133 unused Assets to reduce memory usage. Loaded Objects now: 2478.
+Total: 1.957800 ms (FindLiveObjects: 0.184700 ms CreateObjectMapping: 0.075900 ms MarkObjects: 1.650700 ms  DeleteObjects: 0.045400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Import Request.
-  Time since last request: 58.065452 seconds.
-  path: Assets/Prefab/DieEnemy.prefab
-  artifactKey: Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/DieEnemy.prefab using Guid(879dd5ab992841e41a15928dd8fde724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '120264374c48b9a17bc23e0ab56caa4f') in 0.194436 seconds
-  Import took 0.198140 seconds .
+  Time since last request: 16.675213 seconds.
+  path: Assets/Scripts/Ads/AdsInitialize.cs
+  artifactKey: Guid(8701583ad486b1b418ad33776b0aa700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ads/AdsInitialize.cs using Guid(8701583ad486b1b418ad33776b0aa700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fee23bb12655c9b303509df3b2e2847') in 0.008000 seconds
+  Import took 0.070726 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006189 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.962 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.3 MB.
-System memory in use after: 98.4 MB.
-
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2484.
-Total: 2.070500 ms (FindLiveObjects: 0.210200 ms CreateObjectMapping: 0.077700 ms MarkObjects: 1.709400 ms  DeleteObjects: 0.072300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006224 seconds.
+Registered in 0.011348 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
@@ -154,178 +168,92 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.972 seconds
+- Completed reload, in  3.951 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.3 MB.
-System memory in use after: 98.4 MB.
-
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2487.
-Total: 8.509200 ms (FindLiveObjects: 0.556300 ms CreateObjectMapping: 0.407300 ms MarkObjects: 7.338800 ms  DeleteObjects: 0.203400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Import Request.
-  Time since last request: 644.744997 seconds.
-  path: Assets/Prefab/enemy.prefab
-  artifactKey: Guid(fa6301ff2c0c78845ba7ca92fdaa453e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/enemy.prefab using Guid(fa6301ff2c0c78845ba7ca92fdaa453e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '029b2d9d31bbfa7259f0d8433745a4b1') in 0.083639 seconds
-  Import took 0.089185 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.609806 seconds.
-  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
-  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dc71a7c9072814e9c678eb46d2d0840') in 0.057177 seconds
-  Import took 0.061130 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007557 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.104 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.7 MB.
-System memory in use after: 98.9 MB.
-
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2528.
-Total: 3.077900 ms (FindLiveObjects: 0.322100 ms CreateObjectMapping: 0.085900 ms MarkObjects: 2.601700 ms  DeleteObjects: 0.067000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Import Request.
-  Time since last request: 18.264456 seconds.
-  path: Assets/Prefab/enemy.prefab
-  artifactKey: Guid(fa6301ff2c0c78845ba7ca92fdaa453e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/enemy.prefab using Guid(fa6301ff2c0c78845ba7ca92fdaa453e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74b874760fec28fe4f38eac711a89d0d') in 0.055888 seconds
-  Import took 0.060097 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007001 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.484 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.8 MB.
-System memory in use after: 98.9 MB.
-
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2532.
-Total: 2.234300 ms (FindLiveObjects: 0.228900 ms CreateObjectMapping: 0.088200 ms MarkObjects: 1.863000 ms  DeleteObjects: 0.052500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006483 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.193 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.8 MB.
-System memory in use after: 98.9 MB.
-
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2535.
-Total: 2.923000 ms (FindLiveObjects: 0.360100 ms CreateObjectMapping: 0.112600 ms MarkObjects: 2.385700 ms  DeleteObjects: 0.063600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007017 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.165 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.8 MB.
-System memory in use after: 98.9 MB.
+Unloading 2104 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.4 MB.
+System memory in use after: 95.5 MB.
 
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2538.
-Total: 5.191200 ms (FindLiveObjects: 0.503700 ms CreateObjectMapping: 0.136400 ms MarkObjects: 4.458500 ms  DeleteObjects: 0.090900 ms)
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2482.
+Total: 2.164800 ms (FindLiveObjects: 0.245000 ms CreateObjectMapping: 0.098700 ms MarkObjects: 1.768500 ms  DeleteObjects: 0.051500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006914 seconds.
+Registered in 0.006451 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.193 seconds
+- Completed reload, in  1.045 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.8 MB.
-System memory in use after: 98.9 MB.
+Unloading 2104 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.4 MB.
+System memory in use after: 95.5 MB.
 
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2541.
-Total: 4.388600 ms (FindLiveObjects: 0.560400 ms CreateObjectMapping: 0.260600 ms MarkObjects: 3.506900 ms  DeleteObjects: 0.058800 ms)
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2485.
+Total: 2.917200 ms (FindLiveObjects: 0.251800 ms CreateObjectMapping: 0.107200 ms MarkObjects: 2.472600 ms  DeleteObjects: 0.084500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 89.116134 seconds.
+  path: Assets/Scripts/Ads/AdsInitialize.cs
+  artifactKey: Guid(8701583ad486b1b418ad33776b0aa700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ads/AdsInitialize.cs using Guid(8701583ad486b1b418ad33776b0aa700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8196af2933150c64fcee96a9b70bed83') in 0.004123 seconds
+  Import took 0.008295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.925137 seconds.
+  path: Assets/Scripts/Ads/MobAdManner.cs
+  artifactKey: Guid(a0bfbf2d46886e5498241006d148fa96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ads/MobAdManner.cs using Guid(a0bfbf2d46886e5498241006d148fa96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa36797c8ef4078e85608b6f7cfa47e') in 0.006784 seconds
+  Import took 0.010751 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006340 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.066 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2105 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.4 MB.
+System memory in use after: 95.5 MB.
+
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2489.
+Total: 7.741800 ms (FindLiveObjects: 0.839100 ms CreateObjectMapping: 0.481000 ms MarkObjects: 6.222800 ms  DeleteObjects: 0.195600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007868 seconds.
+Registered in 0.007569 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
@@ -334,61 +262,241 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.322 seconds
+- Completed reload, in  1.089 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.8 MB.
-System memory in use after: 98.9 MB.
+Unloading 2104 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.4 MB.
+System memory in use after: 95.5 MB.
 
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2544.
-Total: 3.042900 ms (FindLiveObjects: 0.240200 ms CreateObjectMapping: 0.085300 ms MarkObjects: 2.644100 ms  DeleteObjects: 0.071600 ms)
+Unloading 133 unused Assets to reduce memory usage. Loaded Objects now: 2491.
+Total: 2.219700 ms (FindLiveObjects: 0.258700 ms CreateObjectMapping: 0.117600 ms MarkObjects: 1.793400 ms  DeleteObjects: 0.048700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Import Request.
-  Time since last request: 3389.856337 seconds.
-  path: Assets/Scripts/AdManager.cs
-  artifactKey: Guid(eae6d082b59ac8740ba7ecca3585206e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/AdManager.cs using Guid(eae6d082b59ac8740ba7ecca3585206e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed31591a31fc3f7a1b8b1e8d99645783') in 0.124250 seconds
-  Import took 0.191300 seconds .
+  Time since last request: 17.063425 seconds.
+  path: Assets/Scripts/Ads/MobAdBanner.cs
+  artifactKey: Guid(ac2143582c0a8324e8944b593e507abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ads/MobAdBanner.cs using Guid(ac2143582c0a8324e8944b593e507abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c71d5bda06f293ce25d6d9332d0b4bf8') in 0.013106 seconds
+  Import took 0.018395 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010720 seconds.
+Registered in 0.006703 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.337 seconds
+- Completed reload, in  1.216 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2104 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.8 MB.
-System memory in use after: 98.9 MB.
+Unloading 2105 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.4 MB.
+System memory in use after: 95.6 MB.
 
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2548.
-Total: 9.217400 ms (FindLiveObjects: 0.611100 ms CreateObjectMapping: 0.187100 ms MarkObjects: 8.316300 ms  DeleteObjects: 0.101600 ms)
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2495.
+Total: 2.213300 ms (FindLiveObjects: 0.345100 ms CreateObjectMapping: 0.079600 ms MarkObjects: 1.741000 ms  DeleteObjects: 0.045900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006729 seconds.
+Registered in 0.006666 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.103 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2105 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
+System memory in use after: 95.6 MB.
+
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2498.
+Total: 2.292600 ms (FindLiveObjects: 0.396600 ms CreateObjectMapping: 0.124300 ms MarkObjects: 1.722300 ms  DeleteObjects: 0.048500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 413.233014 seconds.
+  path: Assets/Scripts/Ads/MobAdBanner.cs
+  artifactKey: Guid(ac2143582c0a8324e8944b593e507abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ads/MobAdBanner.cs using Guid(ac2143582c0a8324e8944b593e507abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b86593472a4baa8b447556ed34edd38') in 0.003970 seconds
+  Import took 0.007912 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007075 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.087 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2105 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
+System memory in use after: 95.6 MB.
+
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2501.
+Total: 1.988400 ms (FindLiveObjects: 0.187600 ms CreateObjectMapping: 0.075700 ms MarkObjects: 1.678600 ms  DeleteObjects: 0.045800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 17.398893 seconds.
+  path: Assets/Scripts/Ads/MobAdRewarded.cs
+  artifactKey: Guid(663e501861c591048a0047c40469652f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ads/MobAdRewarded.cs using Guid(663e501861c591048a0047c40469652f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4615dc4950745d16a3b65cc8d3aaedf9') in 0.008662 seconds
+  Import took 0.013120 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006543 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.226 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
 Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2106 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
+System memory in use after: 95.6 MB.
+
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2505.
+Total: 2.292900 ms (FindLiveObjects: 0.443500 ms CreateObjectMapping: 0.092700 ms MarkObjects: 1.709400 ms  DeleteObjects: 0.045800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006430 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.116 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2106 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
+System memory in use after: 95.6 MB.
+
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2508.
+Total: 2.053900 ms (FindLiveObjects: 0.188700 ms CreateObjectMapping: 0.071900 ms MarkObjects: 1.747700 ms  DeleteObjects: 0.044700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 371.299544 seconds.
+  path: Assets/Scripts/Ads/MobAdRewarded.cs
+  artifactKey: Guid(663e501861c591048a0047c40469652f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Ads/MobAdRewarded.cs using Guid(663e501861c591048a0047c40469652f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '482d8a886e369dfead94cc387ac43a5a') in 0.004043 seconds
+  Import took 0.007295 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007418 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.079 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2106 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
+System memory in use after: 95.6 MB.
+
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2511.
+Total: 2.160900 ms (FindLiveObjects: 0.268900 ms CreateObjectMapping: 0.094800 ms MarkObjects: 1.745300 ms  DeleteObjects: 0.050800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007929 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.352 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2106 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
+System memory in use after: 95.6 MB.
+
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2514.
+Total: 3.325000 ms (FindLiveObjects: 0.224800 ms CreateObjectMapping: 0.087500 ms MarkObjects: 2.956800 ms  DeleteObjects: 0.054600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006627 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -397,94 +505,628 @@ Mono: successfully reloaded assembly
 - Completed reload, in  1.065 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2104 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.8 MB.
-System memory in use after: 99.0 MB.
+Unloading 2106 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
+System memory in use after: 95.6 MB.
 
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2551.
-Total: 2.193300 ms (FindLiveObjects: 0.219700 ms CreateObjectMapping: 0.077800 ms MarkObjects: 1.815800 ms  DeleteObjects: 0.079000 ms)
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2517.
+Total: 2.092500 ms (FindLiveObjects: 0.313700 ms CreateObjectMapping: 0.078800 ms MarkObjects: 1.653600 ms  DeleteObjects: 0.045700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Import Request.
-  Time since last request: 1340.964344 seconds.
-  path: Assets/Scripts/AdManager.cs
-  artifactKey: Guid(eae6d082b59ac8740ba7ecca3585206e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/AdManager.cs using Guid(eae6d082b59ac8740ba7ecca3585206e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '068774a51257b7b7fc55ab457c553286') in 0.004306 seconds
-  Import took 0.007872 seconds .
+  Time since last request: 346.027885 seconds.
+  path: Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset
+  artifactKey: Guid(ac0ad885fb9057941ab018ed164fe04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset using Guid(ac0ad885fb9057941ab018ed164fe04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca58b291400476d0d1f32aa678a18967') in 0.021916 seconds
+  Import took 0.025281 seconds .
 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006738 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.052 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2104 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.9 MB.
-System memory in use after: 99.0 MB.
-
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2554.
-Total: 2.308400 ms (FindLiveObjects: 0.274900 ms CreateObjectMapping: 0.109500 ms MarkObjects: 1.835900 ms  DeleteObjects: 0.086700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Import Request.
-  Time since last request: 208.922286 seconds.
-  path: Assets/Scripts/AdManager.cs
-  artifactKey: Guid(eae6d082b59ac8740ba7ecca3585206e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/AdManager.cs using Guid(eae6d082b59ac8740ba7ecca3585206e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abdaa59a6bc2858d1393dd353bb1e91e') in 0.003937 seconds
-  Import took 0.006964 seconds .
+  Time since last request: 24.384010 seconds.
+  path: Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset
+  artifactKey: Guid(ac0ad885fb9057941ab018ed164fe04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset using Guid(ac0ad885fb9057941ab018ed164fe04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18f3abf58a1a8b34b21a3de37231c4f') in 0.001902 seconds
+  Import took 0.005652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010195 seconds.
+  path: Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset
+  artifactKey: Guid(ac0ad885fb9057941ab018ed164fe04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset using Guid(ac0ad885fb9057941ab018ed164fe04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18f3abf58a1a8b34b21a3de37231c4f') in 0.001922 seconds
+  Import took 0.004778 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006285 seconds.
+Registered in 0.006500 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.051 seconds
+- Completed reload, in  1.124 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2104 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 98.9 MB.
-System memory in use after: 99.0 MB.
+Unloading 2106 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.5 MB.
+System memory in use after: 95.7 MB.
 
-Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2557.
-Total: 4.143200 ms (FindLiveObjects: 0.338400 ms CreateObjectMapping: 0.107300 ms MarkObjects: 3.641400 ms  DeleteObjects: 0.054700 ms)
+Unloading 132 unused Assets to reduce memory usage. Loaded Objects now: 2520.
+Total: 3.289700 ms (FindLiveObjects: 0.340300 ms CreateObjectMapping: 0.095200 ms MarkObjects: 2.798200 ms  DeleteObjects: 0.054900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 6.55 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 6.31 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 46 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.3 MB.
-System memory in use after: 57.5 MB.
+System memory in use before: 54.0 MB.
+System memory in use after: 54.1 MB.
 
-Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 2557.
-Total: 2.430600 ms (FindLiveObjects: 0.198300 ms CreateObjectMapping: 0.106300 ms MarkObjects: 2.103600 ms  DeleteObjects: 0.021600 ms)
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 2520.
+Total: 2.430200 ms (FindLiveObjects: 0.225400 ms CreateObjectMapping: 0.094500 ms MarkObjects: 2.075000 ms  DeleteObjects: 0.033800 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010746 seconds.
+Begin MonoManager ReloadAssembly
+Error: Could not load signature of Firebase.Editor.GenerateXmlFromGoogleServicesJson:OnBundleIdChanged due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+
+Unloading broken assembly Assets/Firebase/Editor/Firebase.Editor.dll, this assembly can cause crashes in the runtime
+
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.IO.FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+File name: 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null'
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+Rethrow as TypeInitializationException: The type initializer for 'Firebase.Editor.AndroidSettingsChecker' threw an exception.
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod.InternalInvoke(System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00002] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x000a8] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetMeshProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetMeshProcessorsHashString()
+
+TypeLoadException: Could not load type of field 'Firebase.Editor.GenerateXmlFromGoogleServicesJson:<>f__mg$cache0' (17) due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+  at (wrapper managed-to-native) System.RuntimeType.GetConstructors_native(System.RuntimeType,System.Reflection.BindingFlags)
+  at System.RuntimeType.GetConstructors_internal (System.Reflection.BindingFlags bindingAttr, System.RuntimeType reflectedType) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructorCandidates (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.CallingConventions callConv, System.Type[] types, System.Boolean allowPrefixLookup) [0x00034] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructors (System.Reflection.BindingFlags bindingAttr) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetDefaultConstructor () [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetMeshProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetMeshProcessorsHashString()
+
+FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+Rethrow as TypeInitializationException: The type initializer for 'Firebase.Editor.AndroidSettingsChecker' threw an exception.
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod.InternalInvoke(System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00002] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x000a8] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
+
+TypeLoadException: Could not load type of field 'Firebase.Editor.GenerateXmlFromGoogleServicesJson:<>f__mg$cache0' (17) due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+  at (wrapper managed-to-native) System.RuntimeType.GetConstructors_native(System.RuntimeType,System.Reflection.BindingFlags)
+  at System.RuntimeType.GetConstructors_internal (System.Reflection.BindingFlags bindingAttr, System.RuntimeType reflectedType) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructorCandidates (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.CallingConventions callConv, System.Type[] types, System.Boolean allowPrefixLookup) [0x00034] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructors (System.Reflection.BindingFlags bindingAttr) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetDefaultConstructor () [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
+
+FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+Rethrow as TypeInitializationException: The type initializer for 'Firebase.Editor.AndroidSettingsChecker' threw an exception.
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod.InternalInvoke(System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00002] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x000a8] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetAudioProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetAudioProcessorsHashString()
+
+TypeLoadException: Could not load type of field 'Firebase.Editor.GenerateXmlFromGoogleServicesJson:<>f__mg$cache0' (17) due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+  at (wrapper managed-to-native) System.RuntimeType.GetConstructors_native(System.RuntimeType,System.Reflection.BindingFlags)
+  at System.RuntimeType.GetConstructors_internal (System.Reflection.BindingFlags bindingAttr, System.RuntimeType reflectedType) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructorCandidates (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.CallingConventions callConv, System.Type[] types, System.Boolean allowPrefixLookup) [0x00034] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructors (System.Reflection.BindingFlags bindingAttr) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetDefaultConstructor () [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetAudioProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetAudioProcessorsHashString()
+
+FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+Rethrow as TypeInitializationException: The type initializer for 'Firebase.Editor.AndroidSettingsChecker' threw an exception.
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod.InternalInvoke(System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00002] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x000a8] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetSpeedTreeProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetSpeedTreeProcessorsHashString()
+
+TypeLoadException: Could not load type of field 'Firebase.Editor.GenerateXmlFromGoogleServicesJson:<>f__mg$cache0' (17) due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+  at (wrapper managed-to-native) System.RuntimeType.GetConstructors_native(System.RuntimeType,System.Reflection.BindingFlags)
+  at System.RuntimeType.GetConstructors_internal (System.Reflection.BindingFlags bindingAttr, System.RuntimeType reflectedType) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructorCandidates (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.CallingConventions callConv, System.Type[] types, System.Boolean allowPrefixLookup) [0x00034] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructors (System.Reflection.BindingFlags bindingAttr) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetDefaultConstructor () [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetSpeedTreeProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetSpeedTreeProcessorsHashString()
+
+FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+Rethrow as TypeInitializationException: The type initializer for 'Firebase.Editor.AndroidSettingsChecker' threw an exception.
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod.InternalInvoke(System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00002] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x000a8] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetPrefabProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetPrefabProcessorsHashString()
+
+TypeLoadException: Could not load type of field 'Firebase.Editor.GenerateXmlFromGoogleServicesJson:<>f__mg$cache0' (17) due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+  at (wrapper managed-to-native) System.RuntimeType.GetConstructors_native(System.RuntimeType,System.Reflection.BindingFlags)
+  at System.RuntimeType.GetConstructors_internal (System.Reflection.BindingFlags bindingAttr, System.RuntimeType reflectedType) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructorCandidates (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.CallingConventions callConv, System.Type[] types, System.Boolean allowPrefixLookup) [0x00034] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructors (System.Reflection.BindingFlags bindingAttr) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetDefaultConstructor () [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetPrefabProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetPrefabProcessorsHashString()
+
+- Completed reload, in  2.715 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2029 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.3 MB.
+System memory in use after: 93.4 MB.
+
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 2523.
+Total: 2.285200 ms (FindLiveObjects: 0.502700 ms CreateObjectMapping: 0.099000 ms MarkObjects: 1.646300 ms  DeleteObjects: 0.035700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008717 seconds.
+Begin MonoManager ReloadAssembly
+Error: Could not load signature of Firebase.Editor.GenerateXmlFromGoogleServicesJson:OnBundleIdChanged due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+
+Unloading broken assembly Assets/Firebase/Editor/Firebase.Editor.dll, this assembly can cause crashes in the runtime
+
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.IO.FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+File name: 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null'
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+Rethrow as TypeInitializationException: The type initializer for 'Firebase.Editor.AndroidSettingsChecker' threw an exception.
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod.InternalInvoke(System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00002] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x000a8] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetMeshProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetMeshProcessorsHashString()
+
+TypeLoadException: Could not load type of field 'Firebase.Editor.GenerateXmlFromGoogleServicesJson:<>f__mg$cache0' (17) due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+  at (wrapper managed-to-native) System.RuntimeType.GetConstructors_native(System.RuntimeType,System.Reflection.BindingFlags)
+  at System.RuntimeType.GetConstructors_internal (System.Reflection.BindingFlags bindingAttr, System.RuntimeType reflectedType) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructorCandidates (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.CallingConventions callConv, System.Type[] types, System.Boolean allowPrefixLookup) [0x00034] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructors (System.Reflection.BindingFlags bindingAttr) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetDefaultConstructor () [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetMeshProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetMeshProcessorsHashString()
+
+FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+Rethrow as TypeInitializationException: The type initializer for 'Firebase.Editor.AndroidSettingsChecker' threw an exception.
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod.InternalInvoke(System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00002] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x000a8] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
+
+TypeLoadException: Could not load type of field 'Firebase.Editor.GenerateXmlFromGoogleServicesJson:<>f__mg$cache0' (17) due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+  at (wrapper managed-to-native) System.RuntimeType.GetConstructors_native(System.RuntimeType,System.Reflection.BindingFlags)
+  at System.RuntimeType.GetConstructors_internal (System.Reflection.BindingFlags bindingAttr, System.RuntimeType reflectedType) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructorCandidates (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.CallingConventions callConv, System.Type[] types, System.Boolean allowPrefixLookup) [0x00034] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructors (System.Reflection.BindingFlags bindingAttr) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetDefaultConstructor () [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetTextureProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetTextureProcessorsHashString()
+
+FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+Rethrow as TypeInitializationException: The type initializer for 'Firebase.Editor.AndroidSettingsChecker' threw an exception.
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod.InternalInvoke(System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00002] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x000a8] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetAudioProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetAudioProcessorsHashString()
+
+TypeLoadException: Could not load type of field 'Firebase.Editor.GenerateXmlFromGoogleServicesJson:<>f__mg$cache0' (17) due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+  at (wrapper managed-to-native) System.RuntimeType.GetConstructors_native(System.RuntimeType,System.Reflection.BindingFlags)
+  at System.RuntimeType.GetConstructors_internal (System.Reflection.BindingFlags bindingAttr, System.RuntimeType reflectedType) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructorCandidates (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.CallingConventions callConv, System.Type[] types, System.Boolean allowPrefixLookup) [0x00034] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructors (System.Reflection.BindingFlags bindingAttr) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetDefaultConstructor () [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetAudioProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetAudioProcessorsHashString()
+
+FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+Rethrow as TypeInitializationException: The type initializer for 'Firebase.Editor.AndroidSettingsChecker' threw an exception.
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod.InternalInvoke(System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00002] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x000a8] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetSpeedTreeProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetSpeedTreeProcessorsHashString()
+
+TypeLoadException: Could not load type of field 'Firebase.Editor.GenerateXmlFromGoogleServicesJson:<>f__mg$cache0' (17) due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+  at (wrapper managed-to-native) System.RuntimeType.GetConstructors_native(System.RuntimeType,System.Reflection.BindingFlags)
+  at System.RuntimeType.GetConstructors_internal (System.Reflection.BindingFlags bindingAttr, System.RuntimeType reflectedType) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructorCandidates (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.CallingConventions callConv, System.Type[] types, System.Boolean allowPrefixLookup) [0x00034] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructors (System.Reflection.BindingFlags bindingAttr) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetDefaultConstructor () [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetSpeedTreeProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetSpeedTreeProcessorsHashString()
+
+FileNotFoundException: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies.
+  at Firebase.Editor.AndroidSettingsChecker..cctor () [0x0000c] in Z:\tmp\tmp.hH9qEjQ9We\firebase\app\client\unity\editor\src\AndroidAPILevelChecker.cs:37 
+Rethrow as TypeInitializationException: The type initializer for 'Firebase.Editor.AndroidSettingsChecker' threw an exception.
+  at (wrapper managed-to-native) System.Reflection.MonoCMethod.InternalInvoke(System.Reflection.MonoCMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00002] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoCMethod.InternalInvoke (System.Object obj, System.Object[] parameters) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x000a8] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetPrefabProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetPrefabProcessorsHashString()
+
+TypeLoadException: Could not load type of field 'Firebase.Editor.GenerateXmlFromGoogleServicesJson:<>f__mg$cache0' (17) due to: Could not load file or assembly 'Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Google.JarResolver, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
+  at (wrapper managed-to-native) System.RuntimeType.GetConstructors_native(System.RuntimeType,System.Reflection.BindingFlags)
+  at System.RuntimeType.GetConstructors_internal (System.Reflection.BindingFlags bindingAttr, System.RuntimeType reflectedType) [0x00008] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructorCandidates (System.String name, System.Reflection.BindingFlags bindingAttr, System.Reflection.CallingConventions callConv, System.Type[] types, System.Boolean allowPrefixLookup) [0x00034] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetConstructors (System.Reflection.BindingFlags bindingAttr) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.GetDefaultConstructor () [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceMono (System.Boolean nonPublic) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceSlow (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00009] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.RuntimeType.CreateInstanceDefaultCtor (System.Boolean publicOnly, System.Boolean skipCheckThis, System.Boolean fillCache, System.Threading.StackCrawlMark& stackMark) [0x00027] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x0002c] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetPostprocessingInternal.GetPrefabProcessorsHashString () [0x00035] in <8c48e4bc2ff34638b69095cbb65e2e27>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.AssetPostprocessingInternal:GetPrefabProcessorsHashString()
+
+- Completed reload, in  1.072 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2029 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.3 MB.
+System memory in use after: 93.4 MB.
+
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 2526.
+Total: 2.456200 ms (FindLiveObjects: 0.506700 ms CreateObjectMapping: 0.161000 ms MarkObjects: 1.760000 ms  DeleteObjects: 0.027500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008915 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.844 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2109 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.9 MB.
+System memory in use after: 96.0 MB.
+
+Unloading 135 unused Assets to reduce memory usage. Loaded Objects now: 2529.
+Total: 2.498400 ms (FindLiveObjects: 0.318300 ms CreateObjectMapping: 0.138900 ms MarkObjects: 1.985600 ms  DeleteObjects: 0.052300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006591 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.149 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2172 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.7 MB.
+System memory in use after: 97.8 MB.
+
+Unloading 198 unused Assets to reduce memory usage. Loaded Objects now: 2532.
+Total: 2.741400 ms (FindLiveObjects: 0.348100 ms CreateObjectMapping: 0.121200 ms MarkObjects: 2.198300 ms  DeleteObjects: 0.071700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010705 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.417 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2172 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.7 MB.
+System memory in use after: 97.8 MB.
+
+Unloading 198 unused Assets to reduce memory usage. Loaded Objects now: 2535.
+Total: 2.183700 ms (FindLiveObjects: 0.216500 ms CreateObjectMapping: 0.083600 ms MarkObjects: 1.819000 ms  DeleteObjects: 0.063500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007220 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.166 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2172 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.7 MB.
+System memory in use after: 97.9 MB.
+
+Unloading 198 unused Assets to reduce memory usage. Loaded Objects now: 2538.
+Total: 2.095000 ms (FindLiveObjects: 0.274100 ms CreateObjectMapping: 0.101300 ms MarkObjects: 1.665100 ms  DeleteObjects: 0.053500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
