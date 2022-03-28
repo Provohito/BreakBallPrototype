@@ -41,12 +41,30 @@ public class PlayerController : MonoBehaviour
             this.gameObject.GetComponent<PlayerMove>().enabled = false;
             _gameManager.GetComponent<GameManager>().StartConsentration();
         }
-        if (collision.transform.tag == "Die" || collision.transform.tag == "enemy")
+        if (collision.transform.tag == "Die")
         {
-            Debug.Log("Win");
-            collision.gameObject.SetActive(false);
+            StartCoroutine(WaitDie(collision.gameObject)); 
+        }
+        if (collision.transform.tag == "enemy")
+        {
+            this.transform.GetChild(7).transform.position = collision.transform.position;
+            this.transform.GetChild(8).transform.position = collision.transform.position;
+            this.transform.GetChild(7).GetComponent<ParticleSystem>().Play();
+            this.transform.GetChild(8).GetComponent<ParticleSystem>().Play();
+            this.transform.GetComponent<SpriteRenderer>().enabled = false;
             _ui.EndGameStart();
         }
+    }
+
+    IEnumerator WaitDie(GameObject obj)
+    {
+        obj.transform.GetChild(0).GetChild(0).GetComponent<ParticleSystem>().Play();
+        obj.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+        _ui.EndGameStart();
+        yield return new WaitForSeconds(1.25f);
+        obj.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+        obj.gameObject.SetActive(false);
+
     }
 
     public void SoundCheck()

@@ -262,6 +262,7 @@ public class UIManagerGame : MonoBehaviour
         //_player.GetComponent<PlayerController>().SCheck();
         //_player.GetComponent<PlayerController>().MCheck();
         Time.timeScale = 1;
+        _player.GetComponent<SpriteRenderer>().enabled = true;
         StopAllCoroutines();
         _scorePanel.SetActive(false);
         _gamePanel.SetActive(true);

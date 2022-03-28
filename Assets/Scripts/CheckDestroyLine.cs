@@ -66,7 +66,10 @@ public class CheckDestroyLine : MonoBehaviour
                     }
                 }
                 _player.GetComponent<AudioSource>().PlayOneShot(_wallBreakSound);
-                
+                _player.transform.GetChild(7).transform.position = collision.transform.position;
+                _player.transform.GetChild(8).transform.position = collision.transform.position;
+                _player.transform.GetChild(7).GetComponent<ParticleSystem>().Play();
+                _player.transform.GetChild(8).GetComponent<ParticleSystem>().Play();
                 Debug.Log("1");
                 _player.GetComponent<PlayerController>().PlayEffect(this.gameObject.GetComponent<SpriteRenderer>().color);
                 _ui.Score += 8;
@@ -74,13 +77,16 @@ public class CheckDestroyLine : MonoBehaviour
             }
             else
             {
-                _ui.EndGameStart();
-            }
+                _player.transform.GetChild(7).transform.position = collision.transform.position;
+                _player.transform.GetChild(8).transform.position = collision.transform.position;
+                _player.transform.GetChild(7).GetComponent<ParticleSystem>().Play();
+                _player.transform.GetChild(8).GetComponent<ParticleSystem>().Play();
+            }     
         }
         else if(collision.tag == "Player")
         {
+            collision.GetComponent<SpriteRenderer>().enabled = false;
             _ui.EndGameStart();
         }
-
     }
 }
