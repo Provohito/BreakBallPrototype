@@ -62,7 +62,7 @@ public class UIManagerGame : MonoBehaviour
 
     private void UpdateScore()
     {
-        _score.text = score.ToString();
+        _score.text = score.ToString() + " M";
         if (_GM.NumberLevel == 2)
         {
             if (score - _previousScore >= 10)
@@ -258,7 +258,6 @@ public class UIManagerGame : MonoBehaviour
     public void GGame()
     {
         
-        Debug.Log("GGame");
         //_player.GetComponent<PlayerController>().SCheck();
         //_player.GetComponent<PlayerController>().MCheck();
         Time.timeScale = 1;

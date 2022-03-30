@@ -22,9 +22,10 @@ public class CheckDestroyLine : MonoBehaviour
         
         if (collision.tag == "defence")
         {
-            
+            Debug.Log("1234");
             if (collision.gameObject.GetComponent<SpriteRenderer>().color == this.gameObject.GetComponent<SpriteRenderer>().color)
             {
+                Debug.Log("1234453");
                 collision.gameObject.SetActive(false);
                 indexWall = Random.Range(0,3);
                 switch (indexWall)
@@ -76,12 +77,9 @@ public class CheckDestroyLine : MonoBehaviour
                 Destroy(this.gameObject);
             }
             else
-            {
-                _player.transform.GetChild(7).transform.position = collision.transform.position;
-                _player.transform.GetChild(8).transform.position = collision.transform.position;
-                _player.transform.GetChild(7).GetComponent<ParticleSystem>().Play();
-                _player.transform.GetChild(8).GetComponent<ParticleSystem>().Play();
-            }     
+                _ui.EndGameStart();
+
+
         }
         else if(collision.tag == "Player")
         {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -164,24 +165,32 @@ public class GameManager : MonoBehaviour
     }
     [SerializeField]
     private AudioClip _newSkinSound;
+    [SerializeField]
+    private GameObject _newSkinConteiner;
     private IEnumerator ReloadDestroyPoint()
     {
         yield return new WaitForSeconds(9);
         GenerateDestroyPoint();
-        int k = Random.Range(0, 100);
+        int k = Random.Range(1, 100);
         int i = Random.Range(0,15);
         if (k == 27)
         {
-            _player.GetComponent<AudioSource>().PlayOneShot(_newSkinSound);
+            
+            
             _unSys.CheckSkin(_newSkinsActive[i]);
             Debug.Log(_unSys.StateSkin);
             if ( _unSys.StateSkin == true)
             {
-
+                _player.GetComponent<AudioSource>().PlayOneShot(_newSkinSound);
+                
                 GameObject newskin = Instantiate(_newSkinPrefab);
+                
                 newskin.transform.position = new Vector3(newskin.transform.position.x, _player.transform.position.y + 12, newskin.transform.position.z);
                 newskin.GetComponent<SpriteRenderer>().sprite = _newSkinsActive[i];
+                _newSkinConteiner.transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = _newSkinsActive[i];
+                _newSkinConteiner.GetComponent<Animator>().Play("OpenCloseAnimation");
                 _unSys.Save(_newSkinsActive[i]);
+                
 
             }
         }
