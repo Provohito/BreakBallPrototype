@@ -63,6 +63,8 @@ public class GameManager : MonoBehaviour
             SwapParticles();
             _numberLevel++;
         }
+
+
     }
 
     [System.Obsolete]

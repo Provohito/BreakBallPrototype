@@ -45,6 +45,8 @@ public class UIManagerGame : MonoBehaviour
     private UnlockSkinsSystem _unSystem;
 
     //private int decster = 20;
+    [SerializeField]
+    private GameObject _closeWindow;
 
     private void Update()
     {
@@ -55,9 +57,28 @@ public class UIManagerGame : MonoBehaviour
             UpdateScore();
             _time = 0;
         }
-        
+
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Time.timeScale = 0;
+                _closeWindow.SetActive(true);
+                
+            }
+        }
+
     }
 
+    public void ApplicationClose()
+    {
+        Application.Quit();
+    }
+    public void ApplicationGo()
+    {
+        _closeWindow.SetActive(false);
+        Time.timeScale = 1;
+    }
     
 
     private void UpdateScore()
