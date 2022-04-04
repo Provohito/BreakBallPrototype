@@ -2125,10 +2125,10 @@ MonoBehaviour:
       - m_Target: {fileID: 724520419}
         m_TargetAssemblyTypeName: MobAdRewarded, Assembly-CSharp
         m_MethodName: ShowRewardedAd
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 203845817}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2993,6 +2993,7 @@ MonoBehaviour:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0, g: 0.03236246, b: 1, a: 1}
   - {r: 0, g: 1, b: 0.08852029, a: 1}
+  - {r: 0.9811321, g: 0.34709862, b: 0.90653986, a: 1}
   _linePrefab: {fileID: 4976372335720153927, guid: fa6301ff2c0c78845ba7ca92fdaa453e, type: 3}
   _startPosition: {fileID: 1677900561}
   _uiManager: {fileID: 1195968656}

@@ -71,9 +71,8 @@ public class CheckDestroyLine : MonoBehaviour
                 _player.transform.GetChild(8).transform.position = collision.transform.position;
                 _player.transform.GetChild(7).GetComponent<ParticleSystem>().Play();
                 _player.transform.GetChild(8).GetComponent<ParticleSystem>().Play();
-                Debug.Log("1");
                 _player.GetComponent<PlayerController>().PlayEffect(this.gameObject.GetComponent<SpriteRenderer>().color);
-                _ui.Score += 8;
+                _ui.Points += 8;
                 Destroy(this.gameObject);
             }
             else

@@ -1,6 +1,6 @@
 using UnityEngine;
 using GoogleMobileAds.Api;
-
+using UnityEngine.UI;
 
 public class MobAdRewarded : MonoBehaviour
 {
@@ -34,11 +34,13 @@ public class MobAdRewarded : MonoBehaviour
         _ui.GGame();
     }
 
-    public void ShowRewardedAd()
+    public void ShowRewardedAd(GameObject obj)
     {
         if (_rewardedAd.IsLoaded())
         {
+            
             _rewardedAd.Show();
+            obj.GetComponent<Button>().interactable = false;
         }
     }
 

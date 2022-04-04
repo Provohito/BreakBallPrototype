@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -47,6 +46,9 @@ public class UIManagerGame : MonoBehaviour
     //private int decster = 20;
     [SerializeField]
     private GameObject _closeWindow;
+    public int Points { get { return _points; } set { _points = value; UpdateScore();} }
+    private int _points = 0;
+
 
     private void Update()
     {
@@ -83,7 +85,7 @@ public class UIManagerGame : MonoBehaviour
 
     private void UpdateScore()
     {
-        _score.text = score.ToString() + " M";
+        _score.text = ((int)(_player.transform.position.y) + _points).ToString() + " M";
         if (_GM.NumberLevel == 2)
         {
             if (score - _previousScore >= 10)
@@ -93,7 +95,7 @@ public class UIManagerGame : MonoBehaviour
                 _previousScore = score;
             }
         }
-        if (score - _previousScore >= 35)
+        if (score - _previousScore >= 15)
         {
             StopAllCoroutines();
             _GM.NextLevel();
@@ -131,7 +133,7 @@ public class UIManagerGame : MonoBehaviour
         Time.timeScale = 1;
         _player = GameObject.Find("Player");
         _player.GetComponent<SpriteRenderer>().sprite = _playerSkins[PlayerPrefs.GetInt("SelectedSkin")];
-        _score.text = score.ToString();
+        _score.text = 0 + " M";
     }
 
     public void PressBtnDefence(Color color)

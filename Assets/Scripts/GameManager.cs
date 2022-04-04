@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Color[] _colorsLine;
 
-    private Color[] _outColor = new Color[4];
+    private Color[] _outColor = new Color[5];
     private int _countLines;
 
     private int _numberLevel;
@@ -161,7 +161,7 @@ public class GameManager : MonoBehaviour
         }
         GenerateContainer();
         
-        _player.GetComponent<PlayerMove>().Speed += 0.02f;
+        _player.GetComponent<PlayerMove>().Speed += 0.03f; // Увеличение скорости
         
         
     }
@@ -237,7 +237,7 @@ public class GameManager : MonoBehaviour
         mainColorPref.SetActive(true);
         for (int i = 0; i < trix; i++)
         {
-            int k = Random.Range(0, 4);
+            int k = Random.Range(0, 5);
             _outColor[i] =  _colorsLine[k];
             colorPref = mainColorPref.transform.GetChild(0).transform.GetChild(i).gameObject;
             colorPref.GetComponent<SpriteRenderer>().color = _outColor[i];
