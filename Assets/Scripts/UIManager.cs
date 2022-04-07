@@ -114,10 +114,43 @@ public class UIManager : MonoBehaviour
         }
         
     }
+    [SerializeField]
+    private GameObject _closeWindow;
+    public void ApplicationGo()
+    {
+        _closeWindow.SetActive(false);
+        Time.timeScale = 1;
+    }
+
 
     private void Update()
     {
+        if (GameObject.Find("UIManagerGame").activeInHierarchy)
+        {
+            Debug.Log("Yes");
+        }
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                GameObject _ui = GameObject.Find("UIManagerGame");
+                if (_ui.activeInHierarchy)
+                {
+                    _ui.GetComponent<UIManagerGame>().PressPause();
+                }
+                
 
+                if (!_ui.activeInHierarchy)
+                {
+                    Time.timeScale = 0;
+                    _closeWindow.SetActive(true);
+                }
+                else if (_TableSkins.activeInHierarchy)
+                {
+                    OpenSkins();
+                }
+            }
+        }
     }
 
     public void OpenSkins()

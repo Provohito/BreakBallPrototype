@@ -4110,7 +4110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 463654, guid: 1edb7f7d5ea68467097decc77664b28d, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 463654, guid: 1edb7f7d5ea68467097decc77664b28d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34680,7 +34680,7 @@ Transform:
   - {fileID: 1720751770}
   - {fileID: 892188200}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1045206614
 Rigidbody2D:
@@ -74987,7 +74987,7 @@ Transform:
   - {fileID: 1691154129}
   - {fileID: 821096375}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1774229086
 BoxCollider2D:
@@ -75574,8 +75574,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1195968657}
-        m_TargetAssemblyTypeName: UIManagerGame, Assembly-CSharp
+      - m_Target: {fileID: 1477575771506196421}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ApplicationGo
         m_Mode: 1
         m_Arguments:
@@ -96919,7 +96919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1477069235987441267, guid: 105e0e33c13091344ae3e411b0b71346, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1477069235987441267, guid: 105e0e33c13091344ae3e411b0b71346, type: 3}
       propertyPath: m_LocalPosition.x
@@ -132857,6 +132857,10 @@ PrefabInstance:
       propertyPath: _TableSkins
       value: 
       objectReference: {fileID: 6492223544469415487}
+    - target: {fileID: 9142220530967333254, guid: d7f917a60417c8047972b319e16598fa, type: 3}
+      propertyPath: _closeWindow
+      value: 
+      objectReference: {fileID: 834429990}
     - target: {fileID: 9142220530967333254, guid: d7f917a60417c8047972b319e16598fa, type: 3}
       propertyPath: _parentSellsToSkins
       value: 
