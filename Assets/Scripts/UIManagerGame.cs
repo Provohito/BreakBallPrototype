@@ -75,12 +75,7 @@ public class UIManagerGame : MonoBehaviour
         _score.text = ((int)(_player.transform.position.y) + _points).ToString() + " M";
         if (_GM.NumberLevel == 2)
         {
-            if (score - _previousScore >= 10)
-            {
-                StopAllCoroutines();
-                _GM.NextLevel();
-                _previousScore = score;
-            }
+            
         }
         if (score - _previousScore >= 15)
         {
@@ -267,7 +262,7 @@ public class UIManagerGame : MonoBehaviour
     private GameObject _prePlayer;
     public void GGame()
     {
-        
+        Debug.Log("GGame");
         //_player.GetComponent<PlayerController>().SCheck();
         //_player.GetComponent<PlayerController>().MCheck();
         Time.timeScale = 1;
@@ -286,12 +281,6 @@ public class UIManagerGame : MonoBehaviour
         {
             _player.transform.GetChild(0).GetChild(i).gameObject.SetActive(false);
         }
-    
-
-
-
-
-
     }
 
     private float timeToCheck = 2.8f;

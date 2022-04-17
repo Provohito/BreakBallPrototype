@@ -152,7 +152,7 @@ PlayerSettings:
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 19
+  AndroidBundleVersionCode: 21
   AndroidMinSdkVersion: 21
   AndroidTargetSdkVersion: 30
   AndroidPreferredInstallLocation: 1
@@ -741,7 +741,7 @@ PlayerSettings:
   cloudProjectId: 5af05284-3b87-44db-ae02-31d35287677e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: BreakBallPrototype
+  projectName: BreakBall
   organizationId: gamedev_unity74
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

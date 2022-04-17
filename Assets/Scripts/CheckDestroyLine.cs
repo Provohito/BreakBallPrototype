@@ -14,12 +14,12 @@ public class CheckDestroyLine : MonoBehaviour
     public void Start()
     {
         _ui = GameObject.Find("UIManagerGame").GetComponent<UIManagerGame>();
-        _gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         _player = GameObject.Find("Player");
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        _gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         if (collision.tag == "defence")
         {
             Debug.Log("1234");

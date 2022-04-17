@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.59437877, b: 0.5697741, a: 1}
+  m_IndirectSpecularColor: {r: 0.0012065594, g: 0.59415144, b: 0.5696969, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2122,9 +2122,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 724520419}
-        m_TargetAssemblyTypeName: MobAdRewarded, Assembly-CSharp
-        m_MethodName: ShowRewardedAd
+      - m_Target: {fileID: 724520422}
+        m_TargetAssemblyTypeName: Unity.Example.RewardedAd, Assembly-CSharp
+        m_MethodName: ShowAd
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 203845817}
@@ -21904,9 +21904,9 @@ GameObject:
   m_Component:
   - component: {fileID: 724520420}
   - component: {fileID: 724520423}
-  - component: {fileID: 724520422}
-  - component: {fileID: 724520421}
   - component: {fileID: 724520419}
+  - component: {fileID: 724520421}
+  - component: {fileID: 724520422}
   m_Layer: 0
   m_Name: Ads
   m_TagString: Untagged
@@ -21923,10 +21923,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 724520418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 663e501861c591048a0047c40469652f, type: 3}
+  m_Script: {fileID: 11500000, guid: ba38dca168da44643a08d64c0be6ed96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ui: {fileID: 1195968657}
+  _androidGameId: 4601141
+  _iOSGameId: 4601140
+  _testMode: 0
+  _rewardedAd: {fileID: 724520418}
 --- !u!4 &724520420
 Transform:
   m_ObjectHideFlags: 0
@@ -21950,9 +21953,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 724520418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac2143582c0a8324e8944b593e507abd, type: 3}
+  m_Script: {fileID: 11500000, guid: 63aa470a2226a494eba357c65d446318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _loadBannerButton: {fileID: 0}
+  _showBannerButton: {fileID: 0}
+  _hideBannerButton: {fileID: 0}
+  _bannerPosition: 4
+  _androidAdUnitId: Banner_Android
+  _iOSAdUnitId: Banner_iOS
 --- !u!114 &724520422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21962,7 +21971,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 724520418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8701583ad486b1b418ad33776b0aa700, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d46a660d57c6f64a8d0da74b304545b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &724520423
@@ -64614,7 +64623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1720975031
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -64655,7 +64664,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -6
-  m_Sprite: {fileID: 21300000, guid: 8048307541addea4285c7bdd024de303, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9b9683892836be4bacf0d2b00a3011a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -64674,8 +64683,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720975030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01671577, y: -191.98051, z: 0}
-  m_LocalScale: {x: 0.19525117, y: 0.32216495, z: 1}
+  m_LocalPosition: {x: -0.104, y: -214.599, z: 0}
+  m_LocalScale: {x: 0.255916, y: 0.49376377, z: 1.7413908}
   m_Children: []
   m_Father: {fileID: 258353765}
   m_RootOrder: 0
@@ -74806,6 +74815,7 @@ Transform:
   - {fileID: 1203965041}
   - {fileID: 1691154129}
   - {fileID: 821096375}
+  - {fileID: 2146793900}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -75828,7 +75838,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 11 FPS
+  m_Text: 3 FPS
 --- !u!222 &1943735641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -75853,7 +75863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110.19, y: -48.75}
+  m_AnchoredPosition: {x: 296, y: -50}
   m_SizeDelta: {x: 168.89, y: 74.910034}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1968917220
@@ -91299,7 +91309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8321852, y: 0}
   m_AnchorMax: {x: 1, y: 0.35589597}
-  m_AnchoredPosition: {x: -26.03418, y: 106.51709}
+  m_AnchoredPosition: {x: -26.03418, y: 106.51706}
   m_SizeDelta: {x: -47.5585, y: -215.6004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047922788
@@ -91835,7 +91845,7 @@ GameObject:
   - component: {fileID: 2146793900}
   - component: {fileID: 2146793899}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: ChangeGrad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91922,12 +91932,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146793898}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.209219, y: 5.0912976, z: -21.891743}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.209219, y: 8.531298, z: -15.58527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 1774229085}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &112838154726024676
 Transform:

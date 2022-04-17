@@ -127,7 +127,7 @@ public class UIManager : MonoBehaviour
     {
         if (GameObject.Find("UIManagerGame").activeInHierarchy)
         {
-            Debug.Log("Yes");
+            //Debug.Log("Yes");
         }
         if (Application.platform == RuntimePlatform.Android)
         {
