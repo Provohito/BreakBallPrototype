@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0012065594, g: 0.59415144, b: 0.5696969, a: 1}
+  m_IndirectSpecularColor: {r: 0.67873174, g: 0.8633076, b: 0.8671329, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21926,10 +21926,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38dca168da44643a08d64c0be6ed96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _androidGameId: 4601141
-  _iOSGameId: 4601140
-  _testMode: 0
-  _rewardedAd: {fileID: 724520418}
 --- !u!4 &724520420
 Transform:
   m_ObjectHideFlags: 0
@@ -21956,12 +21952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63aa470a2226a494eba357c65d446318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadBannerButton: {fileID: 0}
-  _showBannerButton: {fileID: 0}
-  _hideBannerButton: {fileID: 0}
-  _bannerPosition: 4
-  _androidAdUnitId: Banner_Android
-  _iOSAdUnitId: Banner_iOS
 --- !u!114 &724520422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75804,7 +75794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1943735640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91309,7 +91299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8321852, y: 0}
   m_AnchorMax: {x: 1, y: 0.35589597}
-  m_AnchoredPosition: {x: -26.03418, y: 106.51706}
+  m_AnchoredPosition: {x: -26.03418, y: 106.51694}
   m_SizeDelta: {x: -47.5585, y: -215.6004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047922788
@@ -91866,22 +91856,22 @@ MonoBehaviour:
   _mat: {fileID: 2100000, guid: f6bd91fab377e8e40a8e3bda30cf15d8, type: 2}
   _topGradient:
     serializedVersion: 2
-    key0: {r: 0, g: 0.09511185, b: 1, a: 1}
-    key1: {r: 1, g: 0, b: 0.8640461, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.7644001, g: 0.8195203, b: 0.8301887, a: 1}
+    key1: {r: 0.6938768, g: 0.81634146, b: 0.8396226, a: 1}
+    key2: {r: 0.48444286, g: 0.49744993, b: 0.6792453, a: 0}
+    key3: {r: 0.35679132, g: 0.2764151, b: 0.5, a: 0}
+    key4: {r: 0.11730602, g: 0.11438236, b: 0.254717, a: 0}
+    key5: {r: 0.09312924, g: 0.13680112, b: 0.2264151, a: 0}
+    key6: {r: 0.17757869, g: 0.11372549, b: 0.25490198, a: 0}
+    key7: {r: 0.7803922, g: 0.8352942, b: 0.91372555, a: 0}
     ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
+    ctime1: 12143
+    ctime2: 25058
+    ctime3: 27371
+    ctime4: 30455
+    ctime5: 41249
+    ctime6: 65535
+    ctime7: 65535
     atime0: 0
     atime1: 65535
     atime2: 0
@@ -91891,26 +91881,26 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 2
+    m_NumColorKeys: 7
     m_NumAlphaKeys: 2
   _lowGradient:
     serializedVersion: 2
-    key0: {r: 0, g: 1, b: 0.02643156, a: 1}
-    key1: {r: 1, g: 0.77412665, b: 0, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.58431375, g: 0.91071767, b: 0.9137255, a: 1}
+    key1: {r: 0.8867924, g: 0.7824315, b: 0.56553936, a: 1}
+    key2: {r: 0.6792453, g: 0.42036313, b: 0.4253366, a: 0}
+    key3: {r: 0.4433962, g: 0.18237808, b: 0.32441106, a: 0}
+    key4: {r: 0.20136863, g: 0.109576374, b: 0.254717, a: 0}
+    key5: {r: 0.11730602, g: 0.11438236, b: 0.254717, a: 0}
+    key6: {r: 0.11372549, g: 0.14778285, b: 0.25490198, a: 0}
+    key7: {r: 0.9150943, g: 0.8971975, b: 0.78214663, a: 0}
     ctime0: 0
-    ctime1: 33924
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
+    ctime1: 13493
+    ctime2: 24865
+    ctime3: 27371
+    ctime4: 30262
+    ctime5: 45104
+    ctime6: 65535
+    ctime7: 65535
     atime0: 0
     atime1: 65535
     atime2: 0
@@ -91920,10 +91910,10 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 2
+    m_NumColorKeys: 7
     m_NumAlphaKeys: 2
   timeProgress: 0
-  timeDalay: 2555
+  timeDalay: 500
   _text: {fileID: 1943735640}
 --- !u!4 &2146793900
 Transform:
