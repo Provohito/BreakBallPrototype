@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0012065594, g: 0.59415144, b: 0.5696969, a: 1}
+  m_IndirectSpecularColor: {r: 0.0032179407, g: 0.5937601, b: 0.56957316, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21928,7 +21928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidGameId: 4601141
   _iOSGameId: 4601140
-  _testMode: 0
+  _testMode: 1
   _rewardedAd: {fileID: 724520418}
 --- !u!4 &724520420
 Transform:
@@ -91309,7 +91309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8321852, y: 0}
   m_AnchorMax: {x: 1, y: 0.35589597}
-  m_AnchoredPosition: {x: -26.03418, y: 106.51706}
+  m_AnchoredPosition: {x: -26.03418, y: 106.51703}
   m_SizeDelta: {x: -47.5585, y: -215.6004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047922788

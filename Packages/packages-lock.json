@@ -150,14 +150,15 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.mediation": {
-      "version": "file:C:\\Users\\Xiaomi\\Downloads\\d45086feba8425cdca66e28c960ac2d63380cca3.tgz",
+      "version": "0.4.1-preview.1",
       "depth": 0,
-      "source": "local-tarball",
+      "source": "registry",
       "dependencies": {
         "com.unity.settings-manager": "1.0.3",
         "com.unity.modules.ui": "1.0.0",
         "com.unity.services.core": "1.1.0-pre.11"
-      }
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.settings-manager": {
       "version": "1.0.3",
