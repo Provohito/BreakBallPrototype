@@ -18,22 +18,28 @@ public class ChangeGradient : MonoBehaviour
     private Color _topColor;
     [SerializeField]
     private Text _text;
-    void Start()
-    {
-        
-    }
-
-    
+    private bool _isTrueWayToGrad = true;
     void Update()
     {
         float fps = 1.0f / Time.deltaTime;
         _text.text = Convert.ToInt64(fps).ToString() + " FPS";
         if (Application.isPlaying)
-            timeProgress += Time.deltaTime / timeDalay;
-        
-
-        if (timeProgress > 1f)
-            timeProgress = 0f;
+        {
+            if (_isTrueWayToGrad)
+            {
+                if (timeProgress <= 1)
+                    timeProgress += Time.deltaTime / timeDalay;
+                else
+                    _isTrueWayToGrad = false;
+            }
+            else
+            {
+                if (timeProgress >= 0)
+                    timeProgress -= Time.deltaTime / timeDalay;
+                else
+                    _isTrueWayToGrad = true;
+            }
+        }
 
         _mat.SetColor("_TopColor", _topGradient.Evaluate(timeProgress));
         _mat.SetColor("_BottomColor", _lowGradient.Evaluate(timeProgress));
