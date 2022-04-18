@@ -19,6 +19,12 @@ public class ChangeGradient : MonoBehaviour
     [SerializeField]
     private Text _text;
     private bool _isTrueWayToGrad = true;
+
+    public void NewGameStart()
+    {
+        _mat.SetColor("_TopColor", _topGradient.Evaluate(0));
+        _mat.SetColor("_BottomColor", _lowGradient.Evaluate(0));
+    }
     void Update()
     {
         float fps = 1.0f / Time.deltaTime;

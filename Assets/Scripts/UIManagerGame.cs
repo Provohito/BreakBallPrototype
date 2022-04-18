@@ -351,6 +351,8 @@ public class UIManagerGame : MonoBehaviour
         if((int)score > PlayerPrefs.GetInt("Score"))
             PlayerPrefs.SetInt("Score", (int)score);
 
+        GameObject _chG = GameObject.Find("ChangeGrad");
+        _chG.GetComponent<ChangeGradient>().NewGameStart();
         GameObject.Find("SceneManager").GetComponent<ChangeScene>().ChooseScene(0);
     }
 

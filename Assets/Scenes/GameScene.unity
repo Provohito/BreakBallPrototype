@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6847032, g: 0.8595491, b: 0.85750604, a: 1}
+  m_IndirectSpecularColor: {r: 0.6757503, g: 0.86520725, b: 0.87198466, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2678,6 +2678,7 @@ Transform:
   m_LocalPosition: {x: -0.0085, y: 37.9, z: 0}
   m_LocalScale: {x: 0.3589425, y: 0.19041516, z: 1}
   m_Children:
+  - {fileID: 2146793900}
   - {fileID: 1720975032}
   - {fileID: 205039153}
   m_Father: {fileID: 0}
@@ -64687,7 +64688,7 @@ Transform:
   m_LocalScale: {x: 0.26616234, y: 0.49376377, z: 1.7413908}
   m_Children: []
   m_Father: {fileID: 258353765}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1724177668
 GameObject:
@@ -74815,7 +74816,6 @@ Transform:
   - {fileID: 1203965041}
   - {fileID: 1691154129}
   - {fileID: 821096375}
-  - {fileID: 2146793900}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -75838,7 +75838,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3 FPS
+  m_Text: 18 FPS
 --- !u!222 &1943735641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -75883,7 +75883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5611549045463969656, guid: 70211c7f26ca603448ee060a974a5965, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5611549045463969656, guid: 70211c7f26ca603448ee060a974a5965, type: 3}
       propertyPath: m_LocalPosition.x
@@ -91933,11 +91933,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146793898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.209219, y: 8.531298, z: -15.58527}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 28.466171, y: -172.3009, z: -21.891743}
+  m_LocalScale: {x: 2.7859614, y: 5.2516828, z: 1}
   m_Children: []
-  m_Father: {fileID: 1774229085}
-  m_RootOrder: 3
+  m_Father: {fileID: 258353765}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &112838154726024676
 Transform:
