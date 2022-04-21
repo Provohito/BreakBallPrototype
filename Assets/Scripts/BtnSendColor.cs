@@ -20,6 +20,10 @@ public class BtnSendColor : MonoBehaviour
         _defenceConteiner = GameObject.Find("DefencePanel");
         audio = GameObject.Find("Player").GetComponent<AudioSource>();
     }
+    public void Update()
+    {
+        
+    }
     int _fullContainer = 0;
     [System.Obsolete]
     public void SendColor()

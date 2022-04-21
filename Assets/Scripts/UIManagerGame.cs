@@ -59,7 +59,22 @@ public class UIManagerGame : MonoBehaviour
             _time = 0;
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            _defenceConteiner.transform.GetChild(0).GetComponent<BtnSendColor>().SendColor();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            _defenceConteiner.transform.GetChild(1).GetComponent<BtnSendColor>().SendColor();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            _defenceConteiner.transform.GetChild(2).GetComponent<BtnSendColor>().SendColor();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            _defenceConteiner.transform.GetChild(3).GetComponent<BtnSendColor>().SendColor();
+        }
 
     }
 
@@ -109,6 +124,7 @@ public class UIManagerGame : MonoBehaviour
                 break;
         }
     }
+    private GameObject _defenceConteiner;
 
     public void Start()
     {
@@ -116,6 +132,7 @@ public class UIManagerGame : MonoBehaviour
         _player = GameObject.Find("Player");
         _player.GetComponent<SpriteRenderer>().sprite = _playerSkins[PlayerPrefs.GetInt("SelectedSkin")];
         _score.text = 0 + " M";
+        _defenceConteiner = GameObject.Find("DefencePanel");
     }
 
     public void PressBtnDefence(Color color)
