@@ -415,11 +415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5149326529992058105, guid: 06f8f9f6253fc8646b41bbc590f85f61, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00012207031
+      value: 0.00024414062
       objectReference: {fileID: 0}
     - target: {fileID: 5149326529992058105, guid: 06f8f9f6253fc8646b41bbc590f85f61, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 77.20999
+      value: 77.20996
       objectReference: {fileID: 0}
     - target: {fileID: 5149326530561451564, guid: 06f8f9f6253fc8646b41bbc590f85f61, type: 3}
       propertyPath: m_Name
@@ -1696,7 +1696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.72970366, y: 0.93700004}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.35998535, y: -17.5}
+  m_AnchoredPosition: {x: -0.35986328, y: -17.5}
   m_SizeDelta: {x: 0.7227783, y: -33.91089}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &185588170
@@ -21928,8 +21928,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidGameId: 4601141
   _iOSGameId: 4601140
-  _testMode: 1
-  _rewardedAd: {fileID: 0}
+  _testMode: 0
+  _bannerAd: {fileID: 724520418}
 --- !u!4 &724520420
 Transform:
   m_ObjectHideFlags: 0
@@ -75803,7 +75803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1943735640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75837,7 +75837,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50 FPS
+  m_Text: 11 FPS
 --- !u!222 &1943735641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -91308,7 +91308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8321852, y: 0}
   m_AnchorMax: {x: 1, y: 0.35589597}
-  m_AnchoredPosition: {x: -26.03418, y: 106.51669}
+  m_AnchoredPosition: {x: -26.03418, y: 106.51657}
   m_SizeDelta: {x: -47.5585, y: -215.6004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047922788
@@ -91822,7 +91822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.06856251}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1.6599121}
+  m_AnchoredPosition: {x: 0, y: 1.659668}
   m_SizeDelta: {x: 0, y: -3.3200073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2132561162

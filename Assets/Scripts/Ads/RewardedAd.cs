@@ -22,11 +22,8 @@ namespace Unity.Example
             try
             {
                 InitializationOptions initializationOptions = new InitializationOptions();
-                Debug.Log("1");
                 initializationOptions.SetGameId(gameId);
-                Debug.Log("2");
                 await UnityServices.InitializeAsync(initializationOptions);
-                Debug.Log("3");
                 InitializationComplete();
             }
             catch (Exception e)
